@@ -9,26 +9,141 @@
     <meta name="keywords" content="이수민">
     <meta name="author" content="2021 portfolio">
     <link rel="stylesheet" href="../starbucks-landing/scss/import.css">
+    <link rel="stylesheet" href="./scss/full-page-scroll.css">
     <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
-    
-    <div id="main">
-        <section class="section">1</section>
-        <section class="section">2</section>
-        <section class="section">3</section>
-        <section class="section">4</section>        
+    <header id="header">
+        <div class="inner">
+            <h1><a href=""><img src="./images/logo.png" alt="스타벅스로고"></a></h1>
+            <nav id="nav">
+                <ul class="gnb">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">MENU</a></li>
+                    <li><a href="">NEW</a></li>
+                    <li><a href="">STORE</a></li>
+                </ul>
+            </nav>
+        </div>        
+    </header>
+    <div id="main" class="scroll-container">
+        <section class="section section1">
+            <div class="inner">
+                <div class="text-box">
+                    <h2><strong class="fc-primary">스타벅스</strong>의 특별함을 <br> 경험해보세요.</h2>
+                    <p>특별한 스타벅스 경험을 고객 한 분, 한 분에게 한잔의 음료를 통해 전달합니다.</p>
+                    <a href="" class="btn primary-button">자세히 보기</a>                    
+                </div>                
+                <div class="menu-list">
+                    <a href=""><img src="./images/americano.png" alt="아메리카노"></a>
+                    <a href=""><img src="./images/shake.png" alt="쉐이크"></a>
+                </div>
+                <div class="view-box">
+                    <div class="js-container container">
+                        <span>
+                            <h4>아메리카노</h4>
+                            <img src="./images/americano.png" alt="아메리카노">
+                        </span>
+                        <span>
+                            <h4>딸기 피치 블렌디드</h4>
+                            <img src="./images/shake.png" alt="쉐이크">
+                        </span>                                            
+                    </div>
+                </div>                
+            </div>            
+        </section>
+        <section class="section section2">
+            <div class="inner">    
+                <div class="text-box">
+                    <h2><strong class="fc-primary">지금까지 가장 많이 팔린</strong><br>베스트 셀러 TOP10!</h2>                                        
+                </div>     
+                <div class="swiper-container mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000001635]_20210225092236748.jpg" alt="콜드 브루 플로트" class="new-product">
+                            <h3>프라푸치노</h3>
+                            <dl>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                            </dl>
+                            <a href="" class="btn primary-button">자세히 보기</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/02/[9200000001636]_20210225093600536.jpg" alt="콜드 브루 몰트" class="new-product">
+                            <h3>프라푸치노</h3>
+                            <dl>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                            </dl>
+                            <a href="" class="btn primary-button">자세히 보기</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[30]_20210415144252244.jpg" alt="에스프레소 콘 파나" class="new-product">
+                            <h3>프라푸치노</h3>
+                            <dl>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                            </dl>
+                            <a href="" class="btn primary-button">자세히 보기</a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://image.istarbucks.co.kr/upload/store/skuimg/2021/04/[9200000003481]_20210416154220491.jpg" alt="블론드 에스프레소 라떼" class="new-product">
+                            <h3>프라푸치노</h3>
+                            <dl>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                                <dt>칼로리</dt>
+                                <dd>400kcal</dd>
+                            </dl>
+                            <a href="" class="btn primary-button">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>      
     </div>
-
-    <ul class="slide-navigation">
-        <li><a data-index="0" href="#0" class="is-active"></a></li>
-        <li><a data-index="1" href="#1" class=""></a></li>
-        <li><a data-index="2" href="#2" class=""></a></li>
-        <li><a data-index="3" href="#3" class=""></a></li>
-    </ul>
 
     
     <script async="" src="//www.google-analytics.com/analytics.js"></script>
-    <script src="../starbucks-landing/js/fullPage.js"></script>
+    <script src="./js/full-page-scroll.js"></script>
+    <script src="./js/effect.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+    <script type="text/javascript">
+        new fullScroll({
+            mainElement: "main",
+            displayDots: true,
+            dotsPosition: "left",
+            animateTime: 0.7,
+            animateFunction: "ease",
+        });
+    </script>
 </body>
 </html>

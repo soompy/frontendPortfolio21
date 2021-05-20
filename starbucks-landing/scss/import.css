@@ -780,6 +780,10 @@ figure {
 }
 
 /* Page */
+body {
+  font-size: 20px;
+}
+
 .section {
   position: relative;
   width: 100%;
@@ -799,13 +803,14 @@ figure {
 }
 
 .section .text-box h2 {
-  font-size: 60px;
-  line-height: 84px;
+  font-size: 2em;
+  line-height: 1.5em;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .section .text-box h2 p {
-  font-size: 24px;
+  font-size: 1em;
 }
 
 .section1 .inner {
@@ -924,6 +929,27 @@ figure {
   margin: 100px 0 80px;
 }
 
+.section2 h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.section2 dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.section2 .primary-btn {
+  padding: 10px;
+}
+
 .swiper-container {
   overflow: visible !important;
   width: 100%;
@@ -958,14 +984,25 @@ figure {
   position: relative;
   z-index: 100;
   display: block;
-  width: 40%;
-  height: 40%;
-  margin-top: -30%;
-  margin-bottom: 40px;
+  width: 140px;
+  height: 140px;
+  -webkit-transform: translateY(-60%);
+          transform: translateY(-60%);
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
   border: 1px solid #ccc;
+}
+
+.visible,
+.invisible {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.visible {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1024px) {

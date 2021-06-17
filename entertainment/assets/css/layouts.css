@@ -90,6 +90,31 @@
     borde-radius: 50%
 }
 
+/*body*/
+.common-area {
+    position: relative;
+    width: 100%;
+}
+.inner {
+    padding: 80px 50px;
+}
+.flex-box {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.grid-box {
+    display: grid;
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.entertainment {
+
+}
+
+
 
 /*footer*/
 #footer {

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114.png" type="image/png">-->
+    <title>엔터테인먼트</title>
+    <meta name="description" content="엔터테인먼트 페이지 만들기">
+    <meta name="keywords" content="이수민">
+    <meta name="author" content="2021 portfolio">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/layouts.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <div id="app">
+<!--    컨셉 스크롤 원페이지
+        http://www.npley.com/
+        https://m.smtown.com/
+/  -->
+        <header id="header">
+            <h1><a href=""></a></h1>
+            <nav class="nav">
+                <ul class="gnb">
+                    <li class="menu"><a href="">Entertainment</a></li>
+                    <li class="menu"><a href="">Album</a></li>
+                    <li class="menu"><a href="">Artise</a></li>
+                    <li class="menu"><a href="">News</a></li>
+                    <li class="menu"><a href="">Audition</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="visual">
+            <ul class="visual-list">
+                <li class="visual-item">
+                    <div class="blurred-image-container">
+                        <div class="img"></div>
+                        <div class="img blurred"></div>
+                    </div>
+                    <div class="inner">
+                        <h2>타이틀</h2>
+                        <a href="">Click to enter the special world</a>
+                    </div>
+                </li>
+                <li class="visual-item">
+                    <div class="blurred-image-container">
+                        <div class="img"></div>
+                        <div class="img blurred"></div>
+                    </div>
+                    <div class="inner">
+                        <h2>타이틀</h2>
+                        <a href="">Click to enter the special world</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="paging">
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </section>
+
+        <main>
+            <section id="entertainment">
+                <div class=""></div>
+            </section>
+
+            <section id="album"></section>
+
+            <section id="artist"></section>
+
+            <section id="news"></section>
+
+            <section id="audition"></section>
+        </main>
+
+        <footer id="footer">
+
+        </footer>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function(e) {
+                var s = $(window).scrollTop(),
+                    opacityVal = (s / 200);
+
+                $('.blurred').css('opacity', opacityVal);
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!--
+swiper 사용 https://swiperjs.com/get-started
+
+카카오 중간배너
+https://www.kakaocorp.com/#
+
+더현대 서울
+https://www.thehyundaiseoul.com/
+
+스크롤 효과따라하기
+https://codepen.io/ezkorry/pen/oNzRdJX -->
+<!--https://jsfiddle.net/BinaryMoon/8jhw2/-->

@@ -64,10 +64,11 @@
         </section>
 
         <main>
+            <!-- https://codepen.io/syedrafeeq/pen/yEJKn -->
             <section id="entertainment common-area">
                 <div class="inner flex-box">
-                    <div>
-                        <button>더보기</button>
+                    <div class="flex-item">
+                        <button class="wow pulse" data-wow-iteration="infinite" data-wow-duration="500ms">더보기</button>
                         <div class="swiper-container mySwiper enter-news">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">Slide 1</div>
@@ -78,7 +79,7 @@
                             <div class="swiper-pagination"></div>
                         </div>
                     </div>
-                    <div class="grid-box enter-issue">
+                    <div class="grid-box flex-item enter-issue">
                         <div>3</div>
                         <div>3</div>
                         <div>3</div>
@@ -87,7 +88,24 @@
                 </div>
             </section>
 
-            <section id="album" class="common-area"></section>
+            <section id="album" class="common-area">
+                <h3 class="main-title"></h3>
+                <div class="album-box wow fadeInLeft animated" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+                    <ul class="album-list">
+                        <li class="album-item">
+                            <img src="https://pds.joins.com/news/component/htmlphoto_mmdata/202104/28/0d93679b-c55e-4f13-8598-05e202cb314d.jpg" alt="album">
+                        </li>
+                        <li class="album-item">
+                            <img src="https://pds.joins.com/news/component/htmlphoto_mmdata/202104/28/0d93679b-c55e-4f13-8598-05e202cb314d.jpg"
+                                alt="album">
+                        </li>
+                        <li class="album-item">
+                            <img src="https://pds.joins.com/news/component/htmlphoto_mmdata/202104/28/0d93679b-c55e-4f13-8598-05e202cb314d.jpg"
+                                alt="album">
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
             <section id="artist" class="common-area"></section>
 
@@ -101,16 +119,17 @@
         </footer>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function(e) {
-                var s = $(window).scrollTop(),
-                    opacityVal = (s / 200);
+    <script src="./assets/js/wow.js"></script>
+<!--    <script>-->
+<!--        $(document).ready(function() {-->
+<!--            $(window).scroll(function(e) {-->
+<!--                var s = $(window).scrollTop(),-->
+<!--                    opacityVal = (s / 200);-->
 
-                $('.blurred').css('opacity', opacityVal);
-            });
-        });
-    </script>
+<!--                $('.blurred').css('opacity', opacityVal);-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
     <script>
         var swiper = new Swiper(".mySwiper", {
             pagination: {

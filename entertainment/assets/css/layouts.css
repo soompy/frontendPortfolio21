@@ -1,5 +1,8 @@
 /*header*/
 #header {
+  position: fixed;
+  left: 0;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,6 +118,10 @@
   borde-radius: 50%;
 }
 
+main {
+  background: #ffffff;
+}
+
 /*body*/
 .common-area {
   position: relative;
@@ -134,6 +141,12 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.flex-box .flex-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .grid-box {

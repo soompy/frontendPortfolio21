@@ -172,4 +172,34 @@ a:hover, a:active {
   outline: 0;
   color: #666666;
 }
+
+@-webkit-keyframes spinning {
+  0% {
+    -webkit-transform: rotate3d(0);
+            transform: rotate3d(0);
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 1, 0.5, 3.142rad);
+            transform: rotate3d(0, 1, 0.5, 3.142rad);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes spinning {
+  0% {
+    -webkit-transform: rotate3d(0);
+            transform: rotate3d(0);
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 1, 0.5, 3.142rad);
+            transform: rotate3d(0, 1, 0.5, 3.142rad);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 /*# sourceMappingURL=animation.css.map */

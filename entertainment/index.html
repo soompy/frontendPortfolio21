@@ -8,11 +8,8 @@
     <meta name="description" content="엔터테인먼트 페이지 만들기">
     <meta name="keywords" content="이수민">
     <meta name="author" content="2021 portfolio">
-<!--    <link rel="stylesheet" href="./assets/css/reset.css">-->
-<!--    <link rel="stylesheet" href="assets/css/layouts.css">-->
-<!--    <link rel="stylesheet" href="./assets/css/main.css">-->
-    <link rel="stylesheet" href="./assets/css/sourcemap.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/scss/sourcemap.css">
 </head>
 <body>
     <div id="app">
@@ -65,10 +62,10 @@
 
         <main>
             <!-- https://codepen.io/syedrafeeq/pen/yEJKn -->
-            <section id="entertainment common-area">
-                <div class="inner flex-box">
+            <section id="entertainment" class="common-area entertainment-area">
+                <div class="inner flex-box entertainment-wrap">
                     <div class="flex-item">
-                        <button class="wow pulse" data-wow-iteration="infinite" data-wow-duration="500ms">더보기</button>
+                        <button class="more-view">더보기</button>
                         <div class="swiper-container mySwiper enter-news">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">Slide 1</div>
@@ -88,26 +85,35 @@
                 </div>
             </section>
 
-            <section id="album" class="common-area">
+            <section id="album" class="common-area album-area" style="display: none;">
                 <h3 class="main-title"></h3>
-                <div class="album-box wow fadeInLeft animated" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">
+<!--                <div class="album-box wow fadeInLeft animated" style="visibility: visible;-webkit-animation-delay: 0.2s; -moz-animation-delay: 0.2s; animation-delay: 0.2s;">-->
+                <div class="album-box">
                     <ul class="album-list">
                         <li class="album-item">
-                            <img src="https://pds.joins.com/news/component/htmlphoto_mmdata/202104/28/0d93679b-c55e-4f13-8598-05e202cb314d.jpg" alt="album">
+                            <img src="https://cdns-images.dzcdn.net/images/cover/0cc1c0ada6f9aab8128e7d8a7d61aec2/350x350.jpg" alt="album">
                         </li>
                         <li class="album-item">
-                            <img src="https://pds.joins.com/news/component/htmlphoto_mmdata/202104/28/0d93679b-c55e-4f13-8598-05e202cb314d.jpg"
-                                alt="album">
+                            <img src="https://cdns-images.dzcdn.net/images/cover/0cc1c0ada6f9aab8128e7d8a7d61aec2/350x350.jpg" alt="album">
                         </li>
                         <li class="album-item">
-                            <img src="https://pds.joins.com/news/component/htmlphoto_mmdata/202104/28/0d93679b-c55e-4f13-8598-05e202cb314d.jpg"
-                                alt="album">
+                            <img src="https://cdns-images.dzcdn.net/images/cover/0cc1c0ada6f9aab8128e7d8a7d61aec2/350x350.jpg" alt="album">
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <section id="artist" class="common-area"></section>
+            <section id="artist" class="common-area artist-area">
+                <div class="slide-nav">
+                    <a class="slide-before" href="" onclick="return false;">&lt;</a>
+                    <ul class="slide-nav-list">
+                        <li class="slide-nav-item"><a href="javascript:;">아티스트1</a></li>                        
+                        <li class="slide-nav-item"><a href="javascript:;">아티스트1</a></li>
+                        <li class="slide-nav-item"><a href="javascript:;">아티스트1</a></li>
+                    </ul>
+                    <a class="slide-after" href="" onclick="return false;">&gt;</a>
+                </div>
+            </section>
 
             <section id="news" class="common-area"></section>
 
@@ -118,8 +124,9 @@
 
         </footer>
     </div>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./assets/js/wow.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   <script src="./assets/js/wow.js"></script>
+    <script src="./assets/js/cookie.js"></script>
 <!--    <script>-->
 <!--        $(document).ready(function() {-->
 <!--            $(window).scroll(function(e) {-->

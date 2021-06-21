@@ -1,0 +1,82 @@
+.entertainment-area {  
+  .entertainment-wrap {
+    position: relative;
+    .more-view {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .flex-item {
+      width: 50%;
+    }
+  }
+  .enter-issue {
+    grid-template-rows: 50%;
+    &:nth-child(1) {
+
+    }
+  }
+}
+
+//album
+.album-area {
+  .album-box {
+    width: 100%;
+    .album-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .album-item {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        transform-origin: center center center;
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+        }
+        &:hover, &:focus {
+          animation: spinning 2s infinite;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+}
+
+//artist
+.artist-area {
+  position: relative;
+  .slide-nav {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 5;
+    .slide-before {}
+    .slide-after {}
+    .slide-nav-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;      
+      margin: 16px 0;      
+      .slide-nav-item {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(45deg);
+        a {
+          display: block;
+        }        
+      }
+    }
+  }
+}
+
+.news {
+
+}
+
+.audition {
+
+}

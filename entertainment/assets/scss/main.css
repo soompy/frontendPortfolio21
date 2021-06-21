@@ -1,0 +1,96 @@
+.entertainment-area .entertainment-wrap {
+  position: relative;
+}
+
+.entertainment-area .entertainment-wrap .more-view {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.entertainment-area .entertainment-wrap .flex-item {
+  width: 50%;
+}
+
+.entertainment-area .enter-issue {
+  -ms-grid-rows: 50%;
+      grid-template-rows: 50%;
+}
+
+.album-area .album-box {
+  width: 100%;
+}
+
+.album-area .album-box .album-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.album-area .album-box .album-list .album-item {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-transform-origin: center center center;
+          transform-origin: center center center;
+}
+
+.album-area .album-box .album-list .album-item img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.album-area .album-box .album-list .album-item:hover, .album-area .album-box .album-list .album-item:focus {
+  -webkit-animation: spinning 2s infinite;
+          animation: spinning 2s infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.artist-area {
+  position: relative;
+}
+
+.artist-area .slide-nav {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 5;
+}
+
+.artist-area .slide-nav .slide-nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 16px 0;
+}
+
+.artist-area .slide-nav .slide-nav-list .slide-nav-item {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.artist-area .slide-nav .slide-nav-list .slide-nav-item a {
+  display: block;
+}
+/*# sourceMappingURL=main.css.map */

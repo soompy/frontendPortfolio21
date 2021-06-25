@@ -104,7 +104,7 @@
                 </div>
             </section>
 
-            <section id="artist" class="common-area artist-area">                
+            <section id="artist" class="common-area artist-area">
                 <div class="left-artist">
                     <div class="artist-slider-box">
                         <ul class="artist-slider">
@@ -123,7 +123,7 @@
                             <li class="slide-nav-item"><a href="javascript:;">Artist1</a></li>
                         </ul>
                         <a class="slide-after" href="" onclick="return false;"><i class="material-icons large">arrow_downward</i></a>
-                    </div>                    
+                    </div>
                 </div>
                 <div class="right-artist">
                     <div class="artist-slider-box">
@@ -140,9 +140,39 @@
                 <!-- https://www.doosandigitalinnovation.com/ -->
             </section>
 
-            <section id="audition" class="common-area">
-                <div class="day-picker"></div>
-                <!-- https://glife.ggcf.kr/#none -->
+            <section id="audition" class="common-area audition-area">
+                <div class="monthly-calendar">
+                    <div class="select-month">
+                        <div class="dp-f align-items-center mr-08"><i class="material-icons large">arrow_back</i></div>
+                        <p class="month-box">2021년 4월</p>
+                        <div class="dp-f align-items-center ml-08"><i class="material-icons large">arrow_forward</i></div>
+                    </div>
+
+                    <div class="monthly-calendar-box">
+                        <div class="head">
+                            <div class="day-box fs-14"><div class="holiday">일</div></div>
+                            <div class="day-box fs-14">월</div>
+                            <div class="day-box fs-14">화</div>
+                            <div class="day-box fs-14">수</div>
+                            <div class="day-box fs-14">목</div>
+                            <div class="day-box fs-14">금</div>
+                            <div class="day-box fs-14"><div class="holiday">토</div></div>
+                        </div>
+                        <div class="row" v-for="list in 5">
+                            <div class="day-box fs-14">
+                                <!-- [DEV] 추가 클래스 종류 global / seoul / asia -->
+                                <!-- [DEV] 휴일클래스 holiday -->
+                                <span class="day today">20</span>
+                            </div>
+                            <div class="day-box fs-14"><span class="day today">20</span></div>
+                            <div class="day-box fs-14"><span class="day today">20</span></div>
+                            <div class="day-box fs-14"><span class="day today">20</span></div>
+                            <div class="day-box fs-14"><span class="day today">20</span></div>
+                            <div class="day-box fs-14"><span class="day today">20</span></div>
+                            <div class="day-box fs-14"><span class="day today">20</span></div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 

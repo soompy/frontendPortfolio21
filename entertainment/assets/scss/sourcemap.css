@@ -607,6 +607,7 @@ a:hover, a:active {
   width: 100%;
   height: 80px;
   padding: 0 50px;
+  z-index: 200;
 }
 
 .nav {
@@ -951,5 +952,123 @@ main {
 .artist-area .right-artist .artist-slider {
   width: 500px;
   height: 650px;
+}
+
+.audition-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.audition-area .monthly-calendar {
+  padding: 0 6px;
+}
+
+.audition-area .monthly-calendar .select-month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 54px;
+}
+
+.audition-area .monthly-calendar .select-month .month-box {
+  font-weight: bold;
+  color: #263238;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row, .audition-area .monthly-calendar .monthly-calendar-box .head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
+  color: #263238;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 44px;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  font-size: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.finish-work, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.finish-work {
+  background: #424242;
+  color: #ffffff;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.finish-work:after, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.finish-work:after {
+  background: #424242;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.fixed-work, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.fixed-work {
+  background: #ffd600;
+  color: #ffffff;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.fixed-work:after, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.fixed-work:after {
+  background: #ffd600;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.today, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.today {
+  border: 1px solid #ffd600;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day:after, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day:after {
+  display: block;
+  clear: both;
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -12px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .holiday, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .holiday {
+  color: #bf360c !important;
+}
+
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box {
+  margin-bottom: 4px;
 }
 /*# sourceMappingURL=sourcemap.css.map */

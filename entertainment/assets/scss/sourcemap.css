@@ -792,6 +792,7 @@ main {
 /* Page */
 .entertainment-area .entertainment-wrap {
   position: relative;
+  height: 500px;
 }
 
 .entertainment-area .entertainment-wrap .more-view {
@@ -857,6 +858,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  height: 78vh;
 }
 
 .artist-area .artist-slider-box {
@@ -890,7 +892,14 @@ main {
   height: 100%;
 }
 
-.artist-area .slide-nav .slide-nav-list {
+.artist-area .slide-nav .inner-slide-nav {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.artist-area .slide-nav .inner-slide-nav .slide-nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -904,29 +913,38 @@ main {
   margin: 16px 0;
 }
 
-.artist-area .slide-nav .slide-nav-list .slide-nav-item {
+.artist-area .slide-nav .inner-slide-nav .slide-nav-list .slide-nav-item {
+  height: 16%;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
   text-orientation: mixed;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  height: 30%;
+  text-align: center;
 }
 
-.artist-area .slide-nav .slide-nav-list .slide-nav-item a {
+.artist-area .slide-nav .inner-slide-nav .slide-nav-list .slide-nav-item a {
   display: block;
+  font-size: 16px;
+  padding: 12px;
+}
+
+.artist-area .slide-before, .artist-area .slide-after {
+  padding: 12px;
 }
 
 .artist-area .left-artist {
   position: relative;
   width: 50%;
+  height: 100%;
   background: lightgrey;
 }
 
 .artist-area .right-artist {
   position: relative;
   width: 50%;
+  height: 100%;
   background: lightskyblue;
 }
 

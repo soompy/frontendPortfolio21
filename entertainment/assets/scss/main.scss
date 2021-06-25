@@ -1,6 +1,7 @@
 .entertainment-area {  
   .entertainment-wrap {
     position: relative;
+    height: 500px;
     .more-view {
       position: absolute;
       right: 0;
@@ -76,22 +77,31 @@
   }
   .slide-nav {     
     height: 100%;     
-    .slide-nav-list {
-      display: flex;
-      flex-direction: column;
-      align-items: center;      
-      margin: 16px 0;      
-      .slide-nav-item {
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        transform: rotate(180deg);
-        height: 30%;
-        a {
-          display: block;
-        }        
+    .inner-slide-nav {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      .slide-nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;      
+        margin: 16px 0;      
+        .slide-nav-item {
+          height: 16%;
+          writing-mode: vertical-rl;
+          text-orientation: mixed;
+          transform: rotate(180deg);          
+          text-align: center;
+          a {
+            display: block;
+            font-size: 16px;
+            padding: 12px;
+          }        
+        }
       }
-    }
+    }    
   }
+  .slide-before, .slide-after {padding: 12px;}
   .left-artist {    
     position: relative;
     width: 50%;

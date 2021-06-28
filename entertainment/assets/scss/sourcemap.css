@@ -961,6 +961,7 @@ main {
 }
 
 .audition-area .monthly-calendar {
+  width: 100%;
   padding: 0 6px;
 }
 
@@ -1028,25 +1029,25 @@ main {
   border-radius: 50%;
 }
 
-.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.finish-work, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.finish-work {
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.global, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.global {
   background: #424242;
   color: #ffffff;
 }
 
-.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.finish-work:after, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.finish-work:after {
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.global:after, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.global:after {
   background: #424242;
 }
 
-.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.fixed-work, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.fixed-work {
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.seoul, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.seoul {
   background: #ffd600;
   color: #ffffff;
 }
 
-.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.fixed-work:after, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.fixed-work:after {
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.seoul:after, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.seoul:after {
   background: #ffd600;
 }
 
-.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.today, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.today {
+.audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.asia, .audition-area .monthly-calendar .monthly-calendar-box .head .day-box .day.asia {
   border: 1px solid #ffd600;
 }
 

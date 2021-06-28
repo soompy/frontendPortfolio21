@@ -126,8 +126,8 @@
 
 // audition
 .audition-area {
-  display: flex;
   .monthly-calendar {
+    width: 100%;
     padding: 0 6px;
     .select-month {
       display: flex;
@@ -204,5 +204,8 @@
         }
       }
     }
+  }
+  .schedule-information {
+
   }
 }

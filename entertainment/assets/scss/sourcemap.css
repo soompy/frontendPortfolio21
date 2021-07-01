@@ -954,12 +954,6 @@ main {
   height: 650px;
 }
 
-.audition-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .audition-area .monthly-calendar {
   width: 100%;
   padding: 0 6px;
@@ -1071,5 +1065,68 @@ main {
 
 .audition-area .monthly-calendar .monthly-calendar-box .row .day-box {
   margin-bottom: 4px;
+}
+
+.audition-area .schedule-information .audition-schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.audition-area .schedule-information .audition-schedule li {
+  border-radius: 8px;
+}
+
+.audition-area .schedule-information .audition-schedule li .card, .audition-area .schedule-information .audition-schedule li .wrap {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  border-radius: 8px;
+  -webkit-perspective: 350px;
+          perspective: 350px;
+}
+
+.audition-area .schedule-information .audition-schedule li .wrap {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.audition-area .schedule-information .audition-schedule li .card:hover .wrap {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.audition-area .schedule-information .audition-schedule li .back, .audition-area .schedule-information .audition-schedule li .front {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.audition-area .schedule-information .audition-schedule li .front {
+  z-index: 1;
+  background: #ccc;
+}
+
+.audition-area .schedule-information .audition-schedule li .back {
+  -webkit-transform: rotateX(180deg) translate(-50%, -50%);
+          transform: rotateX(180deg) translate(-50%, -50%);
+  background: #888;
 }
 /*# sourceMappingURL=sourcemap.css.map */

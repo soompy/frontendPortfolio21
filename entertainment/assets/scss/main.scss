@@ -206,6 +206,50 @@
     }
   }
   .schedule-information {
-
+    .audition-schedule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li {
+        border-radius: 8px;
+        .card, .wrap {
+          position: relative;
+          width: 300px;
+          height: 150px;
+          border-radius: 8px;
+          perspective: 350px;
+        }
+        .wrap {
+          transition: 1.5s;
+          transform-style: preserve-3d;
+        }
+        .card {
+          &:hover {
+            .wrap {
+              transform: rotateX(180deg);
+            }
+          }
+        }
+        .back, .front {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          transform-origin: 50% 0;
+          text-align: center;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          -webkit-backface-visibility: hidden; //브라우저 호환성
+          backface-visibility: hidden;
+        }
+        .front {
+          z-index: 1;
+          background:#ccc;
+        }
+        .back {
+          transform: rotateX(180deg) translate(-50%,-50%);
+          background: #888;
+        }
+      }
+    }
   }
 }

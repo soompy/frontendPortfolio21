@@ -11,8 +11,10 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/scss/sourcemap.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
-<body>
+<body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
     <div id="app">
 <!--    컨셉 스크롤 원페이지
         http://www.npley.com/
@@ -104,7 +106,7 @@
                 </div>
             </section>
 
-            <section id="artist" class="common-area artist-area">
+            <section id="artist" class="common-area artist-area aos-init aos-animate" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor=".section--hero">
                 <div class="left-artist">
                     <div class="artist-slider-box">
                         <ul class="artist-slider">
@@ -175,7 +177,36 @@
                     </div>
                 </div>
                 <div class="schedule-information">
-
+                    <ul class="audition-schedule">
+                        <li>
+                            <div class="card">
+                                <div class="wrap">
+                                    <div class="front">
+                                        <p>2021.06.30</p>
+                                        <span>Seoul Audition</span>
+                                    </div>
+                                    <div class="back">
+                                        <p>서울에서 진행되는 1st 스페셜</p>
+                                        <button>자세히 보기</button>
+                                    </div>                        
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="card">
+                                <div class="wrap">
+                                    <div class="front">
+                                        <p>2021.06.30</p>
+                                        <span>Seoul Audition</span>
+                                    </div>
+                                    <div class="back">
+                                        <p>서울에서 진행되는 1st 스페셜</p>
+                                        <button>자세히 보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
         </main>
@@ -184,9 +215,22 @@
 
         </footer>
     </div>
-   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-   <script src="./assets/js/wow.js"></script>
-    <script src="./assets/js/cookie.js"></script>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>       
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // https://github.com/michalsnik/aos
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+        hljs.initHighlightingOnLoad();
+
+        $('.hero__scroll').on('click', function (e) {
+            $('html, body').animate({
+                scrollTop: $(window).height()
+            }, 1200);
+        });
+    </script>
 <!--    <script>-->
 <!--        $(document).ready(function() {-->
 <!--            $(window).scroll(function(e) {-->

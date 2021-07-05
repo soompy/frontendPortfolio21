@@ -24,21 +24,20 @@
   .album-box {
     width: 100%;
     .album-list {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flexCenter;
       .album-item {
         width: 150px;
         height: 150px;
-        border-radius: 50%;
+        @include rounded();
         transform-origin: center center center;
         img {
           width: 150px;
           height: 150px;
-          border-radius: 50%;
+          @include rounded();          
+          @include transition(0.4s);
         }
         &:hover, &:focus {
-          animation: spinning 2s infinite;
+          animation: spinning 3s;
           animation-fill-mode: forwards;
         }
       }
@@ -48,9 +47,7 @@
 
 //artist
 .artist-area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flexCenter;
   position: relative;
   height: 78vh;
   .artist-slider-box {
@@ -130,9 +127,7 @@
     width: 100%;
     padding: 0 6px;
     .select-month {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flexCenter;
       height: 54px;
       .month-box {
         font-weight: bold;
@@ -149,20 +144,16 @@
         font-weight: 500;
         color: #263238 ;
         .day-box {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          @include flexCenter;
           flex: 1;
           height: 44px;
           .day {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flexCenter;
             position: relative;
             font-size: 14px;
             width: 34px;
             height: 34px;
-            border-radius: 50%;
+            @include rounded();
             &.global {
               background: #424242;
               color: #ffffff;
@@ -189,7 +180,7 @@
               bottom: -12px;
               width: 6px;
               height: 6px;
-              border-radius: 50%;
+              @include rounded();
               transform: translateX(-50%);
             }
           }
@@ -207,20 +198,18 @@
   }
   .schedule-information {
     .audition-schedule {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include flexCenter;
       li {
-        border-radius: 8px;
+        @include rounded(8px);
         .card, .wrap {
           position: relative;
           width: 300px;
           height: 150px;
-          border-radius: 8px;
+          @include rounded(8px);
           perspective: 350px;
         }
         .wrap {
-          transition: 1.5s;
+          @include transition(1.5s);
           transform-style: preserve-3d;
         }
         .card {
@@ -235,6 +224,8 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%,-50%);
+          width: 100%;
+          height: 100%;
           transform-origin: 50% 0;
           text-align: center;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -246,8 +237,24 @@
           background:#ccc;
         }
         .back {
+          @include flexCenter;
+          flex-direction: column;
           transform: rotateX(180deg) translate(-50%,-50%);
           background: #888;
+          color: #ffffff;
+          .audition-type {
+            @include rounded(8px);
+            border: 1px solid #ffffff;
+            font-size: 14px;
+            padding: 4px 6px;
+          }
+          .audition-name {
+            font-size: 16px;
+            padding: 8px 0;
+          }
+          .audition-place, audition-day {
+            font-size: 14px;
+          }
         }
       }
     }

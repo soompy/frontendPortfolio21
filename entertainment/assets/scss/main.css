@@ -46,11 +46,13 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .album-area .album-box .album-list .album-item:hover, .album-area .album-box .album-list .album-item:focus {
-  -webkit-animation: spinning 2s infinite;
-          animation: spinning 2s infinite;
+  -webkit-animation: spinning 3s;
+          animation: spinning 3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -317,6 +319,8 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   -webkit-transform-origin: 50% 0;
           transform-origin: 50% 0;
   text-align: center;
@@ -332,8 +336,38 @@
 }
 
 .audition-area .schedule-information .audition-schedule li .back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transform: rotateX(180deg) translate(-50%, -50%);
           transform: rotateX(180deg) translate(-50%, -50%);
   background: #888;
+  color: #ffffff;
+}
+
+.audition-area .schedule-information .audition-schedule li .back .audition-type {
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  font-size: 14px;
+  padding: 4px 6px;
+}
+
+.audition-area .schedule-information .audition-schedule li .back .audition-name {
+  font-size: 16px;
+  padding: 8px 0;
+}
+
+.audition-area .schedule-information .audition-schedule li .back .audition-place, .audition-area .schedule-information .audition-schedule li .back audition-day {
+  font-size: 14px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,24 @@
+.apply-form .title h2 {
+  font-size: 16px;
+}
+
+.apply-form .title span {
+  color: #d32f2f;
+}
+
+.upload-file + label {
+  background: #f44336;
+  padding: 10px 30px;
+  border: 2px solid #f44336;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.upload-file + label:hover {
+  background-color: #fff;
+  color: #f44336;
+}
+/*# sourceMappingURL=subpage.css.map */

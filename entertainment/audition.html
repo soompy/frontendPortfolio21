@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114.png" type="image/png">-->
+    <title>엔터테인먼트 오디션지원</title>
+    <meta name="description" content="엔터테인먼트 오디션">
+    <meta name="keywords" content="이수민">
+    <meta name="author" content="2021 portfolio">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/scss/sourcemap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/uploadFile.js"></script>
+</head>
+<body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
+    <div id="app">
+<!--    컨셉 스크롤 원페이지
+        http://www.npley.com/
+        https://m.smtown.com/
+        https://diapick.cjenm.com/diashoplive/home
+/  -->
+        <header id="header">
+            <h1><a href=""></a></h1>
+            <nav class="nav">
+                <ul class="gnb">
+                    <li class="menu"><a href="">Entertainment</a></li>
+                    <li class="menu"><a href="">Album</a></li>
+                    <li class="menu"><a href="">Artise</a></li>
+                    <li class="menu"><a href="">News</a></li>
+                    <li class="menu"><a href="">Audition</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="visual">
+            <ul class="visual-list">
+                <li class="visual-item">
+                    <div class="blurred-image-container">
+                        <div class="img"></div>
+                        <div class="img blurred"></div>
+                    </div>
+                    <div class="inner">
+                        <h2>타이틀</h2>
+                        <a href="">Click to enter the special world</a>
+                    </div>
+                </li>
+                <li class="visual-item">
+                    <div class="blurred-image-container">
+                        <div class="img"></div>
+                        <div class="img blurred"></div>
+                    </div>
+                    <div class="inner">
+                        <h2>타이틀</h2>
+                        <a href="">Click to enter the special world</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="paging">
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </section>
+
+        <main>
+            <!-- https://codepen.io/syedrafeeq/pen/yEJKn -->
+            <section id="entertainment" class="common-area entertainment-area">
+                <div class="inner flex-box entertainment-wrap">                    
+                    <div class="grid-box flex-item enter-issue">
+                        <div>3</div>
+                        <div>3</div>
+                        <div>3</div>
+                        <div>3</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="common-area">
+                <div class="inner">
+                    <form action="#" class="apply-form">
+                        <div class="title">
+                            <h2>지원하기</h2>
+                        </div>
+
+                        <div>
+                            <label for="name">성명</label>
+                            <input type="text" name="name" id="name" placeholder="성명" />
+                        </div>                    
+
+                        <div>
+                            <label for="apply-birthday">생년월일</label>
+                            <input type="text" name="apply-birthday" onKeyup="inputYMDNumber(this);" value="" placeholder="생년-월-일" style="text-align:center;" />
+                        </div>
+
+                        <!-- <div class="image-container">
+                            <label for="select-choice">사진등록</label>
+                            <div class="upload-photo-wrap">
+                                <ul class="upload-photo-list">
+                                    <li class="photo-list">
+                                        <div class="load-photo">
+                                            <button class="upload-btn" id="preview-image">
+                                                <input type="file" id="input-image">
+                                            </button>
+                                            <button class="delete-photo"><i class="ic_close_filled wh-28 grey-2"></i></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>   -->
+                               
+                        <div>
+                            <label for="">파일업로드</label>
+                            <input type="file" class="upload-file" onchange="readURL(this);" />
+                            <img id="blah" src="http://placehold.it/180" alt="your image" />
+                        </div>
+                        
+                        
+                        
+                        
+                        
+
+
+                        <fieldset class="radio-inline">
+                            <legend>지원유형 선택</legend>
+
+                            <input type="radio" name="radio-choice" id="radio-choice-1" value="choice-1" />
+                            <label for="radio-choice-1">
+                                <span></span>가수</label>
+
+                            <input type="radio" name="radio-choice" id="radio-choice-2" value="choice-2" />
+                            <label for="radio-choice-2">
+                                <span></span>배우</label>
+
+                            <input type="radio" name="radio-choice" id="radio-choice-3" value="choice-3" />
+                            <label for="radio-choice-3">
+                                <span></span>모델</label>
+
+                            <input type="radio" name="radio-choice" id="radio-choice-4" value="choice-4" />
+                            <label for="radio-choice-4">
+                                <span></span>인플루언서</label>
+                        </fieldset>
+
+                        <div>
+                            <label for="select-choice">생년월일</label>
+                            <div class="select">
+                                <select name="select-choice" id="select-choice">
+                                    <option value="Choice 1">2000</option>
+                                    <option value="Choice 2">1999</option>
+                                    <option value="Choice 3">1998</option>
+                                </select>
+                                <select name="select-choice" id="select-choice">
+                                    <option value="Choice 1">1</option>
+                                    <option value="Choice 2">2</option>
+                                    <option value="Choice 3">3</option>
+                                </select>
+                                <select name="select-choice" id="select-choice">
+                                    <option value="Choice 1">1</option>
+                                    <option value="Choice 2">2</option>
+                                    <option value="Choice 3">3</option>
+                                    <option value="Choice 3">4</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+
+        </footer>
+    </div>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!--    <script>-->
+<!--        $(document).ready(function() {-->
+<!--            $(window).scroll(function(e) {-->
+<!--                var s = $(window).scrollTop(),-->
+<!--                    opacityVal = (s / 200);-->
+
+<!--                $('.blurred').css('opacity', opacityVal);-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
+</body>
+</html>
+
+<!--
+swiper 사용 https://swiperjs.com/get-started
+
+카카오 중간배너
+https://www.kakaocorp.com/#
+
+더현대 서울
+https://www.thehyundaiseoul.com/
+
+스크롤 효과따라하기
+https://codepen.io/ezkorry/pen/oNzRdJX -->
+<!--https://jsfiddle.net/BinaryMoon/8jhw2/-->

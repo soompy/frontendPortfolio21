@@ -131,12 +131,10 @@ a:hover, a:active { outline: 0; color: #666666; }
 
 //animation keyframe
 @keyframes spinning {
-	0%{
-		transform: rotate3d(0);
-		transform: scale(0.7);
-	}
-	100% {
-		transform: rotate3d(0, 1, 0.5, 3.142rad);
-		transform: scale(1);
-	}
+	from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }

@@ -85,12 +85,12 @@
                             <h2>지원하기</h2>
                         </div>
 
-                        <div>
+                        <div class="input-box">
                             <label for="name">성명</label>
                             <input type="text" name="name" id="name" placeholder="성명" />
                         </div>                    
 
-                        <div>
+                        <div class="input-box">
                             <label for="apply-birthday">생년월일</label>
                             <input type="text" name="apply-birthday" onKeyup="inputYMDNumber(this);" value="" placeholder="생년-월-일" style="text-align:center;" />
                         </div>
@@ -111,8 +111,8 @@
                             </div>
                         </div>   -->
                                
-                        <div>
-                            <label for="">파일업로드</label>
+                        <div class="uploadFile-wrap">
+                            <label for=""> <i class="material-icons large">file_upload</i> 파일업로드</label>
                             <input type="file" class="upload-file" onchange="readURL(this);" />
                             <img id="blah" src="http://placehold.it/180" alt="your image" />
                         </div>
@@ -143,9 +143,9 @@
                                 <span></span>인플루언서</label>
                         </fieldset>
 
-                        <div>
+                        <div class="select-box-wrap">
                             <label for="select-choice">생년월일</label>
-                            <div class="select">
+                            <div class="select-box">
                                 <select name="select-choice" id="select-choice">
                                     <option value="Choice 1">2000</option>
                                     <option value="Choice 2">1999</option>

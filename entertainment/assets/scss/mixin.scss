@@ -22,3 +22,11 @@
         #{$prefix}transition: $time;
     }
 }
+
+@mixin inputBox {
+    border: 1px solid #eb819d;
+    padding: 4px 6px;  
+    height: 32px;      
+    border-radius: 4px;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}

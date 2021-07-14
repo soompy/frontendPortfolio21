@@ -14,7 +14,6 @@
   .enter-issue {
     grid-template-rows: 50%;
     &:nth-child(1) {
-
     }
   }
 }
@@ -33,10 +32,11 @@
         img {
           width: 150px;
           height: 150px;
-          @include rounded();          
+          @include rounded();
           @include transition(0.4s);
         }
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           animation: spinning 3s;
           animation-fill-mode: forwards;
         }
@@ -98,7 +98,10 @@
       }
     }
   }
-  .slide-before, .slide-after {padding: 12px;}
+  .slide-before,
+  .slide-after {
+    padding: 12px;
+  }
   .left-artist {
     position: relative;
     width: 50%;
@@ -118,7 +121,6 @@
 }
 
 .news {
-
 }
 
 // audition
@@ -131,22 +133,23 @@
       height: 54px;
       .month-box {
         font-weight: bold;
-        color: #263238 ;
+        color: #263238;
         font-size: 16px;
         line-height: 24px;
       }
     }
 
     .monthly-calendar-box {
-      .row, .head {
+      .swiper-slide {
+        flex-direction: column;
+        padding-bottom: 20px;
+      }
+      .row {
         display: flex;
         align-items: center;
         font-weight: 500;
-        color: #263238 ;
+        color: #263238;
         .day-box {
-          @include flexCenter;
-          flex: 1;
-          height: 44px;
           .day {
             @include flexCenter;
             position: relative;
@@ -154,15 +157,20 @@
             width: 34px;
             height: 34px;
             @include rounded();
+            &.today {
+              font-size: 20px;
+              font-weight: bold;
+            }
             &.global {
               background: #424242;
-              color: #ffffff;
+              color: #ffd600;
               &:after {
                 background: #424242;
               }
             }
             &.seoul {
               background: #ffd600;
+              color: #424242;
               color: #ffffff;
               &:after {
                 background: #ffd600;
@@ -174,20 +182,26 @@
             &:after {
               display: block;
               clear: both;
-              content: '';
+              content: "";
               position: absolute;
               left: 50%;
-              bottom: -12px;
+              top: 0;
               width: 6px;
               height: 6px;
               @include rounded();
               transform: translateX(-50%);
             }
           }
-          .holiday {
+          &.holiday {
             color: #bf360c !important;
           }
         }
+      }
+      .day-box {
+        @include flexCenter;
+        flex: 1;
+        font-size: 14px;
+        height: 44px;
       }
       .row {
         .day-box {
@@ -201,7 +215,8 @@
       @include flexCenter;
       li {
         @include rounded(8px);
-        .card, .wrap {
+        .card,
+        .wrap {
           position: relative;
           width: 300px;
           height: 150px;
@@ -219,27 +234,29 @@
             }
           }
         }
-        .back, .front {
+        .back,
+        .front {
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate(-50%,-50%);
+          transform: translate(-50%, -50%);
           width: 100%;
           height: 100%;
           transform-origin: 50% 0;
           text-align: center;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
           -webkit-backface-visibility: hidden; //브라우저 호환성
           backface-visibility: hidden;
         }
         .front {
           z-index: 1;
-          background:#ccc;
+          background: #ccc;
         }
         .back {
           @include flexCenter;
           flex-direction: column;
-          transform: rotateX(180deg) translate(-50%,-50%);
+          transform: rotateX(180deg) translate(-50%, -50%);
           background: #888;
           color: #ffffff;
           .audition-type {
@@ -252,7 +269,8 @@
             font-size: 16px;
             padding: 8px 0;
           }
-          .audition-place, audition-day {
+          .audition-place,
+          audition-day {
             font-size: 14px;
           }
         }

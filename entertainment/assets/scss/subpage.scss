@@ -1,4 +1,8 @@
 // audition
+.apply-inner {
+    width: 1200px;
+    margin: auto;
+}
 .apply-form {
     .title {
         h2 {
@@ -8,6 +12,8 @@
             color: #eb819d ;
         }
     }
+    input {width: 100%;}
+    .input-box {margin-bottom: 16px;}
 }
 
 .uploadFile-wrap {

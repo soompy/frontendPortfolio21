@@ -1,9 +1,22 @@
+.apply-inner {
+  width: 1200px;
+  margin: auto;
+}
+
 .apply-form .title h2 {
   font-size: 16px;
 }
 
 .apply-form .title span {
   color: #eb819d;
+}
+
+.apply-form input {
+  width: 100%;
+}
+
+.apply-form .input-box {
+  margin-bottom: 16px;
 }
 
 .uploadFile-wrap {

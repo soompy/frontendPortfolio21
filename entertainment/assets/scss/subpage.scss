@@ -9,7 +9,7 @@
             font-size: 16px;
         }
         span {
-            color: #eb819d ;
+            color: #2792e2 ;
         }
     }
     input {width: 100%;}
@@ -22,22 +22,22 @@
         position: absolute;
         left: 0;
         top: 0;
-        opacity: 0;        
+        opacity: 0;
     }
-    label { 
+    label {
         display: flex;
-        align-items: center;                   
+        align-items: center;
         position: absolute;
         left: 0;
-        top: 0;        
-        background: #eb819d;
+        top: 0;
+        background: #2792e2;
         padding: 4px 6px;
-        border: 2px solid #eb819d;
+        border: 2px solid #2792e2;
         border-radius: 3px;
         color: #fff;
         cursor: pointer;
-        transition: all 0.2s;     
-        i {margin-right: 4px;}   
+        transition: all 0.2s;
+        i {margin-right: 4px;}
         &:after {
             display: block;
             clear: both;
@@ -47,9 +47,9 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: #eb819d;
+            background: #2792e2;
             padding: 8px 16px;
-            border: 2px solid #eb819d;
+            border: 2px solid #2792e2;
             border-radius: 3px;
             color: #fff;
             cursor: pointer;
@@ -59,8 +59,8 @@
         &:hover {
             &:after {
                 background-color: #fff;
-                color: #eb819d;
-            }            
+                color: #2792e2;
+            }
         }
     }
 }

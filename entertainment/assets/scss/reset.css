@@ -220,7 +220,7 @@ select::-ms-expand {
 }
 
 select option:checked, select option:hover {
-  background: #eb819d;
+  background: #2792e2;
   color: #fff;
 }
 

@@ -203,18 +203,3 @@ main {
     object-fit: cover;
   }
 }
-.left-artist-slider {
-  .swiper-slide {
-    width: 50%;
-    height: 50%;
-  }
-}
-.left-artist-slider, .right-artist-slider {
-  .swiper-slide {
-    img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-}

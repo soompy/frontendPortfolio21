@@ -241,21 +241,4 @@ main {
   -o-object-fit: cover;
      object-fit: cover;
 }
-
-.left-artist-slider .swiper-slide {
-  width: 50%;
-  height: 50%;
-}
-
-.left-artist-slider .swiper-slide img, .right-artist-slider .swiper-slide img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
 /*# sourceMappingURL=layouts.css.map */

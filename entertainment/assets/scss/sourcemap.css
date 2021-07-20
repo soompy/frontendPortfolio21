@@ -993,18 +993,6 @@ main {
      object-fit: cover;
 }
 
-.left-artist-slider .swiper-slide img, .right-artist-slider .swiper-slide img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 /* Page */
 .entertainment-area .entertainment-wrap {
   position: relative;
@@ -1081,7 +1069,7 @@ main {
           justify-content: center;
   position: relative;
   width: 100%;
-  height: 78vh;
+  height: 800px;
 }
 
 .artist-area .slide-nav {
@@ -1133,28 +1121,66 @@ main {
 
 .artist-area .left-artist {
   position: relative;
-  width: 50%;
+  width: calc(50% - 24px);
   height: 100%;
   background: lightgrey;
-  padding: 150px;
 }
 
-.artist-area .left-artist img {
+.artist-area .left-artist .left-artist-slider {
+  width: 350px;
+  height: 350px;
+}
+
+.artist-area .left-artist .left-artist-slider img {
   width: 100%;
   height: 100%;
 }
 
 .artist-area .right-artist {
   position: relative;
-  width: 50%;
+  width: calc(50% - 24px);
   height: 100%;
   background: lightskyblue;
-  padding: 50px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
-.artist-area .right-artist img {
+.artist-area .right-artist .right-artist-slider {
+  width: 400px;
+  height: 600px;
+}
+
+.artist-area .right-artist .right-artist-slider img {
   width: 100%;
   height: 100%;
+}
+
+.left-artist,
+.right-artist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.left-artist .left-artist-slider .swiper-slide img,
+.left-artist .right-artist-slider .swiper-slide img,
+.right-artist .left-artist-slider .swiper-slide img,
+.right-artist .right-artist-slider .swiper-slide img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .audition-area .monthly-calendar {

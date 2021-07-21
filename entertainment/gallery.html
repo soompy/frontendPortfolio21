@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114.png" type="image/png">-->
+    <title>엔터테인먼트 오디션지원</title>
+    <meta name="description" content="엔터테인먼트 오디션">
+    <meta name="keywords" content="이수민">
+    <meta name="author" content="2021 portfolio">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./assets/scss/sourcemap.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>    
+</head>
+<body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
+    <div id="app">
+<!--    컨셉 스크롤 원페이지
+        http://www.npley.com/
+        https://m.smtown.com/
+        https://diapick.cjenm.com/diashoplive/home
+/  -->
+        <header id="header">
+            <h1><a href=""></a></h1>
+            <nav class="nav">
+                <ul class="gnb">
+                    <li class="menu"><a href="">Entertainment</a></li>
+                    <li class="menu"><a href="">Album</a></li>
+                    <li class="menu"><a href="">Artise</a></li>
+                    <li class="menu"><a href="">News</a></li>
+                    <li class="menu"><a href="">Audition</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="visual">
+            <ul class="visual-list">
+                <li class="visual-item">
+                    <div class="blurred-image-container">
+                        <div class="img"></div>
+                        <div class="img blurred"></div>
+                    </div>
+                    <div class="inner">
+                        <h2>타이틀</h2>
+                        <a href="">Click to enter the special world</a>
+                    </div>
+                </li>
+                <li class="visual-item">
+                    <div class="blurred-image-container">
+                        <div class="img"></div>
+                        <div class="img blurred"></div>
+                    </div>
+                    <div class="inner">
+                        <h2>타이틀</h2>
+                        <a href="">Click to enter the special world</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="paging">
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </section>
+
+        <main>
+            <!-- https://codepen.io/WixelHQ/pen/dGQyeb -->
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <div class="grid-item grid-item--width2 grid-item--height2">
+                </div>
+                <div class="grid-item grid-item--height2"></div>
+                <div class="grid-item grid-item--width3"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item grid-item--height2"></div>
+                <div class="grid-item grid-item--width2 grid-item--height3"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item grid-item--height2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                <div class="grid-item grid-item--width2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item grid-item--height2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item grid-item--height3"></div>
+                <div class="grid-item grid-item--height2"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item grid-item--height2"></div>
+            </div>
+            <div class="grid-alpha"></div>
+        </main>
+
+        <!-- <footer id="footer">
+            <h1 class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/JYP_Entertainment_Logo.svg/800px-JYP_Entertainment_Logo.svg.png" alt=""></h1>
+            <div class="infos">
+                <address>서울특별시 강동구 강동대로 205(서울특별시 강동구 성내동 448-13)</address>
+                <p>Tel: 02-2225-8100</p>
+            </div>
+        </footer> -->
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/gallery.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!--    <script>-->
+<!--        $(document).ready(function() {-->
+<!--            $(window).scroll(function(e) {-->
+<!--                var s = $(window).scrollTop(),-->
+<!--                    opacityVal = (s / 200);-->
+
+<!--                $('.blurred').css('opacity', opacityVal);-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
+        });
+    </script>
+</body>
+</html>
+
+<!--
+swiper 사용 https://swiperjs.com/get-started
+
+카카오 중간배너
+https://www.kakaocorp.com/#
+
+더현대 서울
+https://www.thehyundaiseoul.com/
+
+스크롤 효과따라하기
+https://codepen.io/ezkorry/pen/oNzRdJX -->
+<!--https://jsfiddle.net/BinaryMoon/8jhw2/-->

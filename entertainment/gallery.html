@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114.png" type="image/png">-->
-    <title>엔터테인먼트 오디션지원</title>
-    <meta name="description" content="엔터테인먼트 오디션">
+    <title>엔터테인먼트 화보</title>
+    <meta name="description" content="엔터테인먼트 화보">
     <meta name="keywords" content="이수민">
     <meta name="author" content="2021 portfolio">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./assets/scss/sourcemap.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>    
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 </head>
 <body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
     <div id="app">
@@ -63,34 +63,37 @@
         </section>
 
         <main>
-            <!-- https://codepen.io/WixelHQ/pen/dGQyeb -->
-            <div class="grid">
-                <div class="grid-sizer"></div>
-                <div class="grid-item grid-item--width2 grid-item--height2">
+            <div class="common-area">
+                <!-- https://codepen.io/WixelHQ/pen/dGQyeb -->
+                <div class="grid">
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                    <div class="grid-item grid-item--height2"></div>
+                    <div class="grid-item grid-item--width3"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item grid-item--height2"></div>
+                    <div class="grid-item grid-item--width2 grid-item--height3"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item grid-item--height2"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item grid-item--width2 grid-item--height2"></div>
+                    <div class="grid-item grid-item--width2"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item grid-item--height2"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item grid-item--height3"></div>
+                    <div class="grid-item grid-item--height2"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item"></div>
+                    <div class="grid-item grid-item--height2"></div>
                 </div>
-                <div class="grid-item grid-item--height2"></div>
-                <div class="grid-item grid-item--width3"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item grid-item--height2"></div>
-                <div class="grid-item grid-item--width2 grid-item--height3"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item grid-item--height2"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item grid-item--width2 grid-item--height2"></div>
-                <div class="grid-item grid-item--width2"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item grid-item--height2"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item grid-item--height3"></div>
-                <div class="grid-item grid-item--height2"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item"></div>
-                <div class="grid-item grid-item--height2"></div>
+                <div class="grid-alpha"></div>
+
+                <button id="moreGallery" class="more-gallery">더보기</button>
             </div>
-            <div class="grid-alpha"></div>
         </main>
 
         <!-- <footer id="footer">
@@ -104,7 +107,16 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./assets/js/gallery.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script>
+        tippy('#moreGallery', {
+            content: '더 많은 화보를 열어보세요!',
+        });
+    </script>
+
 <!--    <script>-->
 <!--        $(document).ready(function() {-->
 <!--            $(window).scroll(function(e) {-->

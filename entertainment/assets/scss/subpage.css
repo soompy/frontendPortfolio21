@@ -314,4 +314,12 @@
 .grid-item:nth-child(40) {
   background-image: url("https://unsplash.it/900/900?image=140");
 }
+
+.more-gallery {
+  background: #2792e2;
+  width: 200px;
+  height: 40px;
+  color: #ffffff;
+  border: none;
+}
 /*# sourceMappingURL=subpage.css.map */

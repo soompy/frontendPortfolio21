@@ -35,35 +35,35 @@ section {
 }
 
 .section--white {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .section--red {
-  background-color: #E74C3C;
+  background-color: #e74c3c;
 }
 
 .section--purple {
-  background-color: #D6A8E9;
+  background-color: #d6a8e9;
 }
 
 .section--blue {
-  background-color: #33CCF7;
+  background-color: #33ccf7;
 }
 
 .section--yellow {
-  background-color: #F4E9B4;
+  background-color: #f4e9b4;
 }
 
 .section--green {
-  background-color: #80D99D;
+  background-color: #80d99d;
 }
 
 .section--cyan {
-  background-color: #80D99D;
+  background-color: #80d99d;
 }
 
 .section--pale {
-  background-color: #F4E9B4;
+  background-color: #f4e9b4;
 }
 
 .col_third section {
@@ -71,23 +71,23 @@ section {
 }
 
 .icn_red {
-  color: #FF3D6A;
+  color: #ff3d6a;
 }
 
 .icn_purple {
-  color: #9B59B6;
+  color: #9b59b6;
 }
 
 .icn_blue {
-  color: #3498DB;
+  color: #3498db;
 }
 
 .icn_yellow {
-  color: #F1C40F;
+  color: #f1c40f;
 }
 
 .icn_green {
-  color: #80D99D;
+  color: #80d99d;
 }
 
 /*-=-=-=-=-=-=-=-=-=-*/
@@ -168,7 +168,8 @@ a {
   color: #666666;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   outline: 0;
   color: #666666;
 }
@@ -275,7 +276,7 @@ a:hover, a:active {
           transform: translate(-50%, -50%);
   height: 160px;
   overflow: hidden;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 35px;
   line-height: 40px;
   color: #ecf0f1;
@@ -289,12 +290,12 @@ a:hover, a:active {
 }
 
 .scrolling-text-wrap .scrolling-text .content__container:before {
-  content: '[';
+  content: "[";
   left: 0;
 }
 
 .scrolling-text-wrap .scrolling-text .content__container:after {
-  content: ']';
+  content: "]";
   position: absolute;
   right: 0;
 }
@@ -338,7 +339,8 @@ a:hover, a:active {
 }
 
 @-webkit-keyframes opacity {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
   }
   50% {
@@ -347,34 +349,42 @@ a:hover, a:active {
 }
 
 @-webkit-keyframes change {
-  0%, 12.66%, 100% {
+  0%,
+  12.66%,
+  100% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
-  16.66%, 29.32% {
+  16.66%,
+  29.32% {
     -webkit-transform: translate3d(0, -25%, 0);
             transform: translate3d(0, -25%, 0);
   }
-  33.32%, 45.98% {
+  33.32%,
+  45.98% {
     -webkit-transform: translate3d(0, -50%, 0);
             transform: translate3d(0, -50%, 0);
   }
-  49.98%, 62.64% {
+  49.98%,
+  62.64% {
     -webkit-transform: translate3d(0, -75%, 0);
             transform: translate3d(0, -75%, 0);
   }
-  66.64%, 79.3% {
+  66.64%,
+  79.3% {
     -webkit-transform: translate3d(0, -50%, 0);
             transform: translate3d(0, -50%, 0);
   }
-  83.3%, 95.96% {
+  83.3%,
+  95.96% {
     -webkit-transform: translate3d(0, -25%, 0);
             transform: translate3d(0, -25%, 0);
   }
 }
 
 @keyframes opacity {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0;
   }
   50% {
@@ -383,29 +393,68 @@ a:hover, a:active {
 }
 
 @keyframes change {
-  0%, 12.66%, 100% {
+  0%,
+  12.66%,
+  100% {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
-  16.66%, 29.32% {
+  16.66%,
+  29.32% {
     -webkit-transform: translate3d(0, -25%, 0);
             transform: translate3d(0, -25%, 0);
   }
-  33.32%, 45.98% {
+  33.32%,
+  45.98% {
     -webkit-transform: translate3d(0, -50%, 0);
             transform: translate3d(0, -50%, 0);
   }
-  49.98%, 62.64% {
+  49.98%,
+  62.64% {
     -webkit-transform: translate3d(0, -75%, 0);
             transform: translate3d(0, -75%, 0);
   }
-  66.64%, 79.3% {
+  66.64%,
+  79.3% {
     -webkit-transform: translate3d(0, -50%, 0);
             transform: translate3d(0, -50%, 0);
   }
-  83.3%, 95.96% {
+  83.3%,
+  95.96% {
     -webkit-transform: translate3d(0, -25%, 0);
             transform: translate3d(0, -25%, 0);
+  }
+}
+
+/* Google chrome */
+@-webkit-keyframes svg-text-anim {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #424238;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #424238;
+  }
+}
+
+/* Most browsers */
+@keyframes svg-text-anim {
+  40% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    fill: #424238;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #424238;
   }
 }
 /*# sourceMappingURL=animation.css.map */

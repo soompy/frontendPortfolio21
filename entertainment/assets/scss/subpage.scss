@@ -1,73 +1,85 @@
 // audition
 .apply-inner {
-    width: 1200px;
-    margin: auto;
+  width: 1200px;
+  margin: auto;
 }
 .apply-form {
-    .title {
-        h2 {
-            font-size: 16px;
-        }
-        span {
-            color: #2792e2 ;
-        }
+  .title {
+    h2 {
+      font-size: 16px;
     }
-    input {width: 100%;}
-    .input-box {margin-bottom: 16px;}
+    span {
+      color: #2792e2;
+    }
+  }
+  input {
+    width: 100%;
+  }
+  .input-box {
+    margin-bottom: 16px;
+  }
 }
 
 .uploadFile-wrap {
-    position: relative;
-    .upload-file {
-        position: absolute;
-        left: 0;
-        top: 0;
-        opacity: 0;
+  position: relative;
+  .upload-file {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #2792e2;
+    padding: 4px 6px;
+    border: 2px solid #2792e2;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+    i {
+      margin-right: 4px;
     }
-    label {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background: #2792e2;
-        padding: 4px 6px;
-        border: 2px solid #2792e2;
-        border-radius: 3px;
-        color: #fff;
-        cursor: pointer;
-        transition: all 0.2s;
-        i {margin-right: 4px;}
-        &:after {
-            display: block;
-            clear: both;
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: #2792e2;
-            padding: 8px 16px;
-            border: 2px solid #2792e2;
-            border-radius: 3px;
-            color: #fff;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: none;
-        }
-        &:hover {
-            &:after {
-                background-color: #fff;
-                color: #2792e2;
-            }
-        }
+    &:after {
+      display: block;
+      clear: both;
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #2792e2;
+      padding: 8px 16px;
+      border: 2px solid #2792e2;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: none;
     }
+    &:hover {
+      &:after {
+        background-color: #fff;
+        color: #2792e2;
+      }
+    }
+  }
+}
+
+.gallery-visual {
+  .swiper-slide {
+    height: 80vh !important;
+  }
 }
 
 // gallery
 .grid:after {
-  content: '';
+  content: "";
   display: block;
   clear: both;
 }
@@ -82,45 +94,45 @@
 .grid-item {
   height: 200px;
   float: left;
-  background-color: #F4F3F4;
+  background-color: #f4f3f4;
   border: 4px solid #000;
   -webkit-filter: grayscale(70%) blur(0.5px);
   -webkit-transform: translateZ(0);
-   transform: translateZ(0);
+  transform: translateZ(0);
   background-image: url(https://unsplash.it/900/900);
   background-size: cover;
   background-position: center center;
   transition: all 0.35s ease-in-out;
 }
 
-.grid-item:hover{
+.grid-item:hover {
   cursor: pointer;
   -webkit-filter: grayscale(0%) blur(0);
 }
 
-.grid-alpha{
+.grid-alpha {
   display: none;
   position: absolute;
-  background-color: #F4F3F4;
+  background-color: #f4f3f4;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   text-align: center;
 }
-.grid-alpha:hover{
+.grid-alpha:hover {
   cursor: zoom-out;
 }
 
-.grid-item.item-opened{
+.grid-item.item-opened {
   width: 80%;
   height: 80vw;
   border: 3px solid #e8e8e8;
   -webkit-filter: grayscale(0%) blur(0);
-  }
+}
 
 .grid-item--width2 {
-  width:  50%;
+  width: 50%;
 }
 
 .grid-item--height2 {
@@ -130,26 +142,26 @@
   height: 600px;
 }
 
-@media only screen and (max-width: 580px){
-  .grid-item{
+@media only screen and (max-width: 580px) {
+  .grid-item {
     width: 50%;
   }
   .grid-item--width2 {
-    width:  100%;
+    width: 100%;
   }
 }
 
 // Random Image loop
-@for $item from 1 through 40{
-  .grid-item:nth-child(#{$item}){ 
-    background-image: url('https://unsplash.it/900/900?image=1#{$item}'); 
+@for $item from 1 through 40 {
+  .grid-item:nth-child(#{$item}) {
+    background-image: url("https://unsplash.it/900/900?image=1#{$item}");
   }
-} 
+}
 
 .more-gallery {
-    background: #2792e2;
-    width: 200px;
-    height: 40px;
-    color: #ffffff;
-    border: none;
+  background: #2792e2;
+  width: 200px;
+  height: 40px;
+  color: #ffffff;
+  border: none;
 }

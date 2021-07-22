@@ -36,6 +36,9 @@
         <div class="swiper-container gallery-visual" id="galleryVisual">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
+                    <div class="floating-box gallery_01">
+                        <img class="visual-gallery-img" src="http://file2.nocutnews.co.kr/newsroom/image/2019/02/01/20190201094337205585_0_600_400.jpg" alt="">
+                    </div>
                     <div class="svg-holder">
                         <svg width="202.4" height="78.32" viewBox="0 0 202.4 78.32" xmlns="http://www.w3.org/2000/svg">
                             <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000" stroke-width="0.25mm"
@@ -54,6 +57,9 @@
                     </div>
                 </div>                
                 <div class="swiper-slide">
+                    <div class="floating-box gallery_01">
+                        <img class="visual-gallery-img" src="http://file2.nocutnews.co.kr/newsroom/image/2019/02/01/20190201094337205585_0_600_400.jpg" alt="">
+                    </div>
                     <div class="svg-holder">
                         <svg width="206.69" height="77.99" viewBox="0 0 206.69 77.99" xmlns="http://www.w3.org/2000/svg">
                             <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000" stroke-width="0.25mm"
@@ -74,6 +80,9 @@
                     </div>
                 </div>                
                 <div class="swiper-slide">
+                    <div class="floating-box gallery_01">
+                        <img class="visual-gallery-img" src="http://file2.nocutnews.co.kr/newsroom/image/2019/02/01/20190201094337205585_0_600_400.jpg" alt="">
+                    </div>
                     <div class="svg-holder">
                         <svg width="263.022" height="79.171" viewBox="0 0 263.022 79.171" xmlns="http://www.w3.org/2000/svg">
                             <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#000" stroke-width="0.25mm"
@@ -97,12 +106,15 @@
                     </div>
                 </div>                
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="pagination-wrap">
+                <div class="swiper-pagination"></div>
+                <span class="slide-direction"><img src="./assets/images/slidearrow.png" alt=""></span>
+            </div>        
         </div>
 
         <main>
-            <div class="common-area">
-                <!-- https://codepen.io/WixelHQ/pen/dGQyeb -->
+            <div class="common-area grid-gallery">
+                <!-- https://codepen.io/WixelHQ/pen/dGQyeb -->            
                 <div class="grid">
                     <div class="grid-sizer"></div>
                     <div class="grid-item grid-item--width2 grid-item--height2"></div>
@@ -129,7 +141,6 @@
                     <div class="grid-item grid-item--height2"></div>
                 </div>
                 <div class="grid-alpha"></div>
-
                 <button id="moreGallery" class="more-gallery">더보기</button>
             </div>
         </main>
@@ -173,15 +184,18 @@
         var swiper = new Swiper(".gallery-visual", {
             slidesPerView: 1,
             spaceBetween: 30,
-            mousewheel: true,
-            pagination: {
-                // el: ".swiper-pagination",
+            pagination: {            
                 el: ".swiper-pagination",
+                type: 'fraction',
                 clickable: true,
             },
             navigation: {
                 nextEl: '.slide-after',
                 prevEl: '.slide-before',
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
             },
         });
     </script>

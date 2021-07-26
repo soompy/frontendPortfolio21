@@ -65,13 +65,13 @@
 
         <main>
             <!-- https://codepen.io/syedrafeeq/pen/yEJKn -->
-            <section id="entertainment" class="common-area entertainment-area">
+            <section id="" class="common-area">
                 <div class="inner flex-box entertainment-wrap">                    
-                    <div class="grid-box flex-item enter-issue">
-                        <div>3</div>
-                        <div>3</div>
-                        <div>3</div>
-                        <div>3</div>
+                    <div class="grid-box flex-item apply-scetion">
+                        <div class="singer"><span>Singer</span></div>
+                        <div class="actor"><span>Actor</span></div>
+                        <div class="model"><span>Model</span></div>
+                        <div class="director"><span>Director</span></div>
                     </div>
                 </div>
             </section>
@@ -129,8 +129,7 @@
                                
                         <div class="uploadFile-wrap">
                             <label for=""> <i class="material-icons large">file_upload</i> 파일업로드</label>
-                            <input type="file" class="upload-file" onchange="readURL(this);" />
-                            <img id="blah" src="http://placehold.it/180" alt="your image" />
+                            <input type="file" class="upload-file" onchange="readURL(this);" />                            
                         </div>        
 
                         <fieldset class="radio-inline">
@@ -154,7 +153,7 @@
                         </fieldset>
 
                         <div class="select-box-wrap">
-                            <label for="select-choice">생년월일</label>
+                            <label for="select-choice">지원일자</label>
                             <div class="select-box">
                                 <select name="select-choice" id="select-choice">
                                     <option value="Choice 1">2000</option>
@@ -175,6 +174,9 @@
                             </div>
                         </div>
                     </form>
+                    <div class="photo-box">
+                        <img id="blah" class="profile-img-blah" src="http://placehold.it/180" alt="your image" accept="image/*" />
+                    </div>
                 </div>
             </section>
 

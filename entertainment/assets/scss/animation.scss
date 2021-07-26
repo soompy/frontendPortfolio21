@@ -505,3 +505,12 @@ a:active {
     transform: scaleX(1);
   }
 }
+
+@keyframes zoomFade {
+  0% {
+    
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

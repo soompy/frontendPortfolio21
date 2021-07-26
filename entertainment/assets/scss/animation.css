@@ -479,4 +479,22 @@ a:active {
             transform: scaleX(1);
   }
 }
+
+@-webkit-keyframes zoomFade {
+  0% {
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes zoomFade {
+  0% {
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
 /*# sourceMappingURL=animation.css.map */

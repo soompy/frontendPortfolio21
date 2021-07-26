@@ -256,8 +256,6 @@ main {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 800px;
-  height: 600px;
   background: #ffffff;
 }
 
@@ -276,10 +274,10 @@ main {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 60vh;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   /* CREDIT CARD IMAGE STYLING */
   /* CHANGEABLE CARD ELEMENTS */
   /* FRONT OF CARD */
@@ -411,16 +409,16 @@ main {
 
 .modal-wrap .modal-box .creditcard .lightcolor,
 .modal-wrap .modal-box .creditcard .darkcolor {
-  -webkit-transition: fill .5s;
-  transition: fill .5s;
+  -webkit-transition: fill 0.5s;
+  transition: fill 0.5s;
 }
 
 .modal-wrap .modal-box .creditcard .lightblue {
-  fill: #03A9F4;
+  fill: #03a9f4;
 }
 
 .modal-wrap .modal-box .creditcard .lightbluedark {
-  fill: #0288D1;
+  fill: #0288d1;
 }
 
 .modal-wrap .modal-box .creditcard .red {
@@ -492,11 +490,11 @@ main {
 }
 
 .modal-wrap .modal-box #cardfront .st2 {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .modal-wrap .modal-box #cardfront .st3 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 600;
 }
 
@@ -505,7 +503,7 @@ main {
 }
 
 .modal-wrap .modal-box #cardfront .st5 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 400;
 }
 
@@ -515,7 +513,7 @@ main {
 
 .modal-wrap .modal-box #cardfront .st7 {
   opacity: 0.6;
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .modal-wrap .modal-box #cardfront .st8 {
@@ -527,7 +525,7 @@ main {
 }
 
 .modal-wrap .modal-box #cardfront .st10 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 300;
 }
 
@@ -536,12 +534,12 @@ main {
 }
 
 .modal-wrap .modal-box #cardfront .st12 {
-  fill: #4C4C4C;
+  fill: #4c4c4c;
 }
 
 .modal-wrap .modal-box #cardback .st0 {
   fill: none;
-  stroke: #0F0F0F;
+  stroke: #0f0f0f;
   stroke-miterlimit: 10;
 }
 
@@ -550,19 +548,19 @@ main {
 }
 
 .modal-wrap .modal-box #cardback .st3 {
-  fill: #F2F2F2;
+  fill: #f2f2f2;
 }
 
 .modal-wrap .modal-box #cardback .st4 {
-  fill: #D8D2DB;
+  fill: #d8d2db;
 }
 
 .modal-wrap .modal-box #cardback .st5 {
-  fill: #C4C4C4;
+  fill: #c4c4c4;
 }
 
 .modal-wrap .modal-box #cardback .st6 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 400;
 }
 
@@ -575,7 +573,7 @@ main {
 }
 
 .modal-wrap .modal-box #cardback .st9 {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .modal-wrap .modal-box #cardback .st10 {
@@ -583,11 +581,11 @@ main {
 }
 
 .modal-wrap .modal-box #cardback .st11 {
-  fill: #EAEAEA;
+  fill: #eaeaea;
 }
 
 .modal-wrap .modal-box #cardback .st12 {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
 }
 
 .modal-wrap .modal-box #cardback .st13 {

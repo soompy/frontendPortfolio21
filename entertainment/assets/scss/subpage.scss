@@ -158,6 +158,8 @@
 }
 .grid-gallery {
   position: relative;
+  font-family: sans-serif;
+  background-color: #000;
   .grid {
     box-sizing: border-box;
     &:after {

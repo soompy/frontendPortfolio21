@@ -2234,6 +2234,8 @@ main {
 
 .grid-gallery {
   position: relative;
+  font-family: sans-serif;
+  background-color: #000;
 }
 
 .grid-gallery .grid {

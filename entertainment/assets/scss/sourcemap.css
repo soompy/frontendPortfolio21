@@ -1245,9 +1245,22 @@ main {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 800px;
-  height: 600px;
   background: #ffffff;
+}
+
+.modal-wrap .modal-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
 }
 
 .modal-wrap .modal-box {
@@ -1265,10 +1278,10 @@ main {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 60vh;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  font-family: 'Raleway';
+  font-family: "Raleway";
   /* CREDIT CARD IMAGE STYLING */
   /* CHANGEABLE CARD ELEMENTS */
   /* FRONT OF CARD */
@@ -1400,16 +1413,16 @@ main {
 
 .modal-wrap .modal-box .creditcard .lightcolor,
 .modal-wrap .modal-box .creditcard .darkcolor {
-  -webkit-transition: fill .5s;
-  transition: fill .5s;
+  -webkit-transition: fill 0.5s;
+  transition: fill 0.5s;
 }
 
 .modal-wrap .modal-box .creditcard .lightblue {
-  fill: #03A9F4;
+  fill: #03a9f4;
 }
 
 .modal-wrap .modal-box .creditcard .lightbluedark {
-  fill: #0288D1;
+  fill: #0288d1;
 }
 
 .modal-wrap .modal-box .creditcard .red {
@@ -1481,11 +1494,11 @@ main {
 }
 
 .modal-wrap .modal-box #cardfront .st2 {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .modal-wrap .modal-box #cardfront .st3 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 600;
 }
 
@@ -1494,7 +1507,7 @@ main {
 }
 
 .modal-wrap .modal-box #cardfront .st5 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 400;
 }
 
@@ -1504,7 +1517,7 @@ main {
 
 .modal-wrap .modal-box #cardfront .st7 {
   opacity: 0.6;
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .modal-wrap .modal-box #cardfront .st8 {
@@ -1516,7 +1529,7 @@ main {
 }
 
 .modal-wrap .modal-box #cardfront .st10 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 300;
 }
 
@@ -1525,12 +1538,12 @@ main {
 }
 
 .modal-wrap .modal-box #cardfront .st12 {
-  fill: #4C4C4C;
+  fill: #4c4c4c;
 }
 
 .modal-wrap .modal-box #cardback .st0 {
   fill: none;
-  stroke: #0F0F0F;
+  stroke: #0f0f0f;
   stroke-miterlimit: 10;
 }
 
@@ -1539,19 +1552,19 @@ main {
 }
 
 .modal-wrap .modal-box #cardback .st3 {
-  fill: #F2F2F2;
+  fill: #f2f2f2;
 }
 
 .modal-wrap .modal-box #cardback .st4 {
-  fill: #D8D2DB;
+  fill: #d8d2db;
 }
 
 .modal-wrap .modal-box #cardback .st5 {
-  fill: #C4C4C4;
+  fill: #c4c4c4;
 }
 
 .modal-wrap .modal-box #cardback .st6 {
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-weight: 400;
 }
 
@@ -1564,7 +1577,7 @@ main {
 }
 
 .modal-wrap .modal-box #cardback .st9 {
-  fill: #FFFFFF;
+  fill: #ffffff;
 }
 
 .modal-wrap .modal-box #cardback .st10 {
@@ -1572,11 +1585,11 @@ main {
 }
 
 .modal-wrap .modal-box #cardback .st11 {
-  fill: #EAEAEA;
+  fill: #eaeaea;
 }
 
 .modal-wrap .modal-box #cardback .st12 {
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
 }
 
 .modal-wrap .modal-box #cardback .st13 {
@@ -2200,6 +2213,21 @@ main {
   height: 80vh !important;
 }
 
+.gallery-visual .swiper-slide:nth-child(1) {
+  background-image: -webkit-gradient(linear, left top, right top, from(#db4137), color-stop(#444444), to(#000000));
+  background-image: linear-gradient(to right, #db4137, #444444, #000000);
+}
+
+.gallery-visual .swiper-slide:nth-child(2) {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ee6666), color-stop(#d9409f), to(#a98bc8));
+  background-image: linear-gradient(to right, #ee6666, #d9409f, #a98bc8);
+}
+
+.gallery-visual .swiper-slide:nth-child(3) {
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff5fa2), to(#fcc89b));
+  background-image: linear-gradient(to right, #ff5fa2, #fcc89b);
+}
+
 .floating-box {
   position: relative;
   width: 500px;
@@ -2211,7 +2239,7 @@ main {
   position: relative;
   z-index: 1;
   border-radius: 50%;
-  max-width: 100%;
+  width: 100%;
   height: 100%;
 }
 
@@ -2229,18 +2257,33 @@ main {
   border-radius: 50%;
   -webkit-animation: opacity 3s ease infinite;
           animation: opacity 3s ease infinite;
-  background: #FFF9C4;
+  background: #fff9c4;
+}
+
+.artist-gallery {
+  background: #000000;
 }
 
 .grid-gallery {
   position: relative;
+<<<<<<< HEAD
   font-family: sans-serif;
   background-color: #000;
+=======
+  width: 1400px;
+  margin: auto;
+>>>>>>> e416aa88e13c838d0c4d6ada0dbe7b23fef9b2f4
 }
 
 .grid-gallery .grid {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: minmax(300px, auto);
+  grid-auto-flow: row dense;
+  grid-gap: 10px;
+  padding: 120px 0;
 }
 
 .grid-gallery .grid:after {
@@ -2249,24 +2292,18 @@ main {
   content: '';
 }
 
-.grid-gallery .grid .grid-sizer,
 .grid-gallery .grid .grid-item {
-  width: 25%;
-}
-
-.grid-gallery .grid .grid-item {
-  height: 200px;
   float: left;
   background-color: #f4f3f4;
-  border: 4px solid #000;
   -webkit-filter: grayscale(70%) blur(0.5px);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  background-image: url(https://unsplash.it/900/900);
   background-size: cover;
   background-position: center center;
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .grid-gallery .grid .grid-item:hover {
@@ -2274,23 +2311,31 @@ main {
   -webkit-filter: grayscale(0%) blur(0);
 }
 
+.grid-gallery .grid .grid-item.twopm {
+  background-image: url("https://menu.mt.co.kr/moneyweek/thumb/2021/06/07/06/2021060709198045678_1.jpg");
+}
+
+.grid-gallery .grid .grid-item.twice {
+  background-image: url("http://file.osen.co.kr/article/2019/10/01/201910011143775340_5d92bdc28f0d7.jpg");
+}
+
+.grid-gallery .grid .grid-item.itzy {
+  background-image: url("https://spnimage.edaily.co.kr/images/Photo/files/NP/S/2020/02/PS20022700051.jpg");
+}
+
+.grid-gallery .grid .grid-item.day6 {
+  background-image: url("https://image.genie.co.kr/Y/IMAGE/IMG_MUZICAT/IV2/Genie_Magazine/8379/Mgz_Main_Top_20200511143059.jpg/dims/resize/Q_80,0");
+}
+
+.grid-gallery .grid .grid-item.straykids {
+  background-image: url("https://www.sonymusic.co.jp/adm_image/common/artist_image/70009000/70009633/artist_photo/55057.jpg");
+}
+
 .grid-gallery .grid .grid-item.item-opened {
   width: 80%;
   height: 80vw;
   border: 3px solid #e8e8e8;
   -webkit-filter: grayscale(0%) blur(0);
-}
-
-.grid-gallery .grid .grid-item.grid-item--width2 {
-  width: 50%;
-}
-
-.grid-gallery .grid .grid-item.grid-item--height2 {
-  height: 400px;
-}
-
-.grid-gallery .grid .grid-item.grid-item--height3 {
-  height: 600px;
 }
 
 .grid-gallery .grid-alpha {
@@ -2312,9 +2357,6 @@ main {
 @media only screen and (max-width: 580px) {
   .grid-item {
     width: 50%;
-  }
-  .grid-item--width2 {
-    width: 100%;
   }
 }
 
@@ -2478,14 +2520,27 @@ main {
   background-image: url("https://unsplash.it/900/900?image=140");
 }
 
-.more-gallery {
-  display: inline-block;
+.more-button {
+  padding-bottom: 80px;
+}
+
+.more-button .more-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: flex;
   background: #2792e2;
   width: 200px;
   height: 40px;
   color: #ffffff;
   border: none;
-  text-align: center;
+  margin: auto;
 }
 
 .pagination-wrap {

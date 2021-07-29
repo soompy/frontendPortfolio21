@@ -773,12 +773,6 @@ a:active {
   animation-iteration-count: infinite;
 }
 
-.rolling-text .rolling-text-container .fixed-text {
-  display: inline;
-  float: left;
-  margin: 0;
-}
-
 .rolling-text .rolling-text-container .rolling-list {
   margin-top: 0;
   padding-left: 26px;
@@ -1216,6 +1210,10 @@ main {
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   z-index: 10;
+}
+
+.dim-layer.show-modal {
+  display: block;
 }
 
 .modal-wrap {

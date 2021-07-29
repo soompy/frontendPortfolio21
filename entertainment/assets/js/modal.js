@@ -280,13 +280,32 @@ securitycode.addEventListener('focus', function () {
 };
 
 
-const modal = document.getElementById('modal');
-open.addEventListener('click', () => {
-    modal.classList.add('show-modal')
+const modal = document.getElementById("modal")
+function modalOn() {
+    modal.style.display = "block"
+}
+function isModalOn() {
+    return modal.style.display === "block"
+}
+function modalOff() {
+    modal.style.display = "none"
+}
+const pop = document.getElementById("modalPop")
+pop.addEventListener("click", e => {
+    modalOn()
 })
-close.addEventListener('click', () => {
-    modal.classList.remove('show-modal')
+const closeBtn = modal.querySelector(".modal-close")
+closeBtn.addEventListener("click", e => {
+    modalOff()
 })
-window.addEventListener('click', (e) => {
-    e.target === modal ? modal.classList.remove('show-modal') : false
+modal.addEventListener("click", e => {
+    const evTarget = e.target
+    if(evTarget.classList.contains("dim-layer")) {
+        modalOff()
+    }
+})
+window.addEventListener("keyup", e => {
+    if(isModalOn() && e.key === "Escape") {
+        modalOff()
+    }
 })

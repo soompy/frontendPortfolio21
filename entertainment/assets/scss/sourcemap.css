@@ -1089,7 +1089,8 @@ a:active {
 
 .blurred-image-container .img {
   position: absolute;
-  background: url(http://bromleydemo.files.wordpress.com/2013/10/blossom.jpg?w=600) center center;
+  background: url(https://imgur.com/n8qZt1E.jpg) center center;
+  background-repeat: no-repeat;
   background-size: cover;
   top: -10%;
   bottom: 10%;
@@ -1193,11 +1194,47 @@ main {
 .grid-box {
   display: -ms-grid;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 12px;
   -ms-grid-rows: (100px)[2];
       grid-template-rows: repeat(2, 100px);
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  width: 1400px;
+  height: 700px;
+  margin: auto;
+  -ms-grid-rows: 50%;
+      grid-template-rows: 50%;
+}
+
+.grid-box > div {
+  overflow: hidden;
+}
+
+.grid-box .grid-item {
+  position: relative;
+}
+
+.grid-box .grid-item img {
+  width: 100%;
+}
+
+.grid-box .grid-item h2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  opacity: 0;
+  color: #ffffff;
+  padding: 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#1b1b1c), color-stop(#4c4c4d), color-stop(#838384), color-stop(#bfbfc0), to(#ffffff));
+  background-image: linear-gradient(to top, #1b1b1c, #4c4c4d, #838384, #bfbfc0, #ffffff);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.grid-box .grid-item:hover {
+  height: 100%;
+  opacity: 1;
 }
 
 /*swiper*/
@@ -1612,6 +1649,7 @@ main {
   transition: transform 0.6s;
   transition: transform 0.6s, -webkit-transform 0.6s;
   cursor: pointer;
+  margin: 0 10px;
 }
 
 .modal-wrap .modal-box .creditcard .front,
@@ -1623,6 +1661,7 @@ main {
   backface-visibility: hidden;
   -webkit-font-smoothing: antialiased;
   color: #47525d;
+  border-radius: 20px;
 }
 
 .modal-wrap .modal-box .creditcard .back {
@@ -1638,7 +1677,7 @@ main {
 /* Page */
 .entertainment-area .entertainment-wrap {
   position: relative;
-  height: 500px;
+  height: 600px;
 }
 
 .entertainment-area .entertainment-wrap .more-view {
@@ -1648,56 +1687,49 @@ main {
 }
 
 .entertainment-area .entertainment-wrap .enter-news .swiper-slide {
-  position: relative;
   font-size: 14px;
 }
 
-.entertainment-area .entertainment-wrap .enter-news .swiper-slide img {
-  width: 400px;
-}
-
-.entertainment-area .entertainment-wrap .enter-news .swiper-slide .issue-box {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 80%;
+.entertainment-area .entertainment-wrap .enter-news .swiper-slide .monthly-issue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1400px;
+  height: 80%;
+  margin: 20px auto;
   background: #ffffff;
-  -webkit-box-shadow: 5px 5px 52px -20px rgba(6, 2, 2, 0.67);
-          box-shadow: 5px 5px 52px -20px rgba(6, 2, 2, 0.67);
-  padding: 15px;
-  border-radius: 20px;
-  text-align: left;
 }
 
-.entertainment-area .entertainment-wrap .enter-news .swiper-slide .issue-box .title {
+.entertainment-area .entertainment-wrap .enter-news .swiper-slide .monthly-issue img {
+  width: 50%;
+  border-radius: 20px;
+}
+
+.entertainment-area .entertainment-wrap .enter-news .swiper-slide .monthly-issue .issue-box {
+  width: 50%;
+  text-align: left;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.entertainment-area .entertainment-wrap .enter-news .swiper-slide .monthly-issue .issue-box .inner {
+  padding: 50px 30px 30px;
+}
+
+.entertainment-area .entertainment-wrap .enter-news .swiper-slide .monthly-issue .issue-box .inner .title {
   font-size: 24px;
   font-weight: bold;
-  margin: 8px 0 12px;
+  margin: 16px 0 40px;
   line-height: 30px;
 }
 
-.entertainment-area .entertainment-wrap .enter-news .swiper-slide .issue-box .text {
+.entertainment-area .entertainment-wrap .enter-news .swiper-slide .monthly-issue .issue-box .inner .text {
   display: -webkit-box;
   font-size: 15px;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 8;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  line-height: 20px;
-}
-
-.entertainment-area .entertainment-wrap .enter-issue {
-  background: url("https://images.unsplash.com/photo-1576514129883-2f1d47a65da6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3RhZ2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80") center center no-repeat;
-}
-
-.entertainment-area .entertainment-wrap .flex-item {
-  width: 50%;
-}
-
-.entertainment-area .enter-issue {
-  -ms-grid-rows: 50%;
-      grid-template-rows: 50%;
+  line-height: 26px;
 }
 
 .album-area .album-box {

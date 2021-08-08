@@ -237,6 +237,7 @@ main {
 
 // modal
 .dim-layer {
+  // display: none;
   position: fixed;
   left: 0;
   top: 0;
@@ -244,6 +245,9 @@ main {
   height: 100vh;
   background: rgba(0, 0, 0, 0.6);
   z-index: 10;
+  &.show-modal {
+    display: block;
+  }
 }
 
 .modal-wrap {

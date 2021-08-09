@@ -95,10 +95,10 @@ var cardnumber_mask = new IMask(cardnumber, {
 //Mask the Expiration Date
 var expirationdate_mask = new IMask(expirationdate, {
     mask: 'MM{/}YY',
-    groups: {
-        YY: new IMask.MaskedPattern.Group.Range([0, 99]),
-        MM: new IMask.MaskedPattern.Group.Range([1, 12]),
-    }
+    // groups: {
+    //     YY: new IMask.MaskedPattern.Group.Range([0, 99]),
+    //     MM: new IMask.MaskedPattern.Group.Range([1, 12]),
+    // }
 });
 
 //Mask the security code

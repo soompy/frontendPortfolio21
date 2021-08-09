@@ -1241,6 +1241,10 @@ main {
 }
 
 .modal-wrap .modal-box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0;
   padding: 0;
   background-color: #f9f9f9;

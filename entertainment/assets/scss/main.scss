@@ -50,6 +50,7 @@
 
 //album
 .album-area {
+  margin: 100px 0;
   .album-box {
     width: 100%;
     .album-list {
@@ -57,8 +58,14 @@
       .album-item {
         width: 150px;
         height: 150px;
+        margin: 0 40px;
         @include rounded();
         transform-origin: center center center;
+        cursor: pointer;
+        animation: beforeSpinning 3s;
+        animation-fill-mode: forwards;
+        box-shadow: 5px 5px 52px -20px #1a1a1a;
+        transition: all 0.6s ease-in;
         img {
           width: 150px;
           height: 150px;
@@ -69,6 +76,7 @@
         &:focus {
           animation: spinning 3s;
           animation-fill-mode: forwards;
+          margin: 0 100px;
         }
       }
     }
@@ -108,17 +116,16 @@
     }
   }
   .text-animation {
-    font-size: 20px;
     font-weight: bold;
-    margin-top: -50px;
-    font-size: 90px;
+    font-size: 40px;
     width: 100%;
     text-align: center;
-    color: transparent;
-    -webkit-animation: blurFadeInOut 3s ease-in backwards;
-    -moz-animation: blurFadeInOut 3s ease-in backwards;
-    -ms-animation: blurFadeInOut 3s ease-in backwards;
-    animation: blurFadeInOut 3s ease-in backwards;
+    color: rebeccapurple;
+    -webkit-animation: blurFadeInOut 5s ease-in backwards;
+    -moz-animation: blurFadeInOut 5s ease-in backwards;
+    -ms-animation: blurFadeInOut 5s ease-in backwards;
+    animation: blurFadeInOut 5s ease-in backwards;
+    animation-iteration-count: infinite;
     &.frame-1 {
       -webkit-animation-delay: 0s;
       -moz-animation-delay: 0s;
@@ -136,7 +143,7 @@
       -moz-animation-delay: 6s;
       -ms-animation-delay: 6s;
       animation-delay: 6s;
-    }    
+    }
   }
   // swiper custom
   // https://fresh-mint.tistory.com/entry/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-swiper
@@ -149,14 +156,18 @@
     position: relative;
     width: calc(50% - 24px);
     height: 100%;
-    background: #EBE6F5;
+    background: #ebe6f5;
     flex-direction: column;
     .left-artist-slider {
       width: 350px;
-      height: 350px;
-      img {
-        width: 100%;
-        height: 100%;
+      height: 450px;
+      .swiper-slide {
+        flex-direction: column;
+        background: #ebe6f5;
+        img {
+          width: 350px;
+          height: 350px;
+        }
       }
     }
   }
@@ -164,7 +175,7 @@
     position: relative;
     width: calc(50% - 24px);
     height: 100%;
-    background: #EBE6F5;
+    background: #ebe6f5;
     flex-shrink: 0;
     .right-artist-slider {
       width: 400px;

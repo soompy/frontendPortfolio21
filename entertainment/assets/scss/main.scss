@@ -85,21 +85,26 @@
 
 //artist
 .artist-area {
-  @include flexCenter;
   position: relative;
   width: 100%;
-  height: 800px;
+  background: #ebe6f5;
+  padding: 80px 0;
+  .area-common {
+    @include flexCenter;
+    width: 1400px;
+    margin: auto;
+  }
   .slide-nav {
     height: 100%;
     .inner-slide-nav {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
       .slide-nav-list {
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 16px 0;
+        .swiper-pagination-bullet {
+          margin: 4px 0;
+        }
         .slide-nav-item {
           height: 16%;
           writing-mode: vertical-rl;
@@ -119,6 +124,7 @@
     font-weight: bold;
     font-size: 40px;
     width: 100%;
+    padding-bottom: 10px;
     text-align: center;
     color: rebeccapurple;
     -webkit-animation: blurFadeInOut 5s ease-in backwards;
@@ -148,15 +154,10 @@
   // swiper custom
   // https://fresh-mint.tistory.com/entry/%ED%94%8C%EB%9F%AC%EA%B7%B8%EC%9D%B8%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-swiper
   // https://codepen.io/lpla/pen/PoWBKyM
-  .slide-before,
-  .slide-after {
-    padding: 12px;
-  }
   .left-artist {
     position: relative;
-    width: calc(50% - 24px);
+    width: 50%;
     height: 100%;
-    background: #ebe6f5;
     flex-direction: column;
     .left-artist-slider {
       width: 350px;
@@ -173,13 +174,13 @@
   }
   .right-artist {
     position: relative;
-    width: calc(50% - 24px);
+    width: 50%;
     height: 100%;
-    background: #ebe6f5;
     flex-shrink: 0;
     .right-artist-slider {
       width: 400px;
       height: 600px;
+      box-shadow: 5px 5px 42px -20px #1a1a1a;
       img {
         width: 100%;
         height: 100%;
@@ -214,27 +215,29 @@
     padding: 0 6px;
     .select-month {
       @include flexCenter;
+      width: 600px;
       height: 54px;
+      margin: auto;
+      padding-bottom: 20px;
       .month-box {
         font-weight: bold;
         color: #263238;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 24px;
       }
     }
 
     .monthly-calendar-box {
-      width: 600px;
+      max-width: 1400px;
       margin: auto;
       .swiper-slide {
         flex-direction: column;
-        padding-bottom: 20px;
       }
       .row {
         display: flex;
         align-items: center;
         font-weight: 500;
         color: #263238;
+        padding: 20px 0 14px;
         .day-box {
           .day {
             @include flexCenter;
@@ -249,21 +252,21 @@
             }
             &.global {
               background: #424242;
-              color: #ffd600;
+              color: #eeeeee;
               &:after {
                 background: #424242;
               }
             }
             &.seoul {
-              background: #ffd600;
+              background: #2792e2;
               color: #424242;
               color: #ffffff;
               &:after {
-                background: #ffd600;
+                background: #2792e2;
               }
             }
             &.asia {
-              border: 1px solid #ffd600;
+              border: 1px solid #2792e2;
             }
             &:after {
               display: block;
@@ -271,9 +274,10 @@
               content: "";
               position: absolute;
               left: 50%;
-              top: 0;
+              top: -10px;
               width: 6px;
               height: 6px;
+              z-index: 1;
               @include rounded();
               transform: translateX(-50%);
             }
@@ -314,6 +318,7 @@
           transform-style: preserve-3d;
         }
         .card {
+          margin: 0 8px;
           &:hover {
             .wrap {
               transform: rotateX(180deg);
@@ -330,20 +335,23 @@
           height: 100%;
           transform-origin: 50% 0;
           text-align: center;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          border-radius: 20px;
           -webkit-backface-visibility: hidden; //브라우저 호환성
           backface-visibility: hidden;
         }
         .front {
+          @include flexCenter;
           z-index: 1;
-          background: #ccc;
+          background: rgb(255, 246, 123);
+          p {
+            margin-right: 8px;
+          }
         }
         .back {
           @include flexCenter;
           flex-direction: column;
           transform: rotateX(180deg) translate(-50%, -50%);
-          background: #888;
+          background: rgb(255, 117, 117);
           color: #ffffff;
           .audition-type {
             @include rounded(8px);

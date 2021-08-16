@@ -936,14 +936,16 @@ a:active {
   }
 }
 
-.input-box label, .select-box-wrap label {
+.input-box label,
+.select-box-wrap label {
   display: block;
   font-size: 14px;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-.input-box input[type="text"], .select-box-wrap input[type="text"] {
+.input-box input[type="text"],
+.select-box-wrap input[type="text"] {
   border: 1px solid #2792e2;
   padding: 4px 6px;
   height: 32px;
@@ -952,7 +954,8 @@ a:active {
   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
 }
 
-.input-box .select-box, .select-box-wrap .select-box {
+.input-box .select-box,
+.select-box-wrap .select-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -961,7 +964,8 @@ a:active {
           align-items: center;
 }
 
-.input-box .select-box select, .select-box-wrap .select-box select {
+.input-box .select-box select,
+.select-box-wrap .select-box select {
   border: 1px solid #2792e2;
   padding: 4px 6px;
   height: 32px;
@@ -978,6 +982,14 @@ a:active {
   -moz-appearance: none;
   appearance: none;
   background-size: 16px;
+}
+
+.ml-at {
+  margin-left: auto;
+}
+
+.mr-at {
+  margin-right: auto;
 }
 
 [type="radio"]:checked,
@@ -998,7 +1010,7 @@ a:active {
 
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -1011,7 +1023,7 @@ a:active {
 
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
-  content: '';
+  content: "";
   width: 12px;
   height: 12px;
   background: #2792e2;
@@ -1261,6 +1273,7 @@ main {
 
 .grid-box .grid-item {
   position: relative;
+  height: 350px;
 }
 
 .grid-box .grid-item img {
@@ -1271,17 +1284,18 @@ main {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100%;
   height: 0;
   opacity: 0;
   color: #ffffff;
   padding: 10px;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#1b1b1c), color-stop(#4c4c4d), color-stop(#838384), color-stop(#bfbfc0), to(#ffffff));
-  background-image: linear-gradient(to top, #1b1b1c, #4c4c4d, #838384, #bfbfc0, #ffffff);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.51)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.51) 100%);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
-.grid-box .grid-item:hover {
+.grid-box .grid-item:hover h2 {
   height: 100%;
   opacity: 1;
 }
@@ -1848,6 +1862,13 @@ main {
 }
 
 .artist-area {
+  position: relative;
+  width: 100%;
+  background: #ebe6f5;
+  padding: 80px 0;
+}
+
+.artist-area .area-common {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1857,20 +1878,12 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: relative;
-  width: 100%;
-  height: 800px;
+  width: 1400px;
+  margin: auto;
 }
 
 .artist-area .slide-nav {
   height: 100%;
-}
-
-.artist-area .slide-nav .inner-slide-nav {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .artist-area .slide-nav .inner-slide-nav .slide-nav-list {
@@ -1885,6 +1898,10 @@ main {
       -ms-flex-align: center;
           align-items: center;
   margin: 16px 0;
+}
+
+.artist-area .slide-nav .inner-slide-nav .slide-nav-list .swiper-pagination-bullet {
+  margin: 4px 0;
 }
 
 .artist-area .slide-nav .inner-slide-nav .slide-nav-list .slide-nav-item {
@@ -1908,6 +1925,7 @@ main {
   font-weight: bold;
   font-size: 40px;
   width: 100%;
+  padding-bottom: 10px;
   text-align: center;
   color: rebeccapurple;
   -webkit-animation: blurFadeInOut 5s ease-in backwards;
@@ -1931,16 +1949,10 @@ main {
   animation-delay: 6s;
 }
 
-.artist-area .slide-before,
-.artist-area .slide-after {
-  padding: 12px;
-}
-
 .artist-area .left-artist {
   position: relative;
-  width: calc(50% - 24px);
+  width: 50%;
   height: 100%;
-  background: #ebe6f5;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1967,9 +1979,8 @@ main {
 
 .artist-area .right-artist {
   position: relative;
-  width: calc(50% - 24px);
+  width: 50%;
   height: 100%;
-  background: #ebe6f5;
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -1977,6 +1988,8 @@ main {
 .artist-area .right-artist .right-artist-slider {
   width: 400px;
   height: 600px;
+  -webkit-box-shadow: 5px 5px 42px -20px #1a1a1a;
+          box-shadow: 5px 5px 42px -20px #1a1a1a;
 }
 
 .artist-area .right-artist .right-artist-slider img {
@@ -2027,18 +2040,20 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 600px;
   height: 54px;
+  margin: auto;
+  padding-bottom: 20px;
 }
 
 .audition-area .monthly-calendar .select-month .month-box {
   font-weight: bold;
   color: #263238;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 24px;
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box {
-  width: 600px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -2047,7 +2062,6 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-bottom: 20px;
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box .row {
@@ -2059,6 +2073,7 @@ main {
           align-items: center;
   font-weight: 500;
   color: #263238;
+  padding: 20px 0 14px;
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day {
@@ -2087,7 +2102,7 @@ main {
 
 .audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.global {
   background: #424242;
-  color: #ffd600;
+  color: #eeeeee;
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.global:after {
@@ -2095,17 +2110,17 @@ main {
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.seoul {
-  background: #ffd600;
+  background: #2792e2;
   color: #424242;
   color: #ffffff;
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.seoul:after {
-  background: #ffd600;
+  background: #2792e2;
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day.asia {
-  border: 1px solid #ffd600;
+  border: 1px solid #2792e2;
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box .row .day-box .day:after {
@@ -2114,9 +2129,10 @@ main {
   content: "";
   position: absolute;
   left: 50%;
-  top: 0;
+  top: -10px;
   width: 6px;
   height: 6px;
+  z-index: 1;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -2186,6 +2202,10 @@ main {
           transform-style: preserve-3d;
 }
 
+.audition-area .schedule-information .audition-schedule li .card {
+  margin: 0 8px;
+}
+
 .audition-area .schedule-information .audition-schedule li .card:hover .wrap {
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
@@ -2203,15 +2223,27 @@ main {
   -webkit-transform-origin: 50% 0;
           transform-origin: 50% 0;
   text-align: center;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .audition-area .schedule-information .audition-schedule li .front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   z-index: 1;
-  background: #ccc;
+  background: #fff67b;
+}
+
+.audition-area .schedule-information .audition-schedule li .front p {
+  margin-right: 8px;
 }
 
 .audition-area .schedule-information .audition-schedule li .back {
@@ -2230,7 +2262,7 @@ main {
           flex-direction: column;
   -webkit-transform: rotateX(180deg) translate(-50%, -50%);
           transform: rotateX(180deg) translate(-50%, -50%);
-  background: #888;
+  background: #ff7575;
   color: #ffffff;
 }
 

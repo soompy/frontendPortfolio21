@@ -1288,15 +1288,15 @@ main {
   height: 0;
   opacity: 0;
   color: #ffffff;
-  padding: 10px;
+  padding: 10px 0 20px 10px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.51)));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.51) 100%);
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.6s linear;
+  transition: all 0.6s linear;
 }
 
 .grid-box .grid-item:hover h2 {
-  height: 100%;
+  height: auto;
   opacity: 1;
 }
 

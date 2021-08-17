@@ -56,6 +56,7 @@
     .album-list {
       @include flexCenter;
       .album-item {
+        position: relative;
         width: 150px;
         height: 150px;
         margin: 0 40px;
@@ -71,12 +72,12 @@
           height: 150px;
           @include rounded();
           @include transition(0.4s);
-        }
+        }        
         &:hover,
         &:focus {
           animation: spinning 3s;
           animation-fill-mode: forwards;
-          margin: 0 100px;
+          margin: 0 100px;          
         }
       }
     }
@@ -104,6 +105,7 @@
         margin: 16px 0;
         .swiper-pagination-bullet {
           margin: 4px 0;
+          background: rebeccapurple;
         }
         .slide-nav-item {
           height: 16%;

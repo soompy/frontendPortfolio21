@@ -280,7 +280,7 @@ securitycode.addEventListener('focus', function () {
 };
 
 
-const modal = document.getElementById("modal")
+const modal = document.getElementById("membershipModal")
 function modalOn() {
     modal.style.display = "block"
 }
@@ -309,3 +309,7 @@ window.addEventListener("keyup", e => {
         modalOff()
     }
 })
+
+function joinMembership() {
+    document.getElementById("membershipModal").style.display = 'block';
+}

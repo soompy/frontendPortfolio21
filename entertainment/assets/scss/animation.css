@@ -510,6 +510,18 @@ a:active {
   }
 }
 
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
 @-webkit-keyframes blurFadeInOut {
   0% {
     opacity: 0;

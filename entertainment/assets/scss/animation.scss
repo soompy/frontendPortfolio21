@@ -470,6 +470,12 @@ a:active {
   }
 }
 
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
 // text animation
 @-webkit-keyframes blurFadeInOut {
   0% {

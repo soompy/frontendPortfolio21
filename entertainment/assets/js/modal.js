@@ -280,7 +280,7 @@ securitycode.addEventListener('focus', function () {
 };
 
 
-const modal = document.getElementById("membershipModal")
+const modal = document.getElementById("issuingCardModal")
 function modalOn() {
     modal.style.display = "block"
 }
@@ -310,6 +310,6 @@ window.addEventListener("keyup", e => {
     }
 })
 
-function joinMembership() {
-    document.getElementById("membershipModal").style.display = 'block';
+function issuingCard() {
+    document.getElementById("issuingCardModal").style.display = 'block';
 }

@@ -104,8 +104,7 @@
         align-items: center;
         margin: 16px 0;
         .swiper-pagination-bullet {
-          margin: 4px 0;
-          background: rebeccapurple;
+          margin: 4px 0;          
         }
         .slide-nav-item {
           height: 16%;
@@ -207,7 +206,45 @@
   }
 }
 
-.news {
+.check-card {
+  @include flexCenter;
+  background: #2792e2;
+  text-align: center;
+  padding: 26px 0;
+  height: auto;
+  font-size: 22px;  
+  color: #ffffff;
+  button {
+    overflow: hidden;
+    position:relative;
+    margin-left: 10px;
+    transition: 0.3s;
+    border: 2px solid #f7f7f7;
+    font-size: 14px;
+    padding: 6px 8px;
+    color: #ffffff;
+    border-radius: 6px;
+    background: transparent;
+    &:after {
+      position: absolute;
+      width: 0;
+      height: 120%;
+      left: -10%;
+      bottom: 0;
+      transform: skewX(15deg);
+      z-index: -1;
+      transition: .3s;
+      content: '';                
+      background: #f7f7f7;
+    }
+    &:hover {
+      color: #2792e2;      
+      &:after {
+        width: 120%;
+        left: -10%;             
+      }
+    }
+  }
 }
 
 // audition
@@ -233,6 +270,7 @@
       margin: auto;
       .swiper-slide {
         flex-direction: column;
+        cursor: pointer;
       }
       .row {
         display: flex;
@@ -314,6 +352,35 @@
           height: 150px;
           @include rounded(8px);
           perspective: 350px;
+          // filter: brightness(0.7);
+          color: #ffffff;
+          font-weight: bold;
+          text-shadow: 2px 0px 3px rgba(150, 150, 150, 1);
+          p, strong {filter: drop-shadow(2px 4px 6px black);}
+          &.seoulAudition {
+            .front {
+              background: url('https://img.theculturetrip.com/450x/smart/wp-content/uploads/2021/04/dnce6n-e1618929428972.jpg') center center no-repeat;              
+            }
+            .back {
+              background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMfUigX0ufH3czf9GAdH3ZLfpn2wgzj2enjg&usqp=CAU') center center no-repeat;              
+            }
+          }
+          &.asiaAudition {
+            .front {
+              background: url('https://luxurylaunches.com/wp-content/uploads/2012/12/Singapore-1.jpg') center center no-repeat;              
+            }
+            .back {
+              background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1N1VU7snfqvZLM9hvRCYdZYj0VHogrlNW4N1OYyJogUdzjZBNhr7vT9BHV1K-bFdSatE&usqp=CAU') center center no-repeat;              
+            }
+          }
+          &.globalAudition {
+            .front {
+              background: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-688899881-1519413300.jpg') center center no-repeat;              
+            }
+            .back {
+              background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7p4x2YZFLOETk9HPXMCiq38kw9IgAort8Ef6s7XEo8cAENfsEFIh8CeV3WbEvW2x-QQ&usqp=CAU') center center no-repeat;              
+            }
+          }
         }
         .wrap {
           @include transition(1.5s);
@@ -322,6 +389,7 @@
         .card {
           margin: 0 8px;
           &:hover {
+            filter: blur();
             .wrap {
               transform: rotateX(180deg);
             }
@@ -343,17 +411,15 @@
         }
         .front {
           @include flexCenter;
-          z-index: 1;
-          background: rgb(255, 246, 123);
+          z-index: 1;          
           p {
-            margin-right: 8px;
+            margin-right: 8px;            
           }
         }
         .back {
           @include flexCenter;
           flex-direction: column;
           transform: rotateX(180deg) translate(-50%, -50%);
-          background: rgb(255, 117, 117);
           color: #ffffff;
           .audition-type {
             @include rounded(8px);
@@ -372,5 +438,5 @@
         }
       }
     }
-  }
+  }  
 }

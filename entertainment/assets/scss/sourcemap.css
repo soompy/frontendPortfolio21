@@ -61,6 +61,17 @@ table {
   border-spacing: 0;
 }
 
+button {
+  background: inherit;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-decoration,
 input[type=search]::-webkit-search-results-button,
@@ -1140,7 +1151,7 @@ a:active {
   height: 100%;
 }
 
-.visual-list li {
+.visual-list .visual-item {
   position: absolute;
   left: 0;
   top: 0;
@@ -1162,7 +1173,7 @@ a:active {
 
 .blurred-image-container .img {
   position: absolute;
-  background: url(https://imgur.com/n8qZt1E.jpg) center center;
+  background: url(https://jthcast.dev/static/65c2d70a1712a6b21d173bf942cfa18b/35c24/is-css-in-js-the-best.png) center center;
   background-repeat: no-repeat;
   background-size: cover;
   top: -10%;
@@ -1306,11 +1317,11 @@ main {
   bottom: 0;
   left: 0;
   line-height: 22px;
-  width: 100%;
+  width: calc(100% - 40px);
   height: 0;
   opacity: 0;
   color: #ffffff;
-  padding: 10px 0 20px 10px;
+  padding: 20px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.51)));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.51) 100%);
   -webkit-transition: all 0.6s linear;
@@ -1377,6 +1388,10 @@ main {
      object-fit: cover;
 }
 
+.swiper-pagination-bullet {
+  background: rebeccapurple;
+}
+
 .dim-layer {
   display: none;
   position: fixed;
@@ -1394,10 +1409,14 @@ main {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.modal-wrap .inner {
+  padding: 10px;
   background: #ffffff;
 }
 
-.modal-wrap .modal-close {
+.modal-wrap .inner .modal-close {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1407,12 +1426,19 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  right: 20px;
   width: 30px;
   height: 30px;
   margin-left: auto;
 }
 
-.modal-wrap .modal-box {
+.modal-wrap .inner .modal-close i {
+  position: absolute;
+  right: 0;
+}
+
+.modal-wrap .inner .modal-box {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1441,51 +1467,51 @@ main {
   /* FLIP ANIMATION */
 }
 
-.modal-wrap .modal-box h2 {
+.modal-wrap .inner .modal-box h2 {
   font-size: 18px;
 }
 
-.modal-wrap .modal-box .payment-title {
+.modal-wrap .inner .modal-box .payment-title {
   width: 100%;
   text-align: center;
 }
 
-.modal-wrap .modal-box .form-container .field-container:first-of-type {
+.modal-wrap .inner .modal-box .form-container .field-container:first-of-type {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: name;
 }
 
-.modal-wrap .modal-box .form-container .field-container:nth-of-type(2) {
+.modal-wrap .inner .modal-box .form-container .field-container:nth-of-type(2) {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: number;
 }
 
-.modal-wrap .modal-box .form-container .field-container:nth-of-type(3) {
+.modal-wrap .inner .modal-box .form-container .field-container:nth-of-type(3) {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: expiration;
 }
 
-.modal-wrap .modal-box .form-container .field-container:nth-of-type(4) {
+.modal-wrap .inner .modal-box .form-container .field-container:nth-of-type(4) {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: security;
 }
 
-.modal-wrap .modal-box .field-container input {
+.modal-wrap .inner .modal-box .field-container input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.modal-wrap .modal-box .field-container {
+.modal-wrap .inner .modal-box .field-container {
   position: relative;
 }
 
-.modal-wrap .modal-box .form-container {
+.modal-wrap .inner .modal-box .form-container {
   display: -ms-grid;
   display: grid;
   grid-column-gap: 10px;
@@ -1499,12 +1525,12 @@ main {
   color: #707070;
 }
 
-.modal-wrap .modal-box label {
+.modal-wrap .inner .modal-box label {
   padding-bottom: 5px;
   font-size: 13px;
 }
 
-.modal-wrap .modal-box input {
+.modal-wrap .inner .modal-box input {
   margin-top: 3px;
   padding: 15px;
   font-size: 16px;
@@ -1513,7 +1539,7 @@ main {
   border: 1px solid #dcdcdc;
 }
 
-.modal-wrap .modal-box .ccicon {
+.modal-wrap .inner .modal-box .ccicon {
   height: 38px;
   position: absolute;
   right: 6px;
@@ -1521,14 +1547,17 @@ main {
   width: 60px;
 }
 
-.modal-wrap .modal-box .preload * {
+.modal-wrap .inner .modal-box .preload * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
   -o-transition: none !important;
 }
 
-.modal-wrap .modal-box .container {
+.modal-wrap .inner .modal-box .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   max-width: 400px;
   max-height: 251px;
@@ -1536,26 +1565,26 @@ main {
   padding: 20px;
 }
 
-.modal-wrap .modal-box #ccsingle {
+.modal-wrap .inner .modal-box #ccsingle {
   position: absolute;
   right: 15px;
   top: 20px;
 }
 
-.modal-wrap .modal-box #ccsingle svg {
+.modal-wrap .inner .modal-box #ccsingle svg {
   width: 100px;
   max-height: 60px;
 }
 
-.modal-wrap .modal-box .creditcard svg#cardfront,
-.modal-wrap .modal-box .creditcard svg#cardback {
+.modal-wrap .inner .modal-box .creditcard svg#cardfront,
+.modal-wrap .inner .modal-box .creditcard svg#cardback {
   width: 100%;
   -webkit-box-shadow: 1px 5px 6px 0px black;
   box-shadow: 1px 5px 6px 0px black;
   border-radius: 22px;
 }
 
-.modal-wrap .modal-box #generatecard {
+.modal-wrap .inner .modal-box #generatecard {
   cursor: pointer;
   float: right;
   font-size: 12px;
@@ -1567,197 +1596,197 @@ main {
   float: right;
 }
 
-.modal-wrap .modal-box .creditcard .lightcolor,
-.modal-wrap .modal-box .creditcard .darkcolor {
+.modal-wrap .inner .modal-box .creditcard .lightcolor,
+.modal-wrap .inner .modal-box .creditcard .darkcolor {
   -webkit-transition: fill 0.5s;
   transition: fill 0.5s;
 }
 
-.modal-wrap .modal-box .creditcard .lightblue {
+.modal-wrap .inner .modal-box .creditcard .lightblue {
   fill: #03a9f4;
 }
 
-.modal-wrap .modal-box .creditcard .lightbluedark {
+.modal-wrap .inner .modal-box .creditcard .lightbluedark {
   fill: #0288d1;
 }
 
-.modal-wrap .modal-box .creditcard .red {
+.modal-wrap .inner .modal-box .creditcard .red {
   fill: #ef5350;
 }
 
-.modal-wrap .modal-box .creditcard .reddark {
+.modal-wrap .inner .modal-box .creditcard .reddark {
   fill: #d32f2f;
 }
 
-.modal-wrap .modal-box .creditcard .purple {
+.modal-wrap .inner .modal-box .creditcard .purple {
   fill: #ab47bc;
 }
 
-.modal-wrap .modal-box .creditcard .purpledark {
+.modal-wrap .inner .modal-box .creditcard .purpledark {
   fill: #7b1fa2;
 }
 
-.modal-wrap .modal-box .creditcard .cyan {
+.modal-wrap .inner .modal-box .creditcard .cyan {
   fill: #26c6da;
 }
 
-.modal-wrap .modal-box .creditcard .cyandark {
+.modal-wrap .inner .modal-box .creditcard .cyandark {
   fill: #0097a7;
 }
 
-.modal-wrap .modal-box .creditcard .green {
+.modal-wrap .inner .modal-box .creditcard .green {
   fill: #66bb6a;
 }
 
-.modal-wrap .modal-box .creditcard .greendark {
+.modal-wrap .inner .modal-box .creditcard .greendark {
   fill: #388e3c;
 }
 
-.modal-wrap .modal-box .creditcard .lime {
+.modal-wrap .inner .modal-box .creditcard .lime {
   fill: #d4e157;
 }
 
-.modal-wrap .modal-box .creditcard .limedark {
+.modal-wrap .inner .modal-box .creditcard .limedark {
   fill: #afb42b;
 }
 
-.modal-wrap .modal-box .creditcard .yellow {
+.modal-wrap .inner .modal-box .creditcard .yellow {
   fill: #ffeb3b;
 }
 
-.modal-wrap .modal-box .creditcard .yellowdark {
+.modal-wrap .inner .modal-box .creditcard .yellowdark {
   fill: #f9a825;
 }
 
-.modal-wrap .modal-box .creditcard .orange {
+.modal-wrap .inner .modal-box .creditcard .orange {
   fill: #ff9800;
 }
 
-.modal-wrap .modal-box .creditcard .orangedark {
+.modal-wrap .inner .modal-box .creditcard .orangedark {
   fill: #ef6c00;
 }
 
-.modal-wrap .modal-box .creditcard .grey {
+.modal-wrap .inner .modal-box .creditcard .grey {
   fill: #bdbdbd;
 }
 
-.modal-wrap .modal-box .creditcard .greydark {
+.modal-wrap .inner .modal-box .creditcard .greydark {
   fill: #616161;
 }
 
-.modal-wrap .modal-box #svgname {
+.modal-wrap .inner .modal-box #svgname {
   text-transform: uppercase;
 }
 
-.modal-wrap .modal-box #cardfront .st2 {
+.modal-wrap .inner .modal-box #cardfront .st2 {
   fill: #ffffff;
 }
 
-.modal-wrap .modal-box #cardfront .st3 {
+.modal-wrap .inner .modal-box #cardfront .st3 {
   font-family: "Source Code Pro", monospace;
   font-weight: 600;
 }
 
-.modal-wrap .modal-box #cardfront .st4 {
+.modal-wrap .inner .modal-box #cardfront .st4 {
   font-size: 54.7817px;
 }
 
-.modal-wrap .modal-box #cardfront .st5 {
+.modal-wrap .inner .modal-box #cardfront .st5 {
   font-family: "Source Code Pro", monospace;
   font-weight: 400;
 }
 
-.modal-wrap .modal-box #cardfront .st6 {
+.modal-wrap .inner .modal-box #cardfront .st6 {
   font-size: 33.1112px;
 }
 
-.modal-wrap .modal-box #cardfront .st7 {
+.modal-wrap .inner .modal-box #cardfront .st7 {
   opacity: 0.6;
   fill: #ffffff;
 }
 
-.modal-wrap .modal-box #cardfront .st8 {
+.modal-wrap .inner .modal-box #cardfront .st8 {
   font-size: 24px;
 }
 
-.modal-wrap .modal-box #cardfront .st9 {
+.modal-wrap .inner .modal-box #cardfront .st9 {
   font-size: 36.5498px;
 }
 
-.modal-wrap .modal-box #cardfront .st10 {
+.modal-wrap .inner .modal-box #cardfront .st10 {
   font-family: "Source Code Pro", monospace;
   font-weight: 300;
 }
 
-.modal-wrap .modal-box #cardfront .st11 {
+.modal-wrap .inner .modal-box #cardfront .st11 {
   font-size: 16.1716px;
 }
 
-.modal-wrap .modal-box #cardfront .st12 {
+.modal-wrap .inner .modal-box #cardfront .st12 {
   fill: #4c4c4c;
 }
 
-.modal-wrap .modal-box #cardback .st0 {
+.modal-wrap .inner .modal-box #cardback .st0 {
   fill: none;
   stroke: #0f0f0f;
   stroke-miterlimit: 10;
 }
 
-.modal-wrap .modal-box #cardback .st2 {
+.modal-wrap .inner .modal-box #cardback .st2 {
   fill: #111111;
 }
 
-.modal-wrap .modal-box #cardback .st3 {
+.modal-wrap .inner .modal-box #cardback .st3 {
   fill: #f2f2f2;
 }
 
-.modal-wrap .modal-box #cardback .st4 {
+.modal-wrap .inner .modal-box #cardback .st4 {
   fill: #d8d2db;
 }
 
-.modal-wrap .modal-box #cardback .st5 {
+.modal-wrap .inner .modal-box #cardback .st5 {
   fill: #c4c4c4;
 }
 
-.modal-wrap .modal-box #cardback .st6 {
+.modal-wrap .inner .modal-box #cardback .st6 {
   font-family: "Source Code Pro", monospace;
   font-weight: 400;
 }
 
-.modal-wrap .modal-box #cardback .st7 {
+.modal-wrap .inner .modal-box #cardback .st7 {
   font-size: 27px;
 }
 
-.modal-wrap .modal-box #cardback .st8 {
+.modal-wrap .inner .modal-box #cardback .st8 {
   opacity: 0.6;
 }
 
-.modal-wrap .modal-box #cardback .st9 {
+.modal-wrap .inner .modal-box #cardback .st9 {
   fill: #ffffff;
 }
 
-.modal-wrap .modal-box #cardback .st10 {
+.modal-wrap .inner .modal-box #cardback .st10 {
   font-size: 24px;
 }
 
-.modal-wrap .modal-box #cardback .st11 {
+.modal-wrap .inner .modal-box #cardback .st11 {
   fill: #eaeaea;
 }
 
-.modal-wrap .modal-box #cardback .st12 {
+.modal-wrap .inner .modal-box #cardback .st12 {
   font-family: "Rock Salt", cursive;
 }
 
-.modal-wrap .modal-box #cardback .st13 {
+.modal-wrap .inner .modal-box #cardback .st13 {
   font-size: 37.769px;
 }
 
-.modal-wrap .modal-box .container {
+.modal-wrap .inner .modal-box .container {
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
 
-.modal-wrap .modal-box .creditcard {
+.modal-wrap .inner .modal-box .creditcard {
   width: 100%;
   max-width: 400px;
   -webkit-transform-style: preserve-3d;
@@ -1770,8 +1799,8 @@ main {
   margin: 0 10px;
 }
 
-.modal-wrap .modal-box .creditcard .front,
-.modal-wrap .modal-box .creditcard .back {
+.modal-wrap .inner .modal-box .creditcard .front,
+.modal-wrap .inner .modal-box .creditcard .back {
   position: absolute;
   width: 100%;
   max-width: 400px;
@@ -1782,12 +1811,12 @@ main {
   border-radius: 20px;
 }
 
-.modal-wrap .modal-box .creditcard .back {
+.modal-wrap .inner .modal-box .creditcard .back {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
-.modal-wrap .modal-box .creditcard.flipped {
+.modal-wrap .inner .modal-box .creditcard.flipped {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
@@ -1950,7 +1979,6 @@ main {
 
 .artist-area .slide-nav .inner-slide-nav .slide-nav-list .swiper-pagination-bullet {
   margin: 4px 0;
-  background: rebeccapurple;
 }
 
 .artist-area .slide-nav .inner-slide-nav .slide-nav-list .slide-nav-item {
@@ -2074,6 +2102,62 @@ main {
           justify-content: center;
 }
 
+.check-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #2792e2;
+  text-align: center;
+  padding: 26px 0;
+  height: auto;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.check-card button {
+  overflow: hidden;
+  position: relative;
+  margin-left: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 2px solid #f7f7f7;
+  font-size: 14px;
+  padding: 6px 8px;
+  color: #ffffff;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.check-card button:after {
+  position: absolute;
+  width: 0;
+  height: 120%;
+  left: -10%;
+  bottom: 0;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+  z-index: -1;
+  -webkit-transition: .3s;
+  transition: .3s;
+  content: '';
+  background: #f7f7f7;
+}
+
+.check-card button:hover {
+  color: #2792e2;
+}
+
+.check-card button:hover:after {
+  width: 120%;
+  left: -10%;
+}
+
 .audition-area .monthly-calendar {
   width: 100%;
   padding: 0 6px;
@@ -2111,6 +2195,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box .row {
@@ -2242,6 +2327,46 @@ main {
   -webkit-border-radius: 8px;
   -webkit-perspective: 350px;
           perspective: 350px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 2px 0px 3px #969696;
+}
+
+.audition-area .schedule-information .audition-schedule li .card p, .audition-area .schedule-information .audition-schedule li .card strong,
+.audition-area .schedule-information .audition-schedule li .wrap p,
+.audition-area .schedule-information .audition-schedule li .wrap strong {
+  -webkit-filter: drop-shadow(2px 4px 6px black);
+          filter: drop-shadow(2px 4px 6px black);
+}
+
+.audition-area .schedule-information .audition-schedule li .card.seoulAudition .front,
+.audition-area .schedule-information .audition-schedule li .wrap.seoulAudition .front {
+  background: url("https://img.theculturetrip.com/450x/smart/wp-content/uploads/2021/04/dnce6n-e1618929428972.jpg") center center no-repeat;
+}
+
+.audition-area .schedule-information .audition-schedule li .card.seoulAudition .back,
+.audition-area .schedule-information .audition-schedule li .wrap.seoulAudition .back {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMfUigX0ufH3czf9GAdH3ZLfpn2wgzj2enjg&usqp=CAU") center center no-repeat;
+}
+
+.audition-area .schedule-information .audition-schedule li .card.asiaAudition .front,
+.audition-area .schedule-information .audition-schedule li .wrap.asiaAudition .front {
+  background: url("https://luxurylaunches.com/wp-content/uploads/2012/12/Singapore-1.jpg") center center no-repeat;
+}
+
+.audition-area .schedule-information .audition-schedule li .card.asiaAudition .back,
+.audition-area .schedule-information .audition-schedule li .wrap.asiaAudition .back {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1N1VU7snfqvZLM9hvRCYdZYj0VHogrlNW4N1OYyJogUdzjZBNhr7vT9BHV1K-bFdSatE&usqp=CAU") center center no-repeat;
+}
+
+.audition-area .schedule-information .audition-schedule li .card.globalAudition .front,
+.audition-area .schedule-information .audition-schedule li .wrap.globalAudition .front {
+  background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-688899881-1519413300.jpg") center center no-repeat;
+}
+
+.audition-area .schedule-information .audition-schedule li .card.globalAudition .back,
+.audition-area .schedule-information .audition-schedule li .wrap.globalAudition .back {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7p4x2YZFLOETk9HPXMCiq38kw9IgAort8Ef6s7XEo8cAENfsEFIh8CeV3WbEvW2x-QQ&usqp=CAU") center center no-repeat;
 }
 
 .audition-area .schedule-information .audition-schedule li .wrap {
@@ -2288,7 +2413,6 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 1;
-  background: #fff67b;
 }
 
 .audition-area .schedule-information .audition-schedule li .front p {
@@ -2311,7 +2435,6 @@ main {
           flex-direction: column;
   -webkit-transform: rotateX(180deg) translate(-50%, -50%);
           transform: rotateX(180deg) translate(-50%, -50%);
-  background: #ff7575;
   color: #ffffff;
 }
 

@@ -218,6 +218,42 @@ a:active {
   }
 }
 
+@-webkit-keyframes cloud-animation {
+  100% {
+    background-position: 0px 2em;
+  }
+}
+
+@keyframes cloud-animation {
+  100% {
+    background-position: 0px 2em;
+  }
+}
+
+@-webkit-keyframes witch-word-color {
+  0% {
+    color: #D3B7F7;
+  }
+  50% {
+    color: #50514f;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+
+@keyframes witch-word-color {
+  0% {
+    color: #D3B7F7;
+  }
+  50% {
+    color: #50514f;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+
 .waves {
   position: relative;
   width: 100%;

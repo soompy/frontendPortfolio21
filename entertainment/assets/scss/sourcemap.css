@@ -632,7 +632,7 @@ a:active {
 
 @-webkit-keyframes witch-word-color {
   0% {
-    color: #D3B7F7;
+    color: #d3b7f7;
   }
   50% {
     color: #50514f;
@@ -644,7 +644,7 @@ a:active {
 
 @keyframes witch-word-color {
   0% {
-    color: #D3B7F7;
+    color: #d3b7f7;
   }
   50% {
     color: #50514f;
@@ -862,9 +862,11 @@ a:active {
   0%,
   100% {
     opacity: 0;
+    left: 0;
   }
   50% {
     opacity: 1;
+    left: 50%;
   }
 }
 
@@ -1209,6 +1211,15 @@ a:active {
   top: 0;
   width: 100%;
   height: 100%;
+  color: #ffffff;
+}
+
+.visual-list .visual-item h2 {
+  position: absolute;
+  bottom: 100px;
+  font-size: 26px;
+  font-weight: 900;
+  text-shadow: 2px 2px 3px #969696;
 }
 
 .blurred-image-container {
@@ -1240,11 +1251,11 @@ a:active {
 }
 
 .blurred-image-container .img.company {
-  background: url(https://jthcast.dev/static/65c2d70a1712a6b21d173bf942cfa18b/35c24/is-css-in-js-the-best.png) center center;
+  background: url(https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile21.uf.tistory.com%2Fimage%2F99A060365C866F593317D8) center center;
 }
 
 .blurred-image-container .img.audition {
-  background: url(https://pbs.twimg.com/media/CIp0kqEVEAQDV2l.jpg) center center;
+  background: url(https://jyp-cdn.azureedge.net/img/f3eac57984374684accdc415c31143a2-cn_c_1920.jpg) center center;
 }
 
 .blurred {
@@ -1281,16 +1292,19 @@ main {
 }
 
 #footer {
+  width: 100%;
+  background: #eeeeee;
+}
+
+#footer .inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   height: 120px;
   padding: 20px 50px;
-  background: #eeeeee;
 }
 
 #footer .logo {
@@ -2548,15 +2562,15 @@ main {
 }
 
 .company-audition .bubble {
-  background: #FF5722;
+  background: #ff5722;
   border-radius: 50%;
   top: 0;
-  left: 60%;
-  width: 58px;
+  left: 46%;
+  width: 70px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 5s linear infinite;
-          animation: top 5s linear infinite;
+  -webkit-animation: top 2s linear infinite;
+          animation: top 2s linear infinite;
 }
 
 .floating-tag-wrap {
@@ -2582,7 +2596,7 @@ main {
   border-radius: 12px;
   background: #ffffff;
   padding: 14px 16px;
-  font-size: 26px;
+  font-size: 18px;
 }
 
 .floating-tag-wrap .tag:after {
@@ -2603,30 +2617,9 @@ main {
 }
 
 .tag_1 {
-  top: 72%;
+  top: 71%;
   right: 0;
-  width: 47px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 2s linear infinite;
-          animation: bottom 2s linear infinite;
-}
-
-.bubble_1 {
-  top: 0;
-  left: 87%;
-  width: 21px;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: top 9s linear infinite;
-          animation: top 9s linear infinite;
-}
-
-.tag_2 {
-  top: 39%;
-  right: 0;
-  width: 40px;
+  width: 39px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -2634,104 +2627,104 @@ main {
           animation: bottom 9s linear infinite;
 }
 
-.bubble_2 {
+.bubble_1 {
   top: 0;
-  left: 16%;
-  width: 34px;
+  left: 78%;
+  width: 64px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 11s linear infinite;
-          animation: top 11s linear infinite;
+  -webkit-animation: top 4s linear infinite;
+          animation: top 4s linear infinite;
+}
+
+.tag_2 {
+  top: 29%;
+  right: 0;
+  width: 1px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 1s linear infinite;
+          animation: bottom 1s linear infinite;
+}
+
+.bubble_2 {
+  top: 0;
+  left: 10%;
+  width: 18px;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: top 9s linear infinite;
+          animation: top 9s linear infinite;
 }
 
 .tag_3 {
-  top: 4%;
+  top: 61%;
   right: 0;
-  width: 29px;
-  border-bottom: 2px solid #dbdbdb;
+  width: 13px;
+  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 2s linear infinite;
-          animation: bottom 2s linear infinite;
+  -webkit-animation: bottom 3s linear infinite;
+          animation: bottom 3s linear infinite;
 }
 
 .bubble_3 {
   top: 0;
-  left: 13%;
-  width: 21px;
+  left: 43%;
+  width: 72px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 12s linear infinite;
-          animation: top 12s linear infinite;
+  -webkit-animation: top 1s linear infinite;
+          animation: top 1s linear infinite;
 }
 
 .tag_4 {
-  top: 11%;
+  top: 67%;
   right: 0;
-  width: 27px;
-  border-bottom: 2px solid #dbdbdb;
+  width: 32px;
+  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 10s linear infinite;
-          animation: bottom 10s linear infinite;
+  -webkit-animation: bottom 1s linear infinite;
+          animation: bottom 1s linear infinite;
 }
 
 .bubble_4 {
   top: 0;
-  left: 48%;
-  width: 21px;
+  left: 69%;
+  width: 70px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 10s linear infinite;
-          animation: top 10s linear infinite;
+  -webkit-animation: top 4s linear infinite;
+          animation: top 4s linear infinite;
 }
 
 .tag_5 {
-  top: 21%;
+  top: 35%;
   right: 0;
-  width: 33px;
-  border-bottom: 1px solid #dbdbdb;
+  width: 45px;
+  border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 5s linear infinite;
-          animation: bottom 5s linear infinite;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
 }
 
 .bubble_5 {
   top: 0;
-  left: 83%;
-  width: 20px;
+  left: 36%;
+  width: 22px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 12s linear infinite;
-          animation: top 12s linear infinite;
+  -webkit-animation: top 2s linear infinite;
+          animation: top 2s linear infinite;
 }
 
 .tag_6 {
-  top: 76%;
+  top: 21%;
   right: 0;
-  width: 19px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 10s linear infinite;
-          animation: bottom 10s linear infinite;
-}
-
-.bubble_6 {
-  top: 0;
-  left: 90%;
-  width: 69px;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: top 6s linear infinite;
-          animation: top 6s linear infinite;
-}
-
-.tag_7 {
-  top: 10%;
-  right: 0;
-  width: 19px;
+  width: 28px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -2739,41 +2732,62 @@ main {
           animation: bottom 11s linear infinite;
 }
 
-.bubble_7 {
+.bubble_6 {
   top: 0;
-  left: 70%;
-  width: 64px;
+  left: 49%;
+  width: 16px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 3s linear infinite;
-          animation: top 3s linear infinite;
+  -webkit-animation: top 6s linear infinite;
+          animation: top 6s linear infinite;
 }
 
-.tag_8 {
-  top: 28%;
+.tag_7 {
+  top: 14%;
   right: 0;
-  width: 17px;
+  width: 34px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 2s linear infinite;
-          animation: bottom 2s linear infinite;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
+}
+
+.bubble_7 {
+  top: 0;
+  left: 73%;
+  width: 78px;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: top 7s linear infinite;
+          animation: top 7s linear infinite;
+}
+
+.tag_8 {
+  top: 19%;
+  right: 0;
+  width: 34px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 7s linear infinite;
+          animation: bottom 7s linear infinite;
 }
 
 .bubble_8 {
   top: 0;
-  left: 80%;
-  width: 58px;
+  left: 57%;
+  width: 77px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 10s linear infinite;
-          animation: top 10s linear infinite;
+  -webkit-animation: top 4s linear infinite;
+          animation: top 4s linear infinite;
 }
 
 .tag_9 {
-  top: 51%;
+  top: 80%;
   right: 0;
-  width: 14px;
+  width: 8px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -2783,39 +2797,60 @@ main {
 
 .bubble_9 {
   top: 0;
-  left: 8%;
-  width: 75px;
+  left: 74%;
+  width: 27px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 4s linear infinite;
-          animation: top 4s linear infinite;
+  -webkit-animation: top 2s linear infinite;
+          animation: top 2s linear infinite;
 }
 
 .tag_10 {
-  top: 78%;
+  top: 48%;
   right: 0;
-  width: 29px;
+  width: 6px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 11s linear infinite;
-          animation: bottom 11s linear infinite;
+  -webkit-animation: bottom 2s linear infinite;
+          animation: bottom 2s linear infinite;
 }
 
 .bubble_10 {
   top: 0;
   left: 52%;
-  width: 13px;
+  width: 80px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 7s linear infinite;
-          animation: top 7s linear infinite;
+  -webkit-animation: top 11s linear infinite;
+          animation: top 11s linear infinite;
 }
 
 .tag_11 {
-  top: 26%;
+  top: 43%;
   right: 0;
-  width: 42px;
+  width: 46px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 4s linear infinite;
+          animation: bottom 4s linear infinite;
+}
+
+.bubble_11 {
+  top: 0;
+  left: 60%;
+  width: 46px;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: top 5s linear infinite;
+          animation: top 5s linear infinite;
+}
+
+.tag_12 {
+  top: 3%;
+  right: 0;
+  width: 47px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -2823,77 +2858,56 @@ main {
           animation: bottom 2s linear infinite;
 }
 
-.bubble_11 {
-  top: 0;
-  left: 83%;
-  width: 21px;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: top 12s linear infinite;
-          animation: top 12s linear infinite;
-}
-
-.tag_12 {
-  top: 26%;
-  right: 0;
-  width: 32px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 12s linear infinite;
-          animation: bottom 12s linear infinite;
-}
-
 .bubble_12 {
   top: 0;
-  left: 21%;
-  width: 60px;
+  left: 86%;
+  width: 68px;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: top 8s linear infinite;
-          animation: top 8s linear infinite;
+  -webkit-animation: top 11s linear infinite;
+          animation: top 11s linear infinite;
 }
 
 .tag_13 {
-  top: 71%;
+  top: 17%;
   right: 0;
-  width: 40px;
-  border-bottom: 2px solid #dbdbdb;
+  width: 33px;
+  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
+  -webkit-animation: bottom 7s linear infinite;
+          animation: bottom 7s linear infinite;
 }
 
 .bubble_13 {
   top: 0;
-  left: 71%;
-  width: 41px;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: top 1s linear infinite;
-          animation: top 1s linear infinite;
-}
-
-.tag_14 {
-  top: 12%;
-  right: 0;
-  width: 22px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
-}
-
-.bubble_14 {
-  top: 0;
-  left: 50%;
-  width: 16px;
+  left: 40%;
+  width: 26px;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: top 7s linear infinite;
           animation: top 7s linear infinite;
+}
+
+.tag_14 {
+  top: 56%;
+  right: 0;
+  width: 43px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
+}
+
+.bubble_14 {
+  top: 0;
+  left: 2%;
+  width: 63px;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: top 12s linear infinite;
+          animation: top 12s linear infinite;
 }
 
 @-webkit-keyframes bottom {
@@ -3002,6 +3016,13 @@ main {
   margin-bottom: 16px;
 }
 
+.apply-inner .apply-form .audition-select {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
 .apply-inner .apply-form .uploadFile-wrap {
   position: relative;
   margin-bottom: 80px;
@@ -3079,8 +3100,9 @@ main {
 
 .btn-bg {
   width: 250px;
-  height: 40px;
+  height: 50px;
   margin: auto;
+  border-radius: 5px;
 }
 
 .btn-bg.bg-1 {
@@ -3317,23 +3339,27 @@ body .btn-bg.bg-6 .btn-6 button::after {
   display: block;
 }
 
-.gallery-visual .swiper-slide {
+.gallery-visual .swiper-wrapper .swiper-slide {
   height: 80vh !important;
 }
 
-.gallery-visual .swiper-slide:nth-child(1) {
+.gallery-visual .swiper-wrapper .swiper-slide:nth-child(1) {
   background-image: -webkit-gradient(linear, left top, right top, from(#db4137), color-stop(#444444), to(#000000));
   background-image: linear-gradient(to right, #db4137, #444444, #000000);
 }
 
-.gallery-visual .swiper-slide:nth-child(2) {
+.gallery-visual .swiper-wrapper .swiper-slide:nth-child(2) {
   background-image: -webkit-gradient(linear, left top, right top, from(#ee6666), color-stop(#d9409f), to(#a98bc8));
   background-image: linear-gradient(to right, #ee6666, #d9409f, #a98bc8);
 }
 
-.gallery-visual .swiper-slide:nth-child(3) {
+.gallery-visual .swiper-wrapper .swiper-slide:nth-child(3) {
   background-image: -webkit-gradient(linear, left top, right top, from(#ff5fa2), to(#fcc89b));
   background-image: linear-gradient(to right, #ff5fa2, #fcc89b);
+}
+
+.gallery-visual .svg-holder {
+  margin-left: 100px;
 }
 
 .floating-box {
@@ -3435,8 +3461,8 @@ body .btn-bg.bg-6 .btn-6 button::after {
 }
 
 .grid-gallery .grid .grid-item.item-opened {
-  width: 80%;
-  height: 80vw;
+  width: 100%;
+  height: 100%;
   border: 3px solid #e8e8e8;
   -webkit-filter: grayscale(0%) blur(0);
 }

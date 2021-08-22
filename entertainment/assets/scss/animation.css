@@ -232,7 +232,7 @@ a:active {
 
 @-webkit-keyframes witch-word-color {
   0% {
-    color: #D3B7F7;
+    color: #d3b7f7;
   }
   50% {
     color: #50514f;
@@ -244,7 +244,7 @@ a:active {
 
 @keyframes witch-word-color {
   0% {
-    color: #D3B7F7;
+    color: #d3b7f7;
   }
   50% {
     color: #50514f;
@@ -462,9 +462,11 @@ a:active {
   0%,
   100% {
     opacity: 0;
+    left: 0;
   }
   50% {
     opacity: 1;
+    left: 50%;
   }
 }
 

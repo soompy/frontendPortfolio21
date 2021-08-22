@@ -68,6 +68,14 @@
     top: 0;
     width: 100%;
     height: 100%;
+    color: #ffffff;
+    h2 {
+      position: absolute;
+      bottom: 100px;
+      font-size: 26px;
+      font-weight: 900;
+      text-shadow: 2px 2px 3px rgba(150, 150, 150, 1);
+    }
   }
 }
 
@@ -99,12 +107,12 @@
         center center;
     }
     &.company {
-       background: url(https://jthcast.dev/static/65c2d70a1712a6b21d173bf942cfa18b/35c24/is-css-in-js-the-best.png)
-         center center;
+      background: url(https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile21.uf.tistory.com%2Fimage%2F99A060365C866F593317D8)
+        center center;
     }
     &.audition {
-      background: url(https://pbs.twimg.com/media/CIp0kqEVEAQDV2l.jpg) center
-        center;
+      background: url(https://jyp-cdn.azureedge.net/img/f3eac57984374684accdc415c31143a2-cn_c_1920.jpg)
+        center center;
     }
   }
 }
@@ -142,12 +150,14 @@ main {
 }
 
 #footer {
-  display: flex;
-  align-items: center;
   width: 100%;
-  height: 120px;
-  padding: 20px 50px;
   background: #eeeeee;
+  .inner {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    padding: 20px 50px;
+  }
   .logo {
     display: flex;
     align-items: center;

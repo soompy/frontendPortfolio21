@@ -625,16 +625,16 @@
     <script src="./assets/js/modal.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        let scrollposition = window.scrollY
-        const headerLayout = document.getElementById('header')
-        const headerHeight = headerLayout.outerHeight
+        const scrollposition = window.scrollY;
+        const headerLayout = document.getElementById('header');
+        const headerHeight = headerLayout.offsetTop;
 
-        window.addEventListener('scroll', function () {
-            console.log('headerHeight')
-            if(scrollposition >= headerHeight) {
-                headerLayout.classList.add('bg-header');
+        window.addEventListener('scroll', function (e) {
+            if(scrollposition < headerHeight) {
+                headerLayout.classList.remove("bg-header");
+                console.log('scrollposition()')
             } else {
-                headerLayout.classList.remove('bg-header');
+                headerLayout.classList.add("bg-header");
             }
         })
 

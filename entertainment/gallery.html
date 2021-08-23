@@ -15,24 +15,21 @@
 </head>
 <body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
     <div id="app">
-<!--    컨셉 스크롤 원페이지
-        http://www.npley.com/
-        https://m.smtown.com/
-        https://diapick.cjenm.com/diashoplive/home
-/  -->
         <header id="header">
-            <h1 class="logo"><a href="index.html"><img
+            <div class="inner">
+                <h1 class="logo"><a href="index.html"><img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/JYP_Entertainment_Logo.svg/800px-JYP_Entertainment_Logo.svg.png"
                         alt=""></a></h1>
-            <nav class="nav">
-                <ul class="gnb">
-                    <li class="menu"><a href="company.html">Company</a></li>
-                    <li class="menu"><a href="gallery.html">Gallery</a></li>
-                    <li class="menu"><a href="audition.html">Audition</a></li>
-                </ul>
-            </nav>
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li class="menu"><a href="company.html">Company</a></li>
+                        <li class="menu"><a href="gallery.html">Gallery</a></li>
+                        <li class="menu"><a href="audition.html">Audition</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-   
+
         <div class="swiper-container gallery-visual" id="galleryVisual">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -55,7 +52,7 @@
                             </g>
                         </svg>
                     </div>
-                </div>                
+                </div>
                 <div class="swiper-slide">
                     <div class="floating-box gallery_01">
                         <img class="visual-gallery-img" src="http://file2.nocutnews.co.kr/newsroom/image/2019/02/01/20190201094337205585_0_600_400.jpg" alt="">
@@ -78,18 +75,18 @@
                             </g>
                         </svg>
                     </div>
-                </div>                                             
+                </div>
             </div>
             <div class="pagination-wrap">
                 <div class="swiper-pagination"></div>
                 <span class="slide-direction"><img src="./assets/images/slidearrow.png" alt=""></span>
-            </div>        
+            </div>
         </div>
 
         <main class="artist-gallery">
             <div class="common-area grid-gallery">
-                <!-- https://codepen.io/WixelHQ/pen/dGQyeb -->            
-                
+                <!-- https://codepen.io/WixelHQ/pen/dGQyeb -->
+
                 <div class="grid">
                     <div class="grid-sizer"></div>
                     <div class="grid-item twice"></div>
@@ -116,13 +113,13 @@
                     <div class="grid-item twopm"></div>
                 </div>
                 <div class="area-common more-button">
-                    <div class="grid-alpha"></div>                
+                    <div class="grid-alpha"></div>
                     <div id="moreGallery" class="btn-bg bg-5">
                         <div class="btn btn-5">
                             <button>더보기</button>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </main>
 
@@ -144,7 +141,6 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
     <script>
         tippy('#moreGallery', {
             content: '더 많은 화보를 열어보세요!',
@@ -164,13 +160,12 @@
             }
         }
         setTextAnimation(0.1, 2.3, 2, 'ease-in', '#ffffff', true);
-    </script>
-    <script>
+
         var swiper = new Swiper(".gallery-visual", {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 30,
-            pagination: {            
+            pagination: {
                 el: ".swiper-pagination",
                 type: 'fraction',
                 clickable: true,
@@ -184,19 +179,6 @@
                 disableOnInteraction: true // 쓸어 넘기거나 버튼 클릭 시 자동 슬라이드 정지.
             },
         });
-    </script>
-
-<!--    <script>-->
-<!--        $(document).ready(function() {-->
-<!--            $(window).scroll(function(e) {-->
-<!--                var s = $(window).scrollTop(),-->
-<!--                    opacityVal = (s / 200);-->
-
-<!--                $('.blurred').css('opacity', opacityVal);-->
-<!--            });-->
-<!--        });-->
-<!--    </script>-->
-    <script>
         var swiper = new Swiper(".mySwiper", {
             pagination: {
                 el: ".swiper-pagination",
@@ -207,15 +189,3 @@
 </body>
 </html>
 
-<!--
-swiper 사용 https://swiperjs.com/get-started
-
-카카오 중간배너
-https://www.kakaocorp.com/#
-
-더현대 서울
-https://www.thehyundaiseoul.com/
-
-스크롤 효과따라하기
-https://codepen.io/ezkorry/pen/oNzRdJX -->
-<!--https://jsfiddle.net/BinaryMoon/8jhw2/-->

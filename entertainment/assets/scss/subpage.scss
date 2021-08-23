@@ -14,18 +14,42 @@
 
 .company-audition {
   overflow: hidden;
-  font-size: 40px;
-  line-height: 60px;
+  position: relative;
+  height: 100vh;
+  font-size: 100px;
+  line-height: 140px;
   font-weight: 900;
-  background: #eeeeee;
-  .bubble {
-    background: #ff5722;
-    border-radius: 50%;
+  margin: 0;
+  .inner-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
     top: 0;
-    left: random(90) + %;
-    width: random(80) + px;
-    transition: 23s;
-    animation: top random(12) + s linear infinite;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .inner {
+      position: fixed;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: translateZ(0);
+      will-change: transform;
+      &.inner1 {
+        color: #333333;
+        background: #1a1a1a;
+      }
+      &.inner2 {
+        color: #4CD7D0;
+        background: #F8EA8C;
+      }
+      .text {
+        @include flexCenter;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
 
@@ -70,13 +94,6 @@ $total: 15;
     border-bottom: random(2) + px solid #dbdbdb;
     transition: 23s;
     animation: bottom random(12) + s linear infinite;
-  }
-  .bubble_#{$i} {
-    top: 0;
-    left: random(90) + %;
-    width: random(80) + px;
-    transition: 23s;
-    animation: top random(12) + s linear infinite;
   }
 }
 

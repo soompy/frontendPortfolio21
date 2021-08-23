@@ -16,14 +16,18 @@
 <body data-aos-easing="ease-out-back" data-aos-duration="1000" data-aos-delay="0">
     <div id="app">
         <header id="header">
-            <h1 class="logo"><a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/JYP_Entertainment_Logo.svg/800px-JYP_Entertainment_Logo.svg.png" alt=""></a></h1>
-            <nav class="nav">
-                <ul class="gnb">
-                    <li class="menu"><a href="company.html">Company</a></li>
-                    <li class="menu"><a href="gallery.html">Gallery</a></li>
-                    <li class="menu"><a href="audition.html">Audition</a></li>
-                </ul>
-            </nav>
+            <div class="layout-inner">
+                <h1 class="logo"><a href="index.html"><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/JYP_Entertainment_Logo.svg/800px-JYP_Entertainment_Logo.svg.png"
+                        alt=""></a></h1>
+                <nav class="nav">
+                    <ul class="gnb">
+                        <li class="menu"><a href="company.html">Company</a></li>
+                        <li class="menu"><a href="gallery.html">Gallery</a></li>
+                        <li class="menu"><a href="audition.html">Audition</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <section id="visual">
@@ -63,8 +67,7 @@
                             </div>
                             <div class="swiper-slide">
                                 <article class="monthly-issue">
-                                    <img src="https://lh3.googleusercontent.com/proxy/uW5ciyABE2eXVBGc2zL4-Wx3OuOKhUR-sZxSRengMaL6pG0BQXl_x_uO3LvoWHEUzt4IrbNCT7hNmnzZPmf9mTQd96-4JiBQoKrVu-81FbAAUoM-OGn1O6ld"
-                                        alt="">
+                                    <img src="https://img.hankyung.com/photo/201905/2019053118064617475-540x810.jpg" alt="">
                                     <div class="issue-box">
                                         <div class="inner">
                                             <strong>JYP Issue</strong>
@@ -612,7 +615,7 @@
                     <address>서울특별시 강동구 강동대로 205(서울특별시 강동구 성내동 448-13)</address>
                     <p>Tel: 02-2225-8100</p>
                 </div>
-            </div>            
+            </div>
         </footer>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -622,20 +625,29 @@
     <script src="./assets/js/modal.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // https://github.com/michalsnik/aos
+        let scrollposition = window.scrollY
+        const headerLayout = document.getElementById('header')
+        const headerHeight = headerLayout.outerHeight
+
+        window.addEventListener('scroll', function () {
+            console.log('headerHeight')
+            if(scrollposition >= headerHeight) {
+                headerLayout.classList.add('bg-header');
+            } else {
+                headerLayout.classList.remove('bg-header');
+            }
+        })
+
         AOS.init({
             easing: 'ease-out-back',
             duration: 1000
         });
-        hljs.initHighlightingOnLoad();
-
+        // hljs.initHighlightingOnLoad();
         $('.hero__scroll').on('click', function (e) {
             $('html, body').animate({
                 scrollTop: $(window).height()
             }, 1200);
         });
-    </script>
-    <script>
         $(document).ready(function() {
             $(window).scroll(function(e) {
                 var s = $(window).scrollTop(),
@@ -644,8 +656,6 @@
                 $('.blurred').css('opacity', opacityVal);
             });
         });
-    </script>
-    <script>
         var swiper = new Swiper(".enter-news", {
             loop: true,
             pagination: {

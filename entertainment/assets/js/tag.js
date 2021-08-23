@@ -7,16 +7,6 @@ for (let i = 1; i < 15; i++) {
     document.querySelector('.tag').innerText = getRandomName();
 }
 
-const bubbleWrap = document.querySelector('.company-audition');
-
-for(let i = 1; i < 7; i++ ) {
-    const buttonSpan = document.createElement("span")
-    buttonSpan.className = `bubble bubble_${i}`;
-    bubbleWrap.appendChild(buttonSpan);
-}
-
-
-
 function getRandomName() {
     var names = [
         'TWICE',

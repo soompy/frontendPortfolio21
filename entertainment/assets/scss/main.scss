@@ -73,7 +73,7 @@
           @include rounded();
           @include transition(0.4s);
         }
-        &:hover{
+        &:hover {
           animation: spinning 3s;
           animation-fill-mode: forwards;
           margin: 0 100px;
@@ -215,7 +215,7 @@
   color: #ffffff;
   button {
     overflow: hidden;
-    position:relative;
+    position: relative;
     margin-left: 10px;
     transition: 0.3s;
     border: 2px solid #f7f7f7;
@@ -232,8 +232,8 @@
       bottom: 0;
       transform: skewX(15deg);
       z-index: -1;
-      transition: .3s;
-      content: '';
+      transition: 0.3s;
+      content: "";
       background: #f7f7f7;
     }
     &:hover {
@@ -355,29 +355,38 @@
           color: #ffffff;
           font-weight: bold;
           text-shadow: 2px 0px 3px rgba(150, 150, 150, 1);
-          p, strong {filter: drop-shadow(2px 4px 6px black);}
+          p,
+          strong {
+            filter: drop-shadow(2px 4px 6px black);
+          }
           &.seoulAudition {
             .front {
-              background: url('https://img.theculturetrip.com/450x/smart/wp-content/uploads/2021/04/dnce6n-e1618929428972.jpg') center center no-repeat;
+              background: url("https://img.theculturetrip.com/450x/smart/wp-content/uploads/2021/04/dnce6n-e1618929428972.jpg")
+                center center no-repeat;
             }
             .back {
-              background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMfUigX0ufH3czf9GAdH3ZLfpn2wgzj2enjg&usqp=CAU') center center no-repeat;
+              background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMfUigX0ufH3czf9GAdH3ZLfpn2wgzj2enjg&usqp=CAU")
+                center center no-repeat;
             }
           }
           &.asiaAudition {
             .front {
-              background: url('https://luxurylaunches.com/wp-content/uploads/2012/12/Singapore-1.jpg') center center no-repeat;
+              background: url("https://luxurylaunches.com/wp-content/uploads/2012/12/Singapore-1.jpg")
+                center center no-repeat;
             }
             .back {
-              background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1N1VU7snfqvZLM9hvRCYdZYj0VHogrlNW4N1OYyJogUdzjZBNhr7vT9BHV1K-bFdSatE&usqp=CAU') center center no-repeat;
+              background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1N1VU7snfqvZLM9hvRCYdZYj0VHogrlNW4N1OYyJogUdzjZBNhr7vT9BHV1K-bFdSatE&usqp=CAU")
+                center center no-repeat;
             }
           }
           &.globalAudition {
             .front {
-              background: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-688899881-1519413300.jpg') center center no-repeat;
+              background: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-688899881-1519413300.jpg")
+                center center no-repeat;
             }
             .back {
-              background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7p4x2YZFLOETk9HPXMCiq38kw9IgAort8Ef6s7XEo8cAENfsEFIh8CeV3WbEvW2x-QQ&usqp=CAU') center center no-repeat;
+              background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb7p4x2YZFLOETk9HPXMCiq38kw9IgAort8Ef6s7XEo8cAENfsEFIh8CeV3WbEvW2x-QQ&usqp=CAU")
+                center center no-repeat;
             }
           }
         }
@@ -434,6 +443,90 @@
           audition-day {
             font-size: 14px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .album-area {
+    margin: 0;
+    .album-box .album-list {
+      overflow-x: scroll;
+      padding: 50px 0;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  .artist-area {
+    .area-common {
+      width: 100%;
+      .left-artist .left-artist-slider .swiper-slide img {
+        width: 30vw;
+        height: 30vw;
+      }
+      .text-animation {
+        font-size: 30px;
+      }
+      .right-artist .right-artist-slider {
+        width: 30vw;
+        height: 50vw;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 720px) {
+  .artist-area {
+    padding: 0;
+    .area-common {
+      flex-direction: column;
+    }
+    .inner-slide-nav {
+      .slide-before,
+      .slide-after {
+        display: none;
+      }
+      .artist-area .slide-nav .inner-slide-nav .slide-nav-list {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 540px) {
+  .inner {
+    padding: 50px 0;
+  }
+  #visual .visual-list .visual-item h2 {
+    bottom: 50px;
+    left: 16px;
+    font-size: 18px;
+  }
+  .entertainment-area
+    .entertainment-wrap
+    .enter-news
+    .swiper-slide
+    .monthly-issue {
+    flex-direction: column;
+    height: 100%;
+    padding: 16px;
+    img {
+      width: 100%;
+    }
+    .issue-box {
+      width: 100%;
+      .inner {
+        padding: 16px;
+        .title {
+          font-size: 18px;
+          line-height: 22px;
+          margin: 16px 0;
+        }
+        .text {
+          font-size: 14px;
         }
       }
     }

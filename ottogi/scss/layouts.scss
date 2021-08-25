@@ -1,0 +1,42 @@
+#header, #footer {
+    width: 100%;
+    .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 94%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    .logo a {
+        display: inline-block;
+        transform-origin: left;
+        position: relative;
+        vertical-align: middle;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        .logoImg {
+            width: 165px;
+            height: 63px;
+            background: url(../images/common/site-logo_w.png) center no-repeat;
+            background-size: contain;
+            font-size: 0;
+            text-indent: -9999px;
+        }
+    }
+
+
+
+}
+
+#main {
+    .area-common {
+        position: relative;
+        width: 100%;
+        .inner {
+            width: 1400px;
+            margin: auto;
+        }
+    }
+}

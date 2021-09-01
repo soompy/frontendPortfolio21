@@ -1,632 +1,91 @@
-/*header*/
-#header {
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  width: 100%;
-  height: 80px;
-  padding: 20px 50px;
-  z-index: 200;
-}
-
-#header .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 180px;
-}
-
-#header .logo img {
-  width: 100%;
-}
-
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: auto;
-}
-
-.nav .gnb {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.nav .gnb .menu {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 0 16px;
-}
-
-.nav .gnb .menu a {
-  display: block;
-  font-size: 20px;
-}
-
-.nav .gnb .menu:hover a {
-  font-weight: bold;
-}
-
-/*visual*/
-#visual {
-  position: relative;
-  width: 100%;
-  height: 700px;
-}
-
-.visual-list {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.visual-list li {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.blurred-image-container {
-  display: block;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 700px;
-  z-index: -1;
-}
-
-.blurred-image-container .img {
-  position: absolute;
-  background: url(http://bromleydemo.files.wordpress.com/2013/10/blossom.jpg?w=600) center center;
-  background-size: cover;
-  top: -10%;
-  bottom: 10%;
-  left: -10%;
-  right: 10%;
-  width: 120%;
-  height: 120%;
-}
-
-.blurred {
-  opacity: 0;
-  -webkit-filter: blur(20px) brightness(0.7);
-  -ms-filter: blur(20px) brightness(0.7);
-  -o-filter: blur(20px) brightness(0.7);
-  filter: blur(20px) brightness(0.7);
-}
-
-#visual .paging {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  left: 50%;
-  bottom: 50px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-#visual .paging a {
-  display: block;
-  width: 10px;
-  height: 10px;
-  background: #1a1a1a;
-  borde-radius: 50%;
-}
-
-main {
-  background: #ffffff;
-}
-
-#footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 120px;
-  padding: 20px 50px;
-  background: #eeeeee;
-}
-
-#footer .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 180px;
-  padding-right: 50px;
-}
-
-#footer .logo img {
-  width: 100%;
-}
-
-/*body*/
-.common-area {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.inner {
-  padding: 80px 50px;
-}
-
-.flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.flex-box .flex-item {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  width: 50%;
-}
-
-.grid-box {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 10px;
-  -ms-grid-rows: (100px)[2];
-      grid-template-rows: repeat(2, 100px);
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-}
-
-/*swiper*/
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.dim-layer {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
-}
-
-.modal-wrap {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  background: #ffffff;
-}
-
-.modal-wrap .modal-box {
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  min-height: 60vh;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  font-family: "Raleway";
-  /* CREDIT CARD IMAGE STYLING */
-  /* CHANGEABLE CARD ELEMENTS */
-  /* FRONT OF CARD */
-  /* BACK OF CARD */
-  /* FLIP ANIMATION */
-}
-
-.modal-wrap .modal-box .payment-title {
-  width: 100%;
-  text-align: center;
-}
-
-.modal-wrap .modal-box .form-container .field-container:first-of-type {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: name;
-}
-
-.modal-wrap .modal-box .form-container .field-container:nth-of-type(2) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: number;
-}
-
-.modal-wrap .modal-box .form-container .field-container:nth-of-type(3) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: expiration;
-}
-
-.modal-wrap .modal-box .form-container .field-container:nth-of-type(4) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: security;
-}
-
-.modal-wrap .modal-box .field-container input {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.modal-wrap .modal-box .field-container {
-  position: relative;
-}
-
-.modal-wrap .modal-box .form-container {
-  display: -ms-grid;
-  display: grid;
-  grid-column-gap: 10px;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  -ms-grid-rows: 90px 90px 90px;
-      grid-template-rows: 90px 90px 90px;
-      grid-template-areas: "name name" "number number" "expiration security";
-  max-width: 400px;
-  padding: 20px;
-  color: #707070;
-}
-
-.modal-wrap .modal-box label {
-  padding-bottom: 5px;
-  font-size: 13px;
-}
-
-.modal-wrap .modal-box input {
-  margin-top: 3px;
-  padding: 15px;
-  font-size: 16px;
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid #dcdcdc;
-}
-
-.modal-wrap .modal-box .ccicon {
-  height: 38px;
-  position: absolute;
-  right: 6px;
-  top: calc(50% - 17px);
-  width: 60px;
-}
-
-.modal-wrap .modal-box .preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
-
-.modal-wrap .modal-box .container {
-  width: 100%;
-  max-width: 400px;
-  max-height: 251px;
-  height: 54vw;
-  padding: 20px;
-}
-
-.modal-wrap .modal-box #ccsingle {
-  position: absolute;
-  right: 15px;
-  top: 20px;
-}
-
-.modal-wrap .modal-box #ccsingle svg {
-  width: 100px;
-  max-height: 60px;
-}
-
-.modal-wrap .modal-box .creditcard svg#cardfront,
-.modal-wrap .modal-box .creditcard svg#cardback {
-  width: 100%;
-  -webkit-box-shadow: 1px 5px 6px 0px black;
-  box-shadow: 1px 5px 6px 0px black;
-  border-radius: 22px;
-}
-
-.modal-wrap .modal-box #generatecard {
-  cursor: pointer;
-  float: right;
-  font-size: 12px;
-  color: #fff;
-  padding: 2px 4px;
-  background-color: #909090;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
-
-.modal-wrap .modal-box .creditcard .lightcolor,
-.modal-wrap .modal-box .creditcard .darkcolor {
-  -webkit-transition: fill 0.5s;
-  transition: fill 0.5s;
-}
-
-.modal-wrap .modal-box .creditcard .lightblue {
-  fill: #03a9f4;
-}
-
-.modal-wrap .modal-box .creditcard .lightbluedark {
-  fill: #0288d1;
-}
-
-.modal-wrap .modal-box .creditcard .red {
-  fill: #ef5350;
-}
-
-.modal-wrap .modal-box .creditcard .reddark {
-  fill: #d32f2f;
-}
-
-.modal-wrap .modal-box .creditcard .purple {
-  fill: #ab47bc;
-}
-
-.modal-wrap .modal-box .creditcard .purpledark {
-  fill: #7b1fa2;
-}
-
-.modal-wrap .modal-box .creditcard .cyan {
-  fill: #26c6da;
-}
-
-.modal-wrap .modal-box .creditcard .cyandark {
-  fill: #0097a7;
-}
-
-.modal-wrap .modal-box .creditcard .green {
-  fill: #66bb6a;
-}
-
-.modal-wrap .modal-box .creditcard .greendark {
-  fill: #388e3c;
-}
-
-.modal-wrap .modal-box .creditcard .lime {
-  fill: #d4e157;
-}
-
-.modal-wrap .modal-box .creditcard .limedark {
-  fill: #afb42b;
-}
-
-.modal-wrap .modal-box .creditcard .yellow {
-  fill: #ffeb3b;
-}
-
-.modal-wrap .modal-box .creditcard .yellowdark {
-  fill: #f9a825;
-}
-
-.modal-wrap .modal-box .creditcard .orange {
-  fill: #ff9800;
-}
-
-.modal-wrap .modal-box .creditcard .orangedark {
-  fill: #ef6c00;
-}
-
-.modal-wrap .modal-box .creditcard .grey {
-  fill: #bdbdbd;
-}
-
-.modal-wrap .modal-box .creditcard .greydark {
-  fill: #616161;
-}
-
-.modal-wrap .modal-box #svgname {
-  text-transform: uppercase;
-}
-
-.modal-wrap .modal-box #cardfront .st2 {
-  fill: #ffffff;
-}
-
-.modal-wrap .modal-box #cardfront .st3 {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 600;
-}
-
-.modal-wrap .modal-box #cardfront .st4 {
-  font-size: 54.7817px;
-}
-
-.modal-wrap .modal-box #cardfront .st5 {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 400;
-}
-
-.modal-wrap .modal-box #cardfront .st6 {
-  font-size: 33.1112px;
-}
-
-.modal-wrap .modal-box #cardfront .st7 {
-  opacity: 0.6;
-  fill: #ffffff;
-}
-
-.modal-wrap .modal-box #cardfront .st8 {
-  font-size: 24px;
-}
-
-.modal-wrap .modal-box #cardfront .st9 {
-  font-size: 36.5498px;
-}
-
-.modal-wrap .modal-box #cardfront .st10 {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 300;
-}
-
-.modal-wrap .modal-box #cardfront .st11 {
-  font-size: 16.1716px;
-}
-
-.modal-wrap .modal-box #cardfront .st12 {
-  fill: #4c4c4c;
-}
-
-.modal-wrap .modal-box #cardback .st0 {
-  fill: none;
-  stroke: #0f0f0f;
-  stroke-miterlimit: 10;
-}
-
-.modal-wrap .modal-box #cardback .st2 {
-  fill: #111111;
-}
-
-.modal-wrap .modal-box #cardback .st3 {
-  fill: #f2f2f2;
-}
-
-.modal-wrap .modal-box #cardback .st4 {
-  fill: #d8d2db;
-}
-
-.modal-wrap .modal-box #cardback .st5 {
-  fill: #c4c4c4;
-}
-
-.modal-wrap .modal-box #cardback .st6 {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 400;
-}
-
-.modal-wrap .modal-box #cardback .st7 {
-  font-size: 27px;
-}
-
-.modal-wrap .modal-box #cardback .st8 {
-  opacity: 0.6;
-}
-
-.modal-wrap .modal-box #cardback .st9 {
-  fill: #ffffff;
-}
-
-.modal-wrap .modal-box #cardback .st10 {
-  font-size: 24px;
-}
-
-.modal-wrap .modal-box #cardback .st11 {
-  fill: #eaeaea;
-}
-
-.modal-wrap .modal-box #cardback .st12 {
-  font-family: "Rock Salt", cursive;
-}
-
-.modal-wrap .modal-box #cardback .st13 {
-  font-size: 37.769px;
-}
-
-.modal-wrap .modal-box .container {
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-}
-
-.modal-wrap .modal-box .creditcard {
-  width: 100%;
-  max-width: 400px;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transition: -webkit-transform 0.6s;
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: transform 0.6s;
-  transition: transform 0.6s, -webkit-transform 0.6s;
-  cursor: pointer;
-}
-
-.modal-wrap .modal-box .creditcard .front,
-.modal-wrap .modal-box .creditcard .back {
-  position: absolute;
-  width: 100%;
-  max-width: 400px;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
-  color: #47525d;
-}
-
-.modal-wrap .modal-box .creditcard .back {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-
-.modal-wrap .modal-box .creditcard.flipped {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY(180deg);
-}
-/*# sourceMappingURL=layouts.css.map */
+/*
+Error: Undefined mixin 'flexCenter'.
+        on line 344 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss, in `flexCenter'
+        from line 344 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss
+
+339:   transform: translate(-50%, -50%);
+340:   .inner {
+341:     padding: 10px;
+342:     background: #ffffff;
+343:     .modal-close {
+344:       @include flexCenter;
+345:       position: relative;
+346:       right: 20px;
+347:       width: 30px;
+348:       height: 30px;
+349:       margin-left: auto;
+
+Backtrace:
+C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss:344:in `flexCenter'
+C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss:344
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `with_mixin'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'flexCenter'.\A         on line 344 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss, in `flexCenter'\A         from line 344 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss\A \A 339:   transform: translate(-50%, -50%);\A 340:   .inner {\A 341:     padding: 10px;\A 342:     background: #ffffff;\A 343:     .modal-close {\A 344:       @include flexCenter;\A 345:       position: relative;\A 346:       right: 20px;\A 347:       width: 30px;\A 348:       height: 30px;\A 349:       margin-left: auto;"; }

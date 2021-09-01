@@ -449,86 +449,86 @@
   }
 }
 
-@media all and (max-width: 1400px) {
-  .album-area {
-    margin: 0;
-    .album-box .album-list {
-      overflow-x: scroll;
-      padding: 50px 0;
-      &::-webkit-scrollbar {
-        display: none;
-      }
-    }
-  }
-  .artist-area {
-    .area-common {
-      width: 100%;
-      .left-artist .left-artist-slider .swiper-slide img {
-        width: 30vw;
-        height: 30vw;
-      }
-      .text-animation {
-        font-size: 30px;
-      }
-      .right-artist .right-artist-slider {
-        width: 30vw;
-        height: 50vw;
-      }
-    }
-  }
-}
-
-@media all and (max-width: 720px) {
-  .artist-area {
-    padding: 0;
-    .area-common {
-      flex-direction: column;
-    }
-    .inner-slide-nav {
-      .slide-before,
-      .slide-after {
-        display: none;
-      }
-      .artist-area .slide-nav .inner-slide-nav .slide-nav-list {
-        flex-direction: row;
-      }
-    }
-  }
-}
-
-@media all and (max-width: 540px) {
-  .inner {
-    padding: 50px 0;
-  }
-  #visual .visual-list .visual-item h2 {
-    bottom: 50px;
-    left: 16px;
-    font-size: 18px;
-  }
-  .entertainment-area
-    .entertainment-wrap
-    .enter-news
-    .swiper-slide
-    .monthly-issue {
-    flex-direction: column;
-    height: 100%;
-    padding: 16px;
-    img {
-      width: 100%;
-    }
-    .issue-box {
-      width: 100%;
-      .inner {
-        padding: 16px;
-        .title {
-          font-size: 18px;
-          line-height: 22px;
-          margin: 16px 0;
-        }
-        .text {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-}
+//@media all and (max-width: 1400px) {
+//  .album-area {
+//    margin: 0;
+//    .album-box .album-list {
+//      overflow-x: scroll;
+//      padding: 50px 0;
+//      &::-webkit-scrollbar {
+//        display: none;
+//      }
+//    }
+//  }
+//  .artist-area {
+//    .area-common {
+//      width: 100%;
+//      .left-artist .left-artist-slider .swiper-slide img {
+//        width: 30vw;
+//        height: 30vw;
+//      }
+//      .text-animation {
+//        font-size: 30px;
+//      }
+//      .right-artist .right-artist-slider {
+//        width: 30vw;
+//        height: 50vw;
+//      }
+//    }
+//  }
+//}
+//
+//@media all and (max-width: 720px) {
+//  .artist-area {
+//    padding: 0;
+//    .area-common {
+//      flex-direction: column;
+//    }
+//    .inner-slide-nav {
+//      .slide-before,
+//      .slide-after {
+//        display: none;
+//      }
+//      .artist-area .slide-nav .inner-slide-nav .slide-nav-list {
+//        flex-direction: row;
+//      }
+//    }
+//  }
+//}
+//
+//@media all and (max-width: 540px) {
+//  .inner {
+//    padding: 50px 0;
+//  }
+//  #visual .visual-list .visual-item h2 {
+//    bottom: 50px;
+//    left: 16px;
+//    font-size: 18px;
+//  }
+//  .entertainment-area,
+//    .entertainment-wrap,
+//    .enter-news,
+//    .swiper-slide,
+//    .monthly-issue {
+//    flex-direction: column;
+//    height: 100%;
+//    padding: 16px;
+//    img {
+//      width: 100%;
+//    }
+//    .issue-box {
+//      width: 100%;
+//      .inner {
+//        padding: 16px;
+//        .title {
+//          font-size: 18px;
+//          line-height: 22px;
+//          margin: 16px 0;
+//        }
+//        .text {
+//          font-size: 14px;
+//        }
+//      }
+//    }
+//  }
+//}

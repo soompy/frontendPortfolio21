@@ -21,7 +21,6 @@ function getRandomName() {
         'NiziU',
     ];
     return names[Math.floor(Math.random() * names.length)];
-
 }
 
 // document.write( getRandomName() );

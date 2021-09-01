@@ -1921,6 +1921,12 @@ main {
 }
 
 @media all and (max-width: 1400px) {
+  #visual {
+    height: 50vh;
+  }
+  #visual .blurred-image-container {
+    height: 50vh;
+  }
   .grid-box {
     width: 100%;
     height: 400px;
@@ -2605,115 +2611,6 @@ main {
   font-size: 14px;
 }
 
-@media all and (max-width: 1400px) {
-  .album-area {
-    margin: 0;
-  }
-  .album-area .album-box .album-list {
-    overflow-x: scroll;
-    padding: 50px 0;
-  }
-  .album-area .album-box .album-list::-webkit-scrollbar {
-    display: none;
-  }
-  .artist-area .area-common {
-    width: 100%;
-  }
-  .artist-area .area-common .left-artist .left-artist-slider .swiper-slide img {
-    width: 30vw;
-    height: 30vw;
-  }
-  .artist-area .area-common .text-animation {
-    font-size: 30px;
-  }
-  .artist-area .area-common .right-artist .right-artist-slider {
-    width: 30vw;
-    height: 50vw;
-  }
-}
-
-@media all and (max-width: 720px) {
-  .artist-area {
-    padding: 0;
-  }
-  .artist-area .area-common {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .artist-area .inner-slide-nav .slide-before,
-  .artist-area .inner-slide-nav .slide-after {
-    display: none;
-  }
-  .artist-area .inner-slide-nav .artist-area .slide-nav .inner-slide-nav .slide-nav-list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media all and (max-width: 540px) {
-  .inner {
-    padding: 50px 0;
-  }
-  #visual .visual-list .visual-item h2 {
-    bottom: 50px;
-    left: 16px;
-    font-size: 18px;
-  }
-  .entertainment-area
-.entertainment-wrap
-.enter-news
-.swiper-slide
-.monthly-issue {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100%;
-    padding: 16px;
-  }
-  .entertainment-area
-.entertainment-wrap
-.enter-news
-.swiper-slide
-.monthly-issue img {
-    width: 100%;
-  }
-  .entertainment-area
-.entertainment-wrap
-.enter-news
-.swiper-slide
-.monthly-issue .issue-box {
-    width: 100%;
-  }
-  .entertainment-area
-.entertainment-wrap
-.enter-news
-.swiper-slide
-.monthly-issue .issue-box .inner {
-    padding: 16px;
-  }
-  .entertainment-area
-.entertainment-wrap
-.enter-news
-.swiper-slide
-.monthly-issue .issue-box .inner .title {
-    font-size: 18px;
-    line-height: 22px;
-    margin: 16px 0;
-  }
-  .entertainment-area
-.entertainment-wrap
-.enter-news
-.swiper-slide
-.monthly-issue .issue-box .inner .text {
-    font-size: 14px;
-  }
-}
-
 .company-solgan strong {
   font-size: 60px;
   padding-right: 80px;
@@ -2763,8 +2660,8 @@ main {
 }
 
 .company-audition .inner-wrap .inner.inner2 {
-  color: #4CD7D0;
-  background: #F8EA8C;
+  color: #ffffff;
+  background: #3e9fff;
 }
 
 .company-audition .inner-wrap .inner .text {
@@ -2785,8 +2682,9 @@ main {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 450px;
-  background: #3e9fff;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#ffea11), color-stop(100%, #e7e8ec), to(#fdfdfd));
+  background: linear-gradient(90deg, #ffea11 0%, #e7e8ec 100%, #fdfdfd 100%);
 }
 
 .floating-tag-wrap .tag {
@@ -2825,64 +2723,42 @@ main {
 }
 
 .tag_1 {
-  top: 4%;
+  top: 73%;
   right: 0;
-  width: 19px;
+  width: 11px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 12s linear infinite;
-          animation: bottom 12s linear infinite;
+  -webkit-animation: bottom 1s linear infinite;
+          animation: bottom 1s linear infinite;
 }
 
 .tag_2 {
-  top: 4%;
+  top: 57%;
   right: 0;
-  width: 16px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 5s linear infinite;
-          animation: bottom 5s linear infinite;
-}
-
-.tag_3 {
-  top: 87%;
-  right: 0;
-  width: 18px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 11s linear infinite;
-          animation: bottom 11s linear infinite;
-}
-
-.tag_4 {
-  top: 14%;
-  right: 0;
-  width: 50px;
+  width: 8px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 10s linear infinite;
-          animation: bottom 10s linear infinite;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
 }
 
-.tag_5 {
-  top: 82%;
+.tag_3 {
+  top: 1%;
   right: 0;
-  width: 33px;
+  width: 25px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 9s linear infinite;
-          animation: bottom 9s linear infinite;
+  -webkit-animation: bottom 2s linear infinite;
+          animation: bottom 2s linear infinite;
 }
 
-.tag_6 {
-  top: 82%;
+.tag_4 {
+  top: 37%;
   right: 0;
-  width: 28px;
+  width: 50px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -2890,54 +2766,21 @@ main {
           animation: bottom 3s linear infinite;
 }
 
-.tag_7 {
-  top: 24%;
+.tag_5 {
+  top: 75%;
   right: 0;
-  width: 26px;
+  width: 48px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 12s linear infinite;
-          animation: bottom 12s linear infinite;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
 }
 
-.tag_8 {
-  top: 26%;
+.tag_6 {
+  top: 28%;
   right: 0;
-  width: 1px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 11s linear infinite;
-          animation: bottom 11s linear infinite;
-}
-
-.tag_9 {
-  top: 34%;
-  right: 0;
-  width: 37px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 4s linear infinite;
-          animation: bottom 4s linear infinite;
-}
-
-.tag_10 {
-  top: 26%;
-  right: 0;
-  width: 6px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 6s linear infinite;
-          animation: bottom 6s linear infinite;
-}
-
-.tag_11 {
-  top: 52%;
-  right: 0;
-  width: 29px;
+  width: 4px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -2945,32 +2788,87 @@ main {
           animation: bottom 5s linear infinite;
 }
 
-.tag_12 {
-  top: 80%;
+.tag_7 {
+  top: 58%;
   right: 0;
-  width: 22px;
+  width: 4px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 4s linear infinite;
-          animation: bottom 4s linear infinite;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
 }
 
-.tag_13 {
-  top: 17%;
+.tag_8 {
+  top: 40%;
   right: 0;
-  width: 19px;
+  width: 33px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 3s linear infinite;
+          animation: bottom 3s linear infinite;
+}
+
+.tag_9 {
+  top: 30%;
+  right: 0;
+  width: 13px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 10s linear infinite;
-          animation: bottom 10s linear infinite;
+  -webkit-animation: bottom 2s linear infinite;
+          animation: bottom 2s linear infinite;
+}
+
+.tag_10 {
+  top: 17%;
+  right: 0;
+  width: 44px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 12s linear infinite;
+          animation: bottom 12s linear infinite;
+}
+
+.tag_11 {
+  top: 58%;
+  right: 0;
+  width: 4px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 2s linear infinite;
+          animation: bottom 2s linear infinite;
+}
+
+.tag_12 {
+  top: 8%;
+  right: 0;
+  width: 4px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 7s linear infinite;
+          animation: bottom 7s linear infinite;
+}
+
+.tag_13 {
+  top: 82%;
+  right: 0;
+  width: 31px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
 }
 
 .tag_14 {
-  top: 65%;
+  top: 19%;
   right: 0;
-  width: 43px;
+  width: 50px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -3551,12 +3449,6 @@ body .btn-bg.bg-6 .btn-6 button::after {
   cursor: zoom-out;
 }
 
-@media only screen and (max-width: 580px) {
-  .grid-item {
-    width: 50%;
-  }
-}
-
 .grid-item:nth-child(1) {
   background-image: url("https://unsplash.it/900/900?image=11");
 }
@@ -3771,5 +3663,36 @@ body .btn-bg.bg-6 .btn-6 button::after {
 
 .pagination-wrap .slide-direction img {
   width: 100%;
+}
+
+@media only screen and (max-width: 720px) {
+  .grid-item {
+    width: 50%;
+  }
+  .company-solgan .flex-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 16px;
+  }
+  .company-solgan .flex-box strong {
+    font-size: 30px;
+  }
+  .company-solgan .flex-box > div {
+    margin-top: 20px;
+  }
+  .company-solgan .flex-box > div p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+  .company-audition {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .company-audition .inner-wrap {
+    padding: 16px;
+  }
 }
 /*# sourceMappingURL=sourcemap.css.map */

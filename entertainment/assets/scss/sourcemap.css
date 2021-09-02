@@ -431,7 +431,7 @@ body {
 section {
   position: relative;
   height: 200px;
-  margin: 60px 0;
+  padding: 60px 0;
 }
 
 .section--white {
@@ -1168,10 +1168,6 @@ a:active {
 
 #header .logo img {
   width: 100%;
-}
-
-#header.bg-header {
-  background: #eeeeee;
 }
 
 #header.bg-header .nav .gnb .menu a {
@@ -1967,6 +1963,7 @@ main {
 .entertainment-area .entertainment-wrap {
   position: relative;
   height: 600px;
+  padding: 50px 0 0 0;
 }
 
 .entertainment-area .entertainment-wrap .more-view {
@@ -2105,6 +2102,23 @@ main {
   height: 100%;
 }
 
+.artist-area .slide-nav .inner-slide-nav {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .artist-area .slide-nav .inner-slide-nav .slide-nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2116,7 +2130,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 16px 0;
+  margin: 30px 0;
 }
 
 .artist-area .slide-nav .inner-slide-nav .slide-nav-list .swiper-pagination-bullet {
@@ -2134,10 +2148,15 @@ main {
   text-align: center;
 }
 
-.artist-area .slide-nav .inner-slide-nav .slide-nav-list .slide-nav-item a {
+.artist-area .slide-nav .inner-slide-nav a {
   display: block;
-  font-size: 16px;
-  padding: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.artist-area .slide-nav .inner-slide-nav a.slide-after {
+  position: absolute;
+  bottom: 24px;
 }
 
 .artist-area .text-animation {
@@ -2179,6 +2198,7 @@ main {
 }
 
 .artist-area .left-artist .left-artist-slider {
+  overflow: hidden;
   width: 350px;
   height: 450px;
 }
@@ -2205,6 +2225,7 @@ main {
 }
 
 .artist-area .right-artist .right-artist-slider {
+  overflow: hidden;
   width: 400px;
   height: 600px;
   -webkit-box-shadow: 5px 5px 42px -20px #1a1a1a;
@@ -2315,7 +2336,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 600px;
+  max-width: 600px;
   height: 54px;
   margin: auto;
   padding-bottom: 20px;
@@ -2328,6 +2349,7 @@ main {
 }
 
 .audition-area .monthly-calendar .monthly-calendar-box {
+  overflow: hidden;
   max-width: 1400px;
   margin: auto;
 }
@@ -2606,6 +2628,14 @@ main {
 }
 
 @media all and (max-width: 1400px) {
+  .entertainment-area .entertainment-wrap {
+    height: 500px;
+    padding: 0;
+  }
+  .entertainment-area .entertainment-wrap .enter-news .swiper-slide .monthly-issue {
+    width: 100%;
+    padding: 50px;
+  }
   .album-area {
     margin: 0;
   }
@@ -2630,9 +2660,20 @@ main {
     width: 30vw;
     height: 50vw;
   }
+  .audition-area .schedule-information .audition-schedule li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 @media all and (max-width: 720px) {
+  .entertainment-area .entertainment-wrap {
+    height: auto;
+  }
+  .album-area {
+    display: none;
+  }
   .artist-area {
     padding: 0;
   }
@@ -2642,15 +2683,40 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .artist-area .inner-slide-nav .slide-before,
-  .artist-area .inner-slide-nav .slide-after {
-    display: none;
+  .artist-area .area-common .left-artist {
+    padding-top: 16px;
   }
-  .artist-area .inner-slide-nav .artist-area .slide-nav .inner-slide-nav .slide-nav-list {
+  .artist-area .area-common .left-artist .left-artist-slider {
+    width: 100%;
+    height: auto;
+  }
+  .artist-area .area-common .right-artist {
+    padding: 16px 0;
+  }
+  .artist-area .slide-nav .inner-slide-nav .slide-nav-list {
+    margin: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .artist-area .slide-nav .inner-slide-nav .slide-nav-list .swiper-pagination-bullet {
+    margin: 0 2px;
+  }
+  .artist-area .slide-nav .inner-slide-nav a {
+    display: none;
+  }
+  .audition-area .schedule-information .audition-schedule {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .audition-area .schedule-information .audition-schedule li {
+    margin: 8px 0;
+  }
+  .audition-area .schedule-information .audition-schedule li .card {
+    margin: 0 auto;
   }
 }
 
@@ -2694,7 +2760,7 @@ main {
 .enter-news
 .swiper-slide
 .monthly-issue .issue-box .inner {
-    padding: 16px;
+    padding: 16px 0;
   }
   .entertainment-area
 .entertainment-wrap
@@ -2711,6 +2777,26 @@ main {
 .swiper-slide
 .monthly-issue .issue-box .inner .text {
     font-size: 14px;
+  }
+  .artist-area .area-common .left-artist {
+    width: 100%;
+    padding: 16px 0;
+  }
+  .artist-area .area-common .right-artist {
+    display: none;
+  }
+  .artist-area .area-common .text-animation {
+    font-size: 18px;
+  }
+  .check-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 14px;
+  }
+  .check-card button {
+    margin: 20px 0 0 0;
   }
 }
 
@@ -2825,64 +2911,97 @@ main {
 }
 
 .tag_1 {
-  top: 4%;
+  top: 9%;
   right: 0;
-  width: 19px;
-  border-bottom: 2px solid #dbdbdb;
+  width: 12px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 6s linear infinite;
+          animation: bottom 6s linear infinite;
+}
+
+.tag_2 {
+  top: 41%;
+  right: 0;
+  width: 9px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 1s linear infinite;
+          animation: bottom 1s linear infinite;
+}
+
+.tag_3 {
+  top: 18%;
+  right: 0;
+  width: 46px;
+  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 12s linear infinite;
           animation: bottom 12s linear infinite;
 }
 
-.tag_2 {
-  top: 4%;
+.tag_4 {
+  top: 56%;
   right: 0;
-  width: 16px;
+  width: 18px;
   border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 4s linear infinite;
+          animation: bottom 4s linear infinite;
+}
+
+.tag_5 {
+  top: 33%;
+  right: 0;
+  width: 42px;
+  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 5s linear infinite;
           animation: bottom 5s linear infinite;
 }
 
-.tag_3 {
-  top: 87%;
+.tag_6 {
+  top: 86%;
   right: 0;
-  width: 18px;
-  border-bottom: 2px solid #dbdbdb;
+  width: 17px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 1s linear infinite;
+          animation: bottom 1s linear infinite;
+}
+
+.tag_7 {
+  top: 12%;
+  right: 0;
+  width: 35px;
+  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 11s linear infinite;
           animation: bottom 11s linear infinite;
 }
 
-.tag_4 {
-  top: 14%;
+.tag_8 {
+  top: 37%;
   right: 0;
-  width: 50px;
-  border-bottom: 1px solid #dbdbdb;
+  width: 30px;
+  border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 10s linear infinite;
           animation: bottom 10s linear infinite;
 }
 
-.tag_5 {
-  top: 82%;
+.tag_9 {
+  top: 78%;
   right: 0;
-  width: 33px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 9s linear infinite;
-          animation: bottom 9s linear infinite;
-}
-
-.tag_6 {
-  top: 82%;
-  right: 0;
-  width: 28px;
+  width: 49px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -2890,92 +3009,59 @@ main {
           animation: bottom 3s linear infinite;
 }
 
-.tag_7 {
-  top: 24%;
+.tag_10 {
+  top: 47%;
   right: 0;
-  width: 26px;
+  width: 24px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
+}
+
+.tag_11 {
+  top: 53%;
+  right: 0;
+  width: 39px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 12s linear infinite;
-          animation: bottom 12s linear infinite;
+  -webkit-animation: bottom 3s linear infinite;
+          animation: bottom 3s linear infinite;
 }
 
-.tag_8 {
-  top: 26%;
+.tag_12 {
+  top: 64%;
   right: 0;
-  width: 1px;
-  border-bottom: 1px solid #dbdbdb;
+  width: 36px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 7s linear infinite;
+          animation: bottom 7s linear infinite;
+}
+
+.tag_13 {
+  top: 83%;
+  right: 0;
+  width: 23px;
+  border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 11s linear infinite;
           animation: bottom 11s linear infinite;
 }
 
-.tag_9 {
-  top: 34%;
+.tag_14 {
+  top: 16%;
   right: 0;
-  width: 37px;
+  width: 46px;
   border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 4s linear infinite;
-          animation: bottom 4s linear infinite;
-}
-
-.tag_10 {
-  top: 26%;
-  right: 0;
-  width: 6px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 6s linear infinite;
-          animation: bottom 6s linear infinite;
-}
-
-.tag_11 {
-  top: 52%;
-  right: 0;
-  width: 29px;
-  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 5s linear infinite;
           animation: bottom 5s linear infinite;
-}
-
-.tag_12 {
-  top: 80%;
-  right: 0;
-  width: 22px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 4s linear infinite;
-          animation: bottom 4s linear infinite;
-}
-
-.tag_13 {
-  top: 17%;
-  right: 0;
-  width: 19px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 10s linear infinite;
-          animation: bottom 10s linear infinite;
-}
-
-.tag_14 {
-  top: 65%;
-  right: 0;
-  width: 43px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 7s linear infinite;
-          animation: bottom 7s linear infinite;
 }
 
 @-webkit-keyframes bottom {

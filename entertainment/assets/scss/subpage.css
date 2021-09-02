@@ -1,362 +1,67 @@
-.apply-inner {
-  width: 1200px;
-  margin: auto;
-}
-
-.apply-form .title h2 {
-  font-size: 16px;
-}
-
-.apply-form .title span {
-  color: #2792e2;
-}
-
-.apply-form input {
-  width: 100%;
-}
-
-.apply-form .input-box {
-  margin-bottom: 16px;
-}
-
-.uploadFile-wrap {
-  position: relative;
-}
-
-.uploadFile-wrap .upload-file {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-}
-
-.uploadFile-wrap label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: #2792e2;
-  padding: 4px 6px;
-  border: 2px solid #2792e2;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-.uploadFile-wrap label i {
-  margin-right: 4px;
-}
-
-.uploadFile-wrap label:after {
-  display: block;
-  clear: both;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #2792e2;
-  padding: 8px 16px;
-  border: 2px solid #2792e2;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  display: none;
-}
-
-.uploadFile-wrap label:hover:after {
-  background-color: #fff;
-  color: #2792e2;
-}
-
-.gallery-visual .swiper-slide {
-  height: 80vh !important;
-}
-
-.grid:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-/* ---- grid-item ---- */
-.grid-sizer,
-.grid-item {
-  width: 25%;
-}
-
-.grid-item {
-  height: 200px;
-  float: left;
-  background-color: #f4f3f4;
-  border: 4px solid #000;
-  -webkit-filter: grayscale(70%) blur(0.5px);
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  background-image: url(https://unsplash.it/900/900);
-  background-size: cover;
-  background-position: center center;
-  -webkit-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-}
-
-.grid-item:hover {
-  cursor: pointer;
-  -webkit-filter: grayscale(0%) blur(0);
-}
-
-.grid-alpha {
-  display: none;
-  position: absolute;
-  background-color: #f4f3f4;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  text-align: center;
-}
-
-.grid-alpha:hover {
-  cursor: -webkit-zoom-out;
-  cursor: zoom-out;
-}
-
-.grid-item.item-opened {
-  width: 80%;
-  height: 80vw;
-  border: 3px solid #e8e8e8;
-  -webkit-filter: grayscale(0%) blur(0);
-}
-
-.grid-item--width2 {
-  width: 50%;
-}
-
-.grid-item--height2 {
-  height: 400px;
-}
-
-.grid-item--height3 {
-  height: 600px;
-}
-
-@media only screen and (max-width: 580px) {
-  .grid-item {
-    width: 50%;
-  }
-  .grid-item--width2 {
-    width: 100%;
-  }
-}
-
-.grid-item:nth-child(1) {
-  background-image: url("https://unsplash.it/900/900?image=11");
-}
-
-.grid-item:nth-child(2) {
-  background-image: url("https://unsplash.it/900/900?image=12");
-}
-
-.grid-item:nth-child(3) {
-  background-image: url("https://unsplash.it/900/900?image=13");
-}
-
-.grid-item:nth-child(4) {
-  background-image: url("https://unsplash.it/900/900?image=14");
-}
-
-.grid-item:nth-child(5) {
-  background-image: url("https://unsplash.it/900/900?image=15");
-}
-
-.grid-item:nth-child(6) {
-  background-image: url("https://unsplash.it/900/900?image=16");
-}
-
-.grid-item:nth-child(7) {
-  background-image: url("https://unsplash.it/900/900?image=17");
-}
-
-.grid-item:nth-child(8) {
-  background-image: url("https://unsplash.it/900/900?image=18");
-}
-
-.grid-item:nth-child(9) {
-  background-image: url("https://unsplash.it/900/900?image=19");
-}
-
-.grid-item:nth-child(10) {
-  background-image: url("https://unsplash.it/900/900?image=110");
-}
-
-.grid-item:nth-child(11) {
-  background-image: url("https://unsplash.it/900/900?image=111");
-}
-
-.grid-item:nth-child(12) {
-  background-image: url("https://unsplash.it/900/900?image=112");
-}
-
-.grid-item:nth-child(13) {
-  background-image: url("https://unsplash.it/900/900?image=113");
-}
-
-.grid-item:nth-child(14) {
-  background-image: url("https://unsplash.it/900/900?image=114");
-}
-
-.grid-item:nth-child(15) {
-  background-image: url("https://unsplash.it/900/900?image=115");
-}
-
-.grid-item:nth-child(16) {
-  background-image: url("https://unsplash.it/900/900?image=116");
-}
-
-.grid-item:nth-child(17) {
-  background-image: url("https://unsplash.it/900/900?image=117");
-}
-
-.grid-item:nth-child(18) {
-  background-image: url("https://unsplash.it/900/900?image=118");
-}
-
-.grid-item:nth-child(19) {
-  background-image: url("https://unsplash.it/900/900?image=119");
-}
-
-.grid-item:nth-child(20) {
-  background-image: url("https://unsplash.it/900/900?image=120");
-}
-
-.grid-item:nth-child(21) {
-  background-image: url("https://unsplash.it/900/900?image=121");
-}
-
-.grid-item:nth-child(22) {
-  background-image: url("https://unsplash.it/900/900?image=122");
-}
-
-.grid-item:nth-child(23) {
-  background-image: url("https://unsplash.it/900/900?image=123");
-}
-
-.grid-item:nth-child(24) {
-  background-image: url("https://unsplash.it/900/900?image=124");
-}
-
-.grid-item:nth-child(25) {
-  background-image: url("https://unsplash.it/900/900?image=125");
-}
-
-.grid-item:nth-child(26) {
-  background-image: url("https://unsplash.it/900/900?image=126");
-}
-
-.grid-item:nth-child(27) {
-  background-image: url("https://unsplash.it/900/900?image=127");
-}
-
-.grid-item:nth-child(28) {
-  background-image: url("https://unsplash.it/900/900?image=128");
-}
-
-.grid-item:nth-child(29) {
-  background-image: url("https://unsplash.it/900/900?image=129");
-}
-
-.grid-item:nth-child(30) {
-  background-image: url("https://unsplash.it/900/900?image=130");
-}
-
-.grid-item:nth-child(31) {
-  background-image: url("https://unsplash.it/900/900?image=131");
-}
-
-.grid-item:nth-child(32) {
-  background-image: url("https://unsplash.it/900/900?image=132");
-}
-
-.grid-item:nth-child(33) {
-  background-image: url("https://unsplash.it/900/900?image=133");
-}
-
-.grid-item:nth-child(34) {
-  background-image: url("https://unsplash.it/900/900?image=134");
-}
-
-.grid-item:nth-child(35) {
-  background-image: url("https://unsplash.it/900/900?image=135");
-}
-
-.grid-item:nth-child(36) {
-  background-image: url("https://unsplash.it/900/900?image=136");
-}
-
-.grid-item:nth-child(37) {
-  background-image: url("https://unsplash.it/900/900?image=137");
-}
-
-.grid-item:nth-child(38) {
-  background-image: url("https://unsplash.it/900/900?image=138");
-}
-
-.grid-item:nth-child(39) {
-  background-image: url("https://unsplash.it/900/900?image=139");
-}
-
-.grid-item:nth-child(40) {
-  background-image: url("https://unsplash.it/900/900?image=140");
-}
-
-.more-gallery {
-  background: #2792e2;
-  width: 200px;
-  height: 40px;
-  color: #ffffff;
-  border: none;
-}
-
-.pagination-wrap {
-  position: relative;
-}
-
-.pagination-wrap .swiper-pagination {
-  left: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.pagination-wrap .slide-direction {
-  display: inline-block;
-  width: 40px;
-  position: absolute;
-  left: 50px;
-  bottom: 10px;
-  z-index: 10;
-  -webkit-animation: lengths 2s linear infinite;
-          animation: lengths 2s linear infinite;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-}
-
-.pagination-wrap .slide-direction img {
-  width: 100%;
-}
-/*# sourceMappingURL=subpage.css.map */
+/*
+Error: Invalid CSS after "...: random(90) + ": expected expression (e.g. 1px, bold), was "%;"
+        on line 91 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\subpage.scss
+
+86: 
+87: $total: 15;
+88: 
+89: @for $i from 1 to $total {
+90:   .tag_#{$i} {
+91:     top: random(90) + %;
+92:     right: 0;
+93:     width: random(50) + px;
+94:     border-bottom: random(2) + px solid #dbdbdb;
+95:     transition: 23s;
+96:     animation: bottom random(12) + s linear infinite;
+
+Backtrace:
+C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\subpage.scss:91
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/lexer.rb:231:in `expected!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:723:in `assert_expr'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:280:in `plus_or_minus'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:272:in `relational'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:272:in `eq_or_neq'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:272:in `and_expr'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:272:in `or_expr'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:473:in `space'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:414:in `interpolation'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:338:in `expr'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:721:in `assert_expr'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:68:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1134:in `sass_script'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:988:in `value!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:796:in `block in try_declaration'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `call'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1254:in `rethrow'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:809:in `try_declaration'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:686:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:697:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:686:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:678:in `block'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:301:in `for_directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:234:in `special_directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:209:in `directive'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:696:in `block_child'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:689:in `block_contents'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:137:in `stylesheet'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:41:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:414:in `_to_tree'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:391:in `run'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+C:/Program Files (x86)/Koala/bin/sass:22:in `load'
+C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...: random(90) + \": expected expression (e.g. 1px, bold), was \"%;\"\A         on line 91 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\subpage.scss\A \A 86: \A 87: $total: 15;\A 88: \A 89: @for $i from 1 to $total {\A 90:   .tag_#{$i} {\A 91:     top: random(90) + %;\A 92:     right: 0;\A 93:     width: random(50) + px;\A 94:     border-bottom: random(2) + px solid #dbdbdb;\A 95:     transition: 23s;\A 96:     animation: bottom random(12) + s linear infinite;"; }

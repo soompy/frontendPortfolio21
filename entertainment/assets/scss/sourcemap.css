@@ -1148,7 +1148,7 @@ a:active {
           align-items: center;
   width: 100%;
   height: 120px;
-  padding: 20px 50px;
+  padding: 0 50px;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.577468)));
   background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.577468) 100%);
 }
@@ -1213,6 +1213,7 @@ a:active {
   width: 100%;
   height: 70vh;
   margin: 0;
+  padding: 0;
 }
 
 #visual .visual-list {
@@ -1969,7 +1970,7 @@ main {
 .entertainment-area .entertainment-wrap {
   position: relative;
   height: 600px;
-  padding: 50px 0 0 0;
+  padding: 0px 50px;
 }
 
 .entertainment-area .entertainment-wrap .more-view {
@@ -2633,7 +2634,6 @@ main {
   font-size: 14px;
 }
 
-<<<<<<< HEAD
 @media all and (max-width: 1400px) {
   .entertainment-area .entertainment-wrap {
     height: 500px;
@@ -2807,8 +2807,6 @@ main {
   }
 }
 
-=======
->>>>>>> c429a16edb658165d802b652304bb1ccc60db204
 .company-solgan strong {
   font-size: 60px;
   padding-right: 80px;
@@ -2921,10 +2919,20 @@ main {
 }
 
 .tag_1 {
-<<<<<<< HEAD
-  top: 9%;
+  top: 67%;
   right: 0;
-  width: 12px;
+  width: 6px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
+}
+
+.tag_2 {
+  top: 31%;
+  right: 0;
+  width: 45px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -2932,76 +2940,98 @@ main {
           animation: bottom 6s linear infinite;
 }
 
-.tag_2 {
-  top: 41%;
-  right: 0;
-  width: 9px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 1s linear infinite;
-          animation: bottom 1s linear infinite;
-}
-
 .tag_3 {
-  top: 18%;
+  top: 55%;
   right: 0;
-  width: 46px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 12s linear infinite;
-          animation: bottom 12s linear infinite;
-}
-
-.tag_4 {
-  top: 56%;
-  right: 0;
-  width: 18px;
+  width: 24px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 4s linear infinite;
-          animation: bottom 4s linear infinite;
-}
-
-.tag_5 {
-  top: 33%;
-  right: 0;
-  width: 42px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 5s linear infinite;
-          animation: bottom 5s linear infinite;
-}
-
-.tag_6 {
-  top: 86%;
-  right: 0;
-  width: 17px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
   -webkit-animation: bottom 1s linear infinite;
           animation: bottom 1s linear infinite;
 }
 
-.tag_7 {
-  top: 12%;
+.tag_4 {
+  top: 41%;
   right: 0;
-  width: 35px;
+  width: 44px;
   border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 6s linear infinite;
+          animation: bottom 6s linear infinite;
+}
+
+.tag_5 {
+  top: 84%;
+  right: 0;
+  width: 34px;
+  border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 11s linear infinite;
           animation: bottom 11s linear infinite;
 }
 
-.tag_8 {
-  top: 37%;
+.tag_6 {
+  top: 53%;
   right: 0;
-  width: 30px;
+  width: 33px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
+}
+
+.tag_7 {
+  top: 28%;
+  right: 0;
+  width: 48px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 3s linear infinite;
+          animation: bottom 3s linear infinite;
+}
+
+.tag_8 {
+  top: 43%;
+  right: 0;
+  width: 26px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 6s linear infinite;
+          animation: bottom 6s linear infinite;
+}
+
+.tag_9 {
+  top: 1%;
+  right: 0;
+  width: 3px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 1s linear infinite;
+          animation: bottom 1s linear infinite;
+}
+
+.tag_10 {
+  top: 33%;
+  right: 0;
+  width: 45px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 5s linear infinite;
+          animation: bottom 5s linear infinite;
+}
+
+.tag_11 {
+  top: 89%;
+  right: 0;
+  width: 15px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -3009,214 +3039,37 @@ main {
           animation: bottom 10s linear infinite;
 }
 
-.tag_9 {
-  top: 78%;
-  right: 0;
-  width: 49px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
-}
-
-.tag_10 {
-  top: 47%;
-  right: 0;
-  width: 24px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 9s linear infinite;
-          animation: bottom 9s linear infinite;
-}
-
-.tag_11 {
-  top: 53%;
-  right: 0;
-  width: 39px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
-}
-
 .tag_12 {
-  top: 64%;
+  top: 65%;
   right: 0;
-  width: 36px;
-=======
-  top: 73%;
+  width: 42px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 4s linear infinite;
+          animation: bottom 4s linear infinite;
+}
+
+.tag_13 {
+  top: 6%;
   right: 0;
   width: 11px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 1s linear infinite;
-          animation: bottom 1s linear infinite;
-}
-
-.tag_2 {
-  top: 57%;
-  right: 0;
-  width: 8px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 8s linear infinite;
-          animation: bottom 8s linear infinite;
-}
-
-.tag_3 {
-  top: 1%;
-  right: 0;
-  width: 25px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 2s linear infinite;
-          animation: bottom 2s linear infinite;
-}
-
-.tag_4 {
-  top: 37%;
-  right: 0;
-  width: 50px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
-}
-
-.tag_5 {
-  top: 75%;
-  right: 0;
-  width: 48px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 8s linear infinite;
-          animation: bottom 8s linear infinite;
-}
-
-.tag_6 {
-  top: 28%;
-  right: 0;
-  width: 4px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 5s linear infinite;
-          animation: bottom 5s linear infinite;
-}
-
-.tag_7 {
-  top: 58%;
-  right: 0;
-  width: 4px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 9s linear infinite;
-          animation: bottom 9s linear infinite;
-}
-
-.tag_8 {
-  top: 40%;
-  right: 0;
-  width: 33px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
-}
-
-.tag_9 {
-  top: 30%;
-  right: 0;
-  width: 13px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 2s linear infinite;
-          animation: bottom 2s linear infinite;
-}
-
-.tag_10 {
-  top: 17%;
-  right: 0;
-  width: 44px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 12s linear infinite;
-          animation: bottom 12s linear infinite;
-}
-
-.tag_11 {
-  top: 58%;
-  right: 0;
-  width: 4px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 2s linear infinite;
-          animation: bottom 2s linear infinite;
-}
-
-.tag_12 {
-  top: 8%;
-  right: 0;
-  width: 4px;
->>>>>>> c429a16edb658165d802b652304bb1ccc60db204
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 7s linear infinite;
-          animation: bottom 7s linear infinite;
-}
-
-.tag_13 {
-<<<<<<< HEAD
-  top: 83%;
-  right: 0;
-  width: 23px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 11s linear infinite;
-          animation: bottom 11s linear infinite;
+  -webkit-animation: bottom 6s linear infinite;
+          animation: bottom 6s linear infinite;
 }
 
 .tag_14 {
-  top: 16%;
-  right: 0;
-  width: 46px;
-  border-bottom: 2px solid #dbdbdb;
-=======
-  top: 82%;
-  right: 0;
-  width: 31px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 8s linear infinite;
-          animation: bottom 8s linear infinite;
-}
-
-.tag_14 {
-  top: 19%;
+  top: 74%;
   right: 0;
   width: 50px;
   border-bottom: 1px solid #dbdbdb;
->>>>>>> c429a16edb658165d802b652304bb1ccc60db204
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 5s linear infinite;
-          animation: bottom 5s linear infinite;
+  -webkit-animation: bottom 6s linear infinite;
+          animation: bottom 6s linear infinite;
 }
 
 @-webkit-keyframes bottom {
@@ -3301,12 +3154,19 @@ main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 1200px;
+  width: 1400px;
   margin: auto;
+  padding: 0;
 }
 
 .apply-inner .apply-form {
-  width: 50%;
+  width: 100%;
+}
+
+.apply-inner .apply-form .privacy-box {
+  width: 30%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .apply-inner .apply-form .title h2 {
@@ -4008,9 +3868,43 @@ body .btn-bg.bg-6 .btn-6 button::after {
   width: 100%;
 }
 
+@media only screen and (max-width: 1400px) {
+  .apply-inner {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  .apply-inner .apply-form {
+    padding: 0 16px;
+  }
+  .apply-inner .photo-box {
+    padding: 0 16px;
+  }
+}
+
 @media only screen and (max-width: 720px) {
   .grid-item {
     width: 50%;
+  }
+  .apply-inner .apply-form .privacy-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .apply-inner .apply-form .privacy-wrap .privacy-box {
+    width: 100%;
+  }
+  .apply-inner .apply-form .uploadFile-wrap {
+    margin-bottom: 74px;
+  }
+  .apply-inner .apply-form input {
+    width: calc(100% - 16px);
+  }
+  .apply-inner .photo-box {
+    margin: auto;
+  }
+  .apply-inner .radio-inline {
+    margin-top: 20px;
   }
   .company-solgan .flex-box {
     -webkit-box-orient: vertical;
@@ -4036,6 +3930,15 @@ body .btn-bg.bg-6 .btn-6 button::after {
   }
   .company-audition .inner-wrap {
     padding: 16px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .grid-box.apply-section {
+    height: 180px;
+  }
+  .grid-box.apply-section > div {
+    height: 25%;
   }
 }
 /*# sourceMappingURL=sourcemap.css.map */

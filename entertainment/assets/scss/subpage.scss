@@ -58,7 +58,12 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(90deg, rgba(255,234,17,1) 0%, rgba(231,232,236,1) 100%, rgba(253,253,253,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 234, 17, 1) 0%,
+    rgba(231, 232, 236, 1) 100%,
+    rgba(253, 253, 253, 1) 100%
+  );
   .tag {
     @include flexCenter;
     width: auto;
@@ -157,10 +162,17 @@ $total: 15;
 .apply-inner {
   display: flex;
   align-items: flex-start;
-  width: 1200px;
+  width: 1400px;
   margin: auto;
+  padding: 0;
   .apply-form {
-    width: 50%;
+    width: 100%;
+    .privacy-wrap {
+    }
+    .privacy-box {
+      width: 30%;
+      flex-shrink: 0;
+    }
     .title {
       h2 {
         font-size: 16px;
@@ -644,12 +656,6 @@ html:not(.touch) .gallery-image:hover:after {
   }
 }
 
-
-
-
-
-
-
 .mfp-with-zoom.mfp-removing .mfp-container, .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
@@ -771,10 +777,6 @@ button.mfp-close:active {
   transform: scale(0.95);
 }
 
-
-
-
-
 // Random Image loop
 @for $item from 1 through 40 {
   .grid-item:nth-child(#{$item}) {
@@ -818,6 +820,18 @@ button.mfp-close:active {
     }
   }
 }
+@media only screen and (max-width: 1400px) {
+  .apply-inner {
+    width: 100%;
+    padding-bottom: 50px;
+    .apply-form {
+      padding: 0 16px;
+    }
+    .photo-box {
+      padding: 0 16px;
+    }
+  }
+}
 
 
 @media only screen and (max-width: 1400px) {
@@ -830,6 +844,29 @@ button.mfp-close:active {
 @media only screen and (max-width: 720px) {
   .grid-item {
     width: 50%;
+  }
+
+  .apply-inner {
+    .apply-form {
+      .privacy-wrap {
+        flex-direction: column;
+        .privacy-box {
+          width: 100%;
+        }
+      }
+      .uploadFile-wrap {
+        margin-bottom: 74px;
+      }
+      input {
+        width: calc(100% - 16px);
+      }
+    }
+    .photo-box {
+      margin: auto;
+    }
+    .radio-inline {
+      margin-top: 20px;
+    }
   }
 
   //company
@@ -858,7 +895,6 @@ button.mfp-close:active {
     }
   }
 }
-
 
 @media only screen and (max-width: 540px) {
   .entertainment-wrap {
@@ -892,4 +928,10 @@ button.mfp-close:active {
     column-count: 2;
   }
 
+  .grid-box.apply-section {
+    height: 180px;
+    > div {
+      height: 25%;
+    }
+  }
 }

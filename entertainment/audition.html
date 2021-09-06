@@ -48,7 +48,7 @@
 
         <main>
             <section id="" class="common-area">
-                <div class="inner flex-box entertainment-wrap">
+                <div class="flex-box audition-wrap">
                     <div class="grid-box flex-item apply-section">
                         <div class="singer"><span>Singer</span></div>
                         <div class="actor"><span>Actor</span></div>
@@ -77,20 +77,29 @@
             <section class="common-area">
                 <div class="inner apply-inner">
                     <form action="#" class="apply-form">
-                        <div class="input-box">
-                            <label for="name">성명</label>
-                            <input type="text" name="name" id="name" placeholder="성명" />
-                        </div>
+                        <div class="flex-box privacy-wrap">
+                            <div class="privacy-box">
+                                <div class="input-box">
+                                    <label for="name">성명</label>
+                                    <input type="text" name="name" id="name" placeholder="성명" />
+                                </div>
+                                
+                                <div class="input-box">
+                                    <label for="apply-birthday">생년월일</label>
+                                    <input type="text" name="apply-birthday" onKeyup="inputYMDNumber(this);" value="" placeholder="생년-월-일"
+                                        style="text-align:center;" />
+                                </div>
+                                
+                                <div class="uploadFile-wrap">
+                                    <label for=""> <i class="material-icons large">file_upload</i> 파일업로드</label>
+                                    <input type="file" class="upload-file" onchange="readURL(this);" />
+                                </div>
+                            </div>
 
-                        <div class="input-box">
-                            <label for="apply-birthday">생년월일</label>
-                            <input type="text" name="apply-birthday" onKeyup="inputYMDNumber(this);" value="" placeholder="생년-월-일" style="text-align:center;" />
-                        </div>
-
-                        <div class="uploadFile-wrap">
-                            <label for=""> <i class="material-icons large">file_upload</i> 파일업로드</label>
-                            <input type="file" class="upload-file" onchange="readURL(this);" />
-                        </div>
+                            <div class="photo-box">
+                                <img id="blah" class="profile-img-blah" src="http://placehold.it/180" alt="your image" accept="image/*" />
+                            </div>
+                        </div>                        
 
                         <fieldset class="radio-inline">
                             <legend class="audition-select">지원유형 선택</legend>
@@ -134,9 +143,7 @@
                             </div>
                         </div>
                     </form>
-                    <div class="photo-box">
-                        <img id="blah" class="profile-img-blah" src="http://placehold.it/180" alt="your image" accept="image/*" />
-                    </div>
+                    
                 </div>
 
                 <div class="btn-bg bg-5">

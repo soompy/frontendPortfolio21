@@ -22,34 +22,42 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   vertical-align: -webkit-baseline-middle;
-  vertical-align: -moz-middle-with-baseline; }
+  vertical-align: -moz-middle-with-baseline;
+}
 
 /* make sure to set some focus styles for accessibility */
 :focus {
-  outline: 0; }
+  outline: 0;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 button {
   background: inherit;
@@ -59,25 +67,29 @@ button {
   border-radius: 0;
   padding: 0;
   overflow: visible;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 input[type=search]::-webkit-search-cancel-button,
 input[type=search]::-webkit-search-decoration,
 input[type=search]::-webkit-search-results-button,
 input[type=search]::-webkit-search-results-decoration {
   -webkit-appearance: none;
-  -moz-appearance: none; }
+  -moz-appearance: none;
+}
 
 input[type=search] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -webkit-box-sizing: content-box;
-  box-sizing: content-box; }
+  box-sizing: content-box;
+}
 
 textarea {
   overflow: auto;
   vertical-align: top;
-  resize: vertical; }
+  resize: vertical;
+}
 
 /**
  * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
@@ -88,7 +100,8 @@ video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
-  max-width: 100%; }
+  max-width: 100%;
+}
 
 /**
  * Prevent modern browsers from displaying `audio` without controls.
@@ -96,14 +109,16 @@ video {
  */
 audio:not([controls]) {
   display: none;
-  height: 0; }
+  height: 0;
+}
 
 /**
  * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
  * Known issue: no IE 6 support.
  */
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 /**
  * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
@@ -118,20 +133,23 @@ html {
   /* 2 */
   -ms-text-size-adjust: 100%;
   /* 2 */
-  text-rendering: optimizelegibility; }
+  text-rendering: optimizelegibility;
+}
 
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
 a:focus {
-  outline: thin dotted; }
+  outline: thin dotted;
+}
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0;
+}
 
 /**
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
@@ -141,19 +159,22 @@ img {
   border: 0;
   /* 1 */
   -ms-interpolation-mode: bicubic;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
 figure {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
 form {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Define consistent border, margin, and padding.
@@ -161,7 +182,8 @@ form {
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em; }
+  padding: 0.35em 0.625em 0.75em;
+}
 
 /**
  * 1. Correct color not being inherited in IE 6/7/8/9.
@@ -175,7 +197,8 @@ legend {
   white-space: normal;
   /* 2 */
   *margin-left: -7px;
-  /* 3 */ }
+  /* 3 */
+}
 
 /**
  * 1. Correct font size not being inherited in all browsers.
@@ -194,18 +217,24 @@ textarea {
   vertical-align: baseline;
   /* 3 */
   *vertical-align: middle;
-  /* 3 */ }
+  /* 3 */
+}
 
 select {
   background: url("data:image/png;base64,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") no-repeat 95% 50%;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; }
-  select::-ms-expand {
-    display: none; }
-  select option:checked, select option:hover {
-    background: #2792e2;
-    color: #fff; }
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select option:checked, select option:hover {
+  background: #2792e2;
+  color: #fff;
+}
 
 /**
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
@@ -216,7 +245,8 @@ input {
   line-height: normal;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; }
+  appearance: none;
+}
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
@@ -226,7 +256,8 @@ input {
  */
 button,
 select {
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
@@ -246,14 +277,16 @@ input[type="submit"] {
   cursor: pointer;
   /* 3 */
   *overflow: visible;
-  /* 4 */ }
+  /* 4 */
+}
 
 /**
  * Re-set default cursor for disabled elements.
  */
 button[disabled],
 html input[disabled] {
-  cursor: default; }
+  cursor: default;
+}
 
 /**
  * 1. Address box sizing set to content-box in IE 8/9.
@@ -271,7 +304,8 @@ input[type="radio"] {
   *height: 13px;
   /* 3 */
   *width: 13px;
-  /* 3 */ }
+  /* 3 */
+}
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
@@ -283,7 +317,8 @@ input[type="search"] {
   /* 1 */
   -webkit-box-sizing: content-box;
   /* 2 */
-  box-sizing: content-box; }
+  box-sizing: content-box;
+}
 
 /**
  * Remove inner padding and search cancel button in Safari 5 and Chrome
@@ -291,7 +326,8 @@ input[type="search"] {
  */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 /**
  * Remove inner padding and border in Firefox 3+.
@@ -299,7 +335,8 @@ input[type="search"]::-webkit-search-decoration {
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
@@ -309,45 +346,53 @@ textarea {
   overflow: auto;
   /* 1 */
   vertical-align: top;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove most spacing between table cells.
  */
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 html,
 button,
 input,
 select,
 textarea {
-  color: #222; }
+  color: #222;
+}
 
 ::-moz-selection {
   background: #b3d4fc;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 ::selection {
   background: #b3d4fc;
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 img {
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 fieldset {
   border: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 textarea {
-  resize: vertical; }
+  resize: vertical;
+}
 
 .chromeframe {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0; }
-
+  padding: 0.2em 0;
+}
 /*# sourceMappingURL=reset.css.map */

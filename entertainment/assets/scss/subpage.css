@@ -1,21 +1,21 @@
 /*
 Error: Invalid CSS after "...: random(90) + ": expected expression (e.g. 1px, bold), was "%;"
-        on line 91 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\subpage.scss
+        on line 96 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\subpage.scss
 
-86: 
-87: $total: 15;
-88: 
-89: @for $i from 1 to $total {
-90:   .tag_#{$i} {
-91:     top: random(90) + %;
-92:     right: 0;
-93:     width: random(50) + px;
-94:     border-bottom: random(2) + px solid #dbdbdb;
-95:     transition: 23s;
-96:     animation: bottom random(12) + s linear infinite;
+91: 
+92: $total: 15;
+93: 
+94: @for $i from 1 to $total {
+95:   .tag_#{$i} {
+96:     top: random(90) + %;
+97:     right: 0;
+98:     width: random(50) + px;
+99:     border-bottom: random(2) + px solid #dbdbdb;
+100:     transition: 23s;
+101:     animation: bottom random(12) + s linear infinite;
 
 Backtrace:
-C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\subpage.scss:91
+C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\subpage.scss:96
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/scss/parser.rb:1278:in `expected'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/lexer.rb:231:in `expected!'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/parser.rb:723:in `assert_expr'
@@ -64,4 +64,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...: random(90) + \": expected expression (e.g. 1px, bold), was \"%;\"\A         on line 91 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\subpage.scss\A \A 86: \A 87: $total: 15;\A 88: \A 89: @for $i from 1 to $total {\A 90:   .tag_#{$i} {\A 91:     top: random(90) + %;\A 92:     right: 0;\A 93:     width: random(50) + px;\A 94:     border-bottom: random(2) + px solid #dbdbdb;\A 95:     transition: 23s;\A 96:     animation: bottom random(12) + s linear infinite;"; }
+  content: "Error: Invalid CSS after \"...: random(90) + \": expected expression (e.g. 1px, bold), was \"%;\"\A         on line 96 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\subpage.scss\A \A 91: \A 92: $total: 15;\A 93: \A 94: @for $i from 1 to $total {\A 95:   .tag_#{$i} {\A 96:     top: random(90) + %;\A 97:     right: 0;\A 98:     width: random(50) + px;\A 99:     border-bottom: random(2) + px solid #dbdbdb;\A 100:     transition: 23s;\A 101:     animation: bottom random(12) + s linear infinite;"; }

@@ -310,6 +310,16 @@ window.addEventListener("keyup", e => {
     }
 })
 
-function issuingCard() {
-    document.getElementById("issuingCardModal").style.display = 'block';
-}
+// function issuingCard() {
+//     document.getElementById("issuingCardModal").style.display = 'block';
+// }
+
+
+// 모달 스크롤
+document.querySelectorAll(".issuingCard").forEach(element => element.addEventListener("click", () => {
+    document.querySelector(".dim-layer").style.display = "block";
+}));
+
+document.querySelectorAll(".modal-close").forEach(element => element.addEventListener("click", () => {
+    document.querySelector(".dim-layer").style.display = "none";
+}));

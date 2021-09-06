@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'flexCenter'.
-        on line 344 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss, in `flexCenter'
-        from line 344 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss
+        on line 343 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss, in `flexCenter'
+        from line 343 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss
 
-339:   transform: translate(-50%, -50%);
-340:   .inner {
-341:     padding: 10px;
-342:     background: #ffffff;
-343:     .modal-close {
-344:       @include flexCenter;
-345:       position: relative;
-346:       right: 20px;
-347:       width: 30px;
-348:       height: 30px;
-349:       margin-left: auto;
+338:   transform: translate(-50%, -50%);
+339:   .inner {
+340:     padding: 10px;
+341:     background: #ffffff;
+342:     .modal-close {
+343:       @include flexCenter;
+344:       position: relative;
+345:       right: 20px;
+346:       width: 30px;
+347:       height: 30px;
+348:       margin-left: auto;
 
 Backtrace:
-C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss:344:in `flexCenter'
-C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss:344
+C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss:343:in `flexCenter'
+C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss:343
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
@@ -88,4 +88,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'flexCenter'.\A         on line 344 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss, in `flexCenter'\A         from line 344 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss\A \A 339:   transform: translate(-50%, -50%);\A 340:   .inner {\A 341:     padding: 10px;\A 342:     background: #ffffff;\A 343:     .modal-close {\A 344:       @include flexCenter;\A 345:       position: relative;\A 346:       right: 20px;\A 347:       width: 30px;\A 348:       height: 30px;\A 349:       margin-left: auto;"; }
+  content: "Error: Undefined mixin 'flexCenter'.\A         on line 343 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss, in `flexCenter'\A         from line 343 of C:\Users\SMART-TD-014\Desktop\cli-24\frontendworks21\entertainment\assets\scss\layouts.scss\A \A 338:   transform: translate(-50%, -50%);\A 339:   .inner {\A 340:     padding: 10px;\A 341:     background: #ffffff;\A 342:     .modal-close {\A 343:       @include flexCenter;\A 344:       position: relative;\A 345:       right: 20px;\A 346:       width: 30px;\A 347:       height: 30px;\A 348:       margin-left: auto;"; }

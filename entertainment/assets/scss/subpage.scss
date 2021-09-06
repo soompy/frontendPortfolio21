@@ -519,72 +519,260 @@ body .btn-bg.bg-6 .btn-6 button::after {
 .artist-gallery {
   background: #000000;
 }
-.grid-gallery {
+
+//갤러리 스타일
+.mfp-with-zoom .mfp-title, .touch .gallery-image figcaption, html:not(.touch) .gallery-image figcaption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0);
+  padding: 1em;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  max-width: calc(100% - 9em);
+  line-height: 1.25;
+  text-align: center;
+  box-sizing: border-box;
+}
+.mfp-with-zoom .mfp-title:before, .touch .gallery-image figcaption:before, html:not(.touch) .gallery-image figcaption:before, .mfp-with-zoom .mfp-title:after, .touch .gallery-image figcaption:after, html:not(.touch) .gallery-image figcaption:after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+.mfp-with-zoom .mfp-title:before, .touch .gallery-image figcaption:before, html:not(.touch) .gallery-image figcaption:before, .mfp-with-zoom .mfp-title:after, .touch .gallery-image figcaption:after, html:not(.touch) .gallery-image figcaption:after {
+  right: 100%;
+  bottom: 100%;
+}
+.mfp-with-zoom .mfp-title:after, .touch .gallery-image figcaption:after, html:not(.touch) .gallery-image figcaption:after {
+  left: 100%;
+  top: 100%;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-title, .touch .gallery-image figcaption, html:not(.touch) .gallery-image:hover figcaption {
+  color: white;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease 0.3s;
+}
+.mfp-with-zoom.mfp-ready .mfp-title:before, .touch .gallery-image figcaption:before, html:not(.touch) .gallery-image:hover figcaption:before, .mfp-with-zoom.mfp-ready .mfp-title:after, .touch .gallery-image figcaption:after, html:not(.touch) .gallery-image:hover figcaption:after {
+  opacity: 1;
+}
+.mfp-with-zoom.mfp-ready .mfp-title:before, .touch .gallery-image figcaption:before, html:not(.touch) .gallery-image:hover figcaption:before {
+  right: -1.5em;
+  bottom: -1.5em;
+}
+.mfp-with-zoom.mfp-ready .mfp-title:after, .touch .gallery-image figcaption:after, html:not(.touch) .gallery-image:hover figcaption:after {
+  left: -1.5em;
+  top: -1.5em;
+}
+
+.gallery {
+  -moz-column-gap: 0;
+  column-gap: 0;
+}
+
+.gallery-image {
   position: relative;
-  width: 1400px;
-  margin: auto;
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    // grid-template-rows: 500px 300px repeat(7, minmax(400px, 1fr));
-    grid-auto-rows: minmax(300px, auto);
-    grid-auto-flow: row dense;
-    grid-gap: 10px;
-    padding: 120px 0;
-    &:after {
-      @include pseudoElement;
-    }
-    .grid-item {
-      float: left;
-      background-color: #f4f3f4;
-      -webkit-filter: grayscale(70%) blur(0.5px);
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-      background-size: cover;
-      background-position: center center;
-      transition: all 0.35s ease-in-out;
-      box-sizing: border-box;
-      &:hover {
-        cursor: pointer;
-        -webkit-filter: grayscale(0%) blur(0);
-      }
-      &.twopm {
-        background-image: url("https://menu.mt.co.kr/moneyweek/thumb/2021/06/07/06/2021060709198045678_1.jpg");
-      }
-      &.twice {
-        background-image: url("http://file.osen.co.kr/article/2019/10/01/201910011143775340_5d92bdc28f0d7.jpg");
-      }
-      &.itzy {
-        background-image: url("https://spnimage.edaily.co.kr/images/Photo/files/NP/S/2020/02/PS20022700051.jpg");
-      }
-      &.day6 {
-        background-image: url("https://image.genie.co.kr/Y/IMAGE/IMG_MUZICAT/IV2/Genie_Magazine/8379/Mgz_Main_Top_20200511143059.jpg/dims/resize/Q_80,0");
-      }
-      &.straykids {
-        background-image: url("https://www.sonymusic.co.jp/adm_image/common/artist_image/70009000/70009633/artist_photo/55057.jpg");
-      }
-      &.item-opened {
-        width: 100%;
-        height: 100%;
-        border: 3px solid #e8e8e8;
-        -webkit-filter: grayscale(0%) blur(0);
-      }
-    }
-  }
-  .grid-alpha {
-    display: none;
+  margin: 0;
+  padding: 0;
+  &:before, &:after {
+    content: "";
     position: absolute;
-    background-color: #f4f3f4;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-    text-align: center;
-    &:hover {
-      cursor: zoom-out;
+    right: 0;
+    bottom: 0;
+    border: 16px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+    will-change: border;
+  }
+  &:after {
+    border-width: 0;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.touch {
+  .gallery-image {
+    figcaption {
+      top: auto;
+      bottom: 2em;
     }
   }
 }
+
+html:not(.touch) .gallery-image {
+  overflow: hidden;
+}
+html:not(.touch) .gallery-image:hover:before {
+  border-width: 16px;
+}
+html:not(.touch) .gallery-image:hover:after {
+  border-width: 32px;
+}
+
+.mfp-with-zoom {
+  .mfp-container {
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: all 0.3s ease-out;
+  }
+  &.mfp-bg {
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: all 0.3s ease-out;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  &.mfp-ready {
+    .mfp-container {
+      opacity: 1;
+    }
+    &.mfp-bg {
+      opacity: 1;
+    }
+  }
+}
+
+
+
+
+
+
+
+.mfp-with-zoom.mfp-removing .mfp-container, .mfp-with-zoom.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+.mfp-with-zoom img.mfp-img {
+  padding: 0;
+}
+.mfp-with-zoom .mfp-figure:after {
+  top: 0;
+  bottom: 0;
+}
+.mfp-with-zoom .mfp-container {
+  padding: 0;
+}
+.mfp-with-zoom .mfp-content {
+  overflow: hidden;
+}
+.mfp-with-zoom .mfp-bottom-bar {
+  top: auto;
+  bottom: 0;
+  margin-top: 0;
+}
+.mfp-with-zoom .mfp-title {
+  top: auto;
+  bottom: 2em;
+}
+.mfp-arrow {
+  opacity: 1;
+  margin-top: 0 !important;
+  width: 20%;
+  height: 30%;
+  transform: translateY(-50%);
+}
+.mfp-arrow:before, .mfp-arrow:after {
+  margin: 0;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(-45deg) translate(-50%, -100%);
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transition: all 0.15s;
+}
+.mfp-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.mfp-arrow-left {
+  left: 0;
+}
+.mfp-arrow-left:before, .mfp-arrow-left:after {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+.mfp-arrow-left:after {
+  margin-left: 2rem;
+}
+.mfp-arrow-left:hover:before, .mfp-arrow-left:active:before {
+  margin-left: 2rem;
+}
+.mfp-arrow-left:hover:after, .mfp-arrow-left:active:after {
+  margin-left: 0;
+}
+
+.mfp-arrow-right {
+  right: 0;
+}
+.mfp-arrow-right:before, .mfp-arrow-right:after {
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+}
+.mfp-arrow-right:after {
+  margin-left: 2rem;
+}
+.mfp-arrow-right:hover:before {
+  margin-left: 2rem;
+}
+.mfp-arrow-right:hover:after {
+  margin-left: 0;
+}
+
+button.mfp-close {
+  opacity: 1;
+  margin-top: 0 !important;
+  width: 20%;
+  height: 30%;
+  font: 0/0 serif;
+  text-shadow: none;
+  color: transparent;
+}
+button.mfp-close:before, button.mfp-close:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  opacity: 1;
+  transition: all 0.15s;
+  transform-origin: 0 0;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+button.mfp-close:before {
+  transform: rotate(-45deg);
+}
+button.mfp-close:after {
+  transform: rotate(135deg);
+}
+button.mfp-close:hover:before {
+  transform: rotate(135deg);
+}
+button.mfp-close:hover:after {
+  transform: rotate(315deg);
+}
+button.mfp-close:active {
+  transform: scale(0.95);
+}
+
+
+
 
 
 // Random Image loop
@@ -631,6 +819,14 @@ body .btn-bg.bg-6 .btn-6 button::after {
   }
 }
 
+
+@media only screen and (max-width: 1400px) {
+  .gallery {
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
+
 @media only screen and (max-width: 720px) {
   .grid-item {
     width: 50%;
@@ -665,5 +861,35 @@ body .btn-bg.bg-6 .btn-6 button::after {
 
 
 @media only screen and (max-width: 540px) {
+  .entertainment-wrap {
+    padding: 20px 0;
+  }
+  .grid-box.apply-section {
+    height: 70px;
+    > div {
+      overflow: hidden;
+      height: 100%;
+      color: #ffffff;
+      font-weight: bold;
+      span {
+        @include flexCenter;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+      &:hover {
+        span {
+          animation: zoomFade 0.6s ease-in-out;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+  }
+  .gallery {
+    -moz-column-count: 2;
+    column-count: 2;
+  }
 
 }

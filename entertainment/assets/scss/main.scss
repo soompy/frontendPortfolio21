@@ -56,6 +56,7 @@
     width: 100%;
     .album-list {
       @include flexCenter;
+      padding: 80px 0;
       .album-item {
         position: relative;
         width: 150px;
@@ -64,8 +65,8 @@
         @include rounded();
         transform-origin: center center center;
         cursor: pointer;
-        animation: beforeSpinning 3s;
-        animation-fill-mode: forwards;
+        animation: beforeSpinning 1s;
+        //animation-direction: alternate;
         box-shadow: 5px 5px 52px -20px #1a1a1a;
         transition: all 0.6s ease-in;
         img {
@@ -75,7 +76,7 @@
           @include transition(0.4s);
         }
         &:hover {
-          animation: spinning 3s;
+          animation: spinning 1s;
           animation-fill-mode: forwards;
           margin: 0 100px;
         }
@@ -476,7 +477,6 @@
     margin: 0;
     .album-box .album-list {
       overflow-x: scroll;
-      padding: 50px 0;
       &::-webkit-scrollbar {
         display: none;
       }

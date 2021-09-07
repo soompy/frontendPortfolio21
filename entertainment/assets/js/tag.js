@@ -23,6 +23,8 @@ const getRandomName = () => {
     return names[Math.floor(Math.random() * names.length)];
 }
 
+
+
 const tagWrap = document.querySelector('.floating-tag-wrap');
 
 Array.from({ length: 15 }, (v, i) => {

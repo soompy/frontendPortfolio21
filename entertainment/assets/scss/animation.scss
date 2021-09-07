@@ -197,6 +197,10 @@ a:active {
   }
 }
 
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
 .waves {
   position: relative;
   width: 100%;

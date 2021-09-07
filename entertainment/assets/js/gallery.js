@@ -3,7 +3,7 @@
     $('.gallery-link').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
-        closeBtnInside: false,
+        closeBtnInside: true,
         mainClass: 'mfp-with-zoom mfp-img-mobile',
         image: {
             verticalFit: true,
@@ -26,3 +26,4 @@
     });
 
 }).call(this);
+

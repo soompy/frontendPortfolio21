@@ -2355,25 +2355,14 @@ main {
   color: #ffffff;
 }
 
-.check-card button {
-  color: var(--color);
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  background: none;
-  border: 2px solid;
-  font: inherit;
-  line-height: 1;
-  margin: 0.5em;
-  padding: 1em 2em;
+.check-card .btn-bg {
+  width: 180px;
+  margin: 0 0 0 20px;
 }
 
-.check-card button:hover, .check-card button:focus {
-  -webkit-animation: pulse 1s;
-          animation: pulse 1s;
-  -webkit-box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
-          box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
-  border-color: var(--hover);
-  color: #fff;
+.check-card .btn-bg button {
+  width: 180px !important;
+  font-size: 16px;
 }
 
 .audition-area .monthly-calendar {
@@ -2946,6 +2935,7 @@ main {
   background: #ffffff;
   padding: 14px 16px;
   font-size: 18px;
+  min-width: 180px;
 }
 
 .floating-tag-wrap .tag:after {
@@ -2966,42 +2956,31 @@ main {
 }
 
 .tag_0 {
-  top: 88%;
+  top: 67%;
   right: 0;
-  width: 18px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 1s linear infinite;
-          animation: bottom 1s linear infinite;
-}
-
-.tag_1 {
-  top: 11%;
-  right: 0;
-  width: 35px;
+  width: 25px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 5s linear infinite;
-          animation: bottom 5s linear infinite;
+  -webkit-animation: bottom 3s linear infinite;
+          animation: bottom 3s linear infinite;
+}
+
+.tag_1 {
+  top: 85%;
+  right: 0;
+  width: 25px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 6s linear infinite;
+          animation: bottom 6s linear infinite;
 }
 
 .tag_2 {
-  top: 41%;
+  top: 51%;
   right: 0;
-  width: 28px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 11s linear infinite;
-          animation: bottom 11s linear infinite;
-}
-
-.tag_3 {
-  top: 17%;
-  right: 0;
-  width: 48px;
+  width: 9px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -3009,21 +2988,32 @@ main {
           animation: bottom 9s linear infinite;
 }
 
-.tag_4 {
-  top: 76%;
+.tag_3 {
+  top: 79%;
   right: 0;
-  width: 13px;
-  border-bottom: 2px solid #dbdbdb;
+  width: 49px;
+  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 10s linear infinite;
-          animation: bottom 10s linear infinite;
+  -webkit-animation: bottom 4s linear infinite;
+          animation: bottom 4s linear infinite;
+}
+
+.tag_4 {
+  top: 14%;
+  right: 0;
+  width: 35px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
 }
 
 .tag_5 {
-  top: 74%;
+  top: 48%;
   right: 0;
-  width: 43px;
+  width: 31px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -3032,10 +3022,10 @@ main {
 }
 
 .tag_6 {
-  top: 42%;
+  top: 18%;
   right: 0;
-  width: 7px;
-  border-bottom: 1px solid #dbdbdb;
+  width: 4px;
+  border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 6s linear infinite;
@@ -3043,75 +3033,31 @@ main {
 }
 
 .tag_7 {
-  top: 20%;
+  top: 62%;
   right: 0;
-  width: 2px;
+  width: 6px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 11s linear infinite;
-          animation: bottom 11s linear infinite;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
 }
 
 .tag_8 {
-  top: 9%;
+  top: 54%;
   right: 0;
-  width: 11px;
+  width: 19px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
 }
 
 .tag_9 {
-  top: 4%;
+  top: 38%;
   right: 0;
-  width: 36px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 12s linear infinite;
-          animation: bottom 12s linear infinite;
-}
-
-.tag_10 {
-  top: 34%;
-  right: 0;
-  width: 37px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 7s linear infinite;
-          animation: bottom 7s linear infinite;
-}
-
-.tag_11 {
-  top: 33%;
-  right: 0;
-  width: 4px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 11s linear infinite;
-          animation: bottom 11s linear infinite;
-}
-
-.tag_12 {
-  top: 57%;
-  right: 0;
-  width: 35px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 6s linear infinite;
-          animation: bottom 6s linear infinite;
-}
-
-.tag_13 {
-  top: 77%;
-  right: 0;
-  width: 49px;
+  width: 9px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -3119,11 +3065,55 @@ main {
           animation: bottom 2s linear infinite;
 }
 
-.tag_14 {
-  top: 15%;
+.tag_10 {
+  top: 51%;
   right: 0;
-  width: 39px;
+  width: 18px;
   border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 6s linear infinite;
+          animation: bottom 6s linear infinite;
+}
+
+.tag_11 {
+  top: 42%;
+  right: 0;
+  width: 25px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
+}
+
+.tag_12 {
+  top: 29%;
+  right: 0;
+  width: 16px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 1s linear infinite;
+          animation: bottom 1s linear infinite;
+}
+
+.tag_13 {
+  top: 11%;
+  right: 0;
+  width: 21px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 12s linear infinite;
+          animation: bottom 12s linear infinite;
+}
+
+.tag_14 {
+  top: 30%;
+  right: 0;
+  width: 34px;
+  border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 11s linear infinite;

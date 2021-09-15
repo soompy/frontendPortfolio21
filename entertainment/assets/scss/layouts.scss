@@ -184,6 +184,68 @@ main {
       width: 100%;
     }
   }
+  .family-link-wrap {
+    position: relative;
+    margin-left: auto;
+    .family-link {
+      button {
+        position: relative;
+        width: 200px;
+        height: 50px;
+        border: 1px solid #333333;
+        background: url("https://toppng.com/uploads/preview/arrow-down-icon-11549436707mosicxsqad.png") 95% center no-repeat;
+        background-size: 12px;
+        &:after {
+          position: absolute;
+          transition: .3s;
+          content: '';
+          width: 0;
+          left: 50%;
+          bottom: 0;
+          height: 3px;
+          background-color: red;
+          height: 120%;
+          left: -10%;
+          transform: skewX(15deg);
+          z-index: -1;
+        }
+        &:hover {
+          color: #5bcaff;
+          &:after {
+            left: -10%;
+            width: 120%;
+          }
+        }
+      }
+      .family {
+        overflow-y: scroll;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        max-height: 118px;
+        li {
+          width: 180px;
+          a {
+            display: block;
+            width: calc(100% - 2px);
+            padding: 10px;
+            background: #ffffff;
+            border: 1px solid #333333;
+            border-top: none;
+          }
+          &:first-child {
+            a {
+              border: 1px solid #333333;
+            }
+          }
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 /*body*/

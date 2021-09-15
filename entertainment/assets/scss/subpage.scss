@@ -41,7 +41,7 @@
         background: #1a1a1a;
       }
       &.inner2 {
-        color: rgba(255, 234, 17, 1);
+        color: #FCC21B;
         background: rgba(62,159,255,1);
       }
       .text {
@@ -63,13 +63,13 @@
   .tag {
     @include flexCenter;
     position: absolute;
-    border-radius: 12px;
-    background: #ffffff;
-    padding: 14px 16px;
-    font-size: 18px;
-    min-width: 180px;
-    height: 180px;
-    border-radius: 50%;
+    padding: 10px;
+    font-size: 14px;
+    min-width: 140px;
+    height: 30px;
+    border-radius: 16px;
+    background: url("https://stickershop.line-scdn.net/stickershop/v1/product/3710576/LINEStorePC/main.png;compress=true") right center no-repeat #FFFFF0;
+    background-size: 30px;
     &:after {
       @include pseudoElement;
       position: absolute;
@@ -77,12 +77,12 @@
       left: 50%;
       width: 0;
       height: 0;
-      border: 40px solid transparent;
-      border-top-color: #ffffff;
+      border: 30px solid transparent;
+      border-top-color: #FFFFF0;
       border-bottom: 0;
       border-left: 0;
       margin-left: 0;
-      margin-bottom: -24px;
+      margin-bottom: -16px;
     }
   }
 }
@@ -962,6 +962,20 @@ button.mfp-close:active {
     height: 180px;
     > div {
       height: 25%;
+    }
+  }
+
+  .submit-inner {
+    margin: 0 16px;
+    .btn-bg {
+      &.submit {
+        width: 100%;
+        .btn {
+          button {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

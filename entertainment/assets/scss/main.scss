@@ -221,21 +221,12 @@
   height: auto;
   font-size: 22px;
   color: #ffffff;
-  button {
-    color: var(--color);
-    transition: 0.25s;
-    background: none;
-    border: 2px solid;
-    font: inherit;
-    line-height: 1;
-    margin: 0.5em;
-    padding: 1em 2em;
-
-    &:hover, &:focus {
-      animation: pulse 1s;
-      box-shadow: 0 0 0 2em rgba(#fff,0);
-      border-color: var(--hover);
-      color: #fff;
+  .btn-bg {
+    width: 180px;
+    margin: 0 0 0 20px;
+    button {
+      width: 180px !important;
+      font-size: 16px;
     }
   }
 }

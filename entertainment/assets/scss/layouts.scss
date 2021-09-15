@@ -10,6 +10,7 @@
   align-content: center;
   width: 100%;
   z-index: 200;
+  transition: all 0.5s ease-in-out;
   .layout-inner {
     display: flex;
     align-items: center;
@@ -32,8 +33,13 @@
     }
   }
   &.bg-header {
+    .layout-inner {
+      background: #ffffff;
+      border-bottom: 1px solid #cccccc;
+    }
     .nav .gnb .menu a {
       color: #1a1a1a;
+      text-shadow: none;
     }
   }
 }
@@ -184,64 +190,62 @@ main {
       width: 100%;
     }
   }
-  .family-link-wrap {
-    position: relative;
+  .family {
+    width: 200px;
+    height: 33px;
     margin-left: auto;
-    .family-link {
-      button {
-        position: relative;
-        width: 200px;
-        height: 50px;
-        border: 1px solid #333333;
-        background: url("https://toppng.com/uploads/preview/arrow-down-icon-11549436707mosicxsqad.png") 95% center no-repeat;
-        background-size: 12px;
-        &:after {
-          position: absolute;
-          transition: .3s;
-          content: '';
-          width: 0;
-          left: 50%;
-          bottom: 0;
-          height: 3px;
-          background-color: red;
-          height: 120%;
-          left: -10%;
-          transform: skewX(15deg);
-          z-index: -1;
+    .footer_toggle {
+      position: relative;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 1px solid #1a1a1a;
+      cursor: pointer;
+      img {
+        margin-left: auto;
+        width: 8px;
+      }
+      &:focus {
+        img {
+          transform: rotate(180deg);
         }
-        &:hover {
-          color: #5bcaff;
-          &:after {
-            left: -10%;
-            width: 120%;
-          }
+        ~ .family-group {
+          display: block;
+          overflow: visible;
+          visibility: visible;
         }
       }
-      .family {
-        overflow-y: scroll;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        max-height: 118px;
-        li {
-          width: 180px;
-          a {
-            display: block;
-            width: calc(100% - 2px);
-            padding: 10px;
-            background: #ffffff;
-            border: 1px solid #333333;
-            border-top: none;
-          }
-          &:first-child {
-            a {
-              border: 1px solid #333333;
-            }
-          }
+    }
+    .family-group {
+      position: absolute;
+      top: -33px;
+      z-index: 5;
+      width: 200px;
+      display: none;
+      overflow: hidden;
+      visibility: hidden;
+      border-top: 1px solid #cccccc;
+      border-left: 1px solid #cccccc;
+      border-right: 1px solid #cccccc;
+      transition: all 0.5s linear;
+      li {
+        font-size: 1em;
+        border-bottom: 1px solid #cccccc;
+        background-color: white;
+        p {
+          padding: 8px 12px;
+          font-weight: bold;
         }
-        &::-webkit-scrollbar {
-          display: none;
+        a {
+          display: block;
+          padding: 8px 12px;
+        }
+        &:hover {
+          a {
+            background: #eeeeee;
+          }
         }
       }
     }

@@ -191,6 +191,7 @@ main {
     }
   }
   .family {
+    position: relative;
     width: 200px;
     height: 33px;
     margin-left: auto;
@@ -220,7 +221,7 @@ main {
     }
     .family-group {
       position: absolute;
-      top: -33px;
+      bottom: 33px;
       z-index: 5;
       width: 200px;
       display: none;

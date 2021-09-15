@@ -1401,6 +1401,7 @@ main {
 }
 
 #footer .family {
+  position: relative;
   width: 200px;
   height: 33px;
   margin-left: auto;
@@ -1439,7 +1440,7 @@ main {
 
 #footer .family .family-group {
   position: absolute;
-  top: -33px;
+  bottom: 33px;
   z-index: 5;
   width: 200px;
   display: none;
@@ -3041,32 +3042,32 @@ main {
 }
 
 .tag_0 {
-  top: 36%;
+  top: 16%;
   right: 0;
-  width: 39px;
-  border-bottom: 2px solid #dbdbdb;
+  width: 43px;
+  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 8s linear infinite;
-          animation: bottom 8s linear infinite;
+  -webkit-animation: bottom 5s linear infinite;
+          animation: bottom 5s linear infinite;
 }
 
 .tag_1 {
-  top: 85%;
+  top: 60%;
   right: 0;
-  width: 4px;
-  border-bottom: 2px solid #dbdbdb;
+  width: 44px;
+  border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 12s linear infinite;
-          animation: bottom 12s linear infinite;
+  -webkit-animation: bottom 10s linear infinite;
+          animation: bottom 10s linear infinite;
 }
 
 .tag_2 {
-  top: 80%;
+  top: 71%;
   right: 0;
-  width: 32px;
-  border-bottom: 1px solid #dbdbdb;
+  width: 2px;
+  border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
   -webkit-animation: bottom 6s linear infinite;
@@ -3074,119 +3075,20 @@ main {
 }
 
 .tag_3 {
-  top: 80%;
+  top: 39%;
   right: 0;
-  width: 34px;
+  width: 15px;
   border-bottom: 1px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 9s linear infinite;
-          animation: bottom 9s linear infinite;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
 }
 
 .tag_4 {
-  top: 66%;
+  top: 50%;
   right: 0;
-  width: 29px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 8s linear infinite;
-          animation: bottom 8s linear infinite;
-}
-
-.tag_5 {
-  top: 44%;
-  right: 0;
-  width: 13px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 4s linear infinite;
-          animation: bottom 4s linear infinite;
-}
-
-.tag_6 {
-  top: 77%;
-  right: 0;
-  width: 33px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
-}
-
-.tag_7 {
-  top: 11%;
-  right: 0;
-  width: 47px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
-}
-
-.tag_8 {
-  top: 61%;
-  right: 0;
-  width: 45px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 3s linear infinite;
-          animation: bottom 3s linear infinite;
-}
-
-.tag_9 {
-  top: 12%;
-  right: 0;
-  width: 18px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 8s linear infinite;
-          animation: bottom 8s linear infinite;
-}
-
-.tag_10 {
-  top: 16%;
-  right: 0;
-  width: 21px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 6s linear infinite;
-          animation: bottom 6s linear infinite;
-}
-
-.tag_11 {
-  top: 18%;
-  right: 0;
-  width: 20px;
-  border-bottom: 1px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 9s linear infinite;
-          animation: bottom 9s linear infinite;
-}
-
-.tag_12 {
-  top: 42%;
-  right: 0;
-  width: 14px;
-  border-bottom: 2px solid #dbdbdb;
-  -webkit-transition: 23s;
-  transition: 23s;
-  -webkit-animation: bottom 9s linear infinite;
-          animation: bottom 9s linear infinite;
-}
-
-.tag_13 {
-  top: 72%;
-  right: 0;
-  width: 16px;
+  width: 3px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
@@ -3194,15 +3096,114 @@ main {
           animation: bottom 10s linear infinite;
 }
 
-.tag_14 {
-  top: 63%;
+.tag_5 {
+  top: 15%;
   right: 0;
-  width: 37px;
+  width: 14px;
   border-bottom: 2px solid #dbdbdb;
   -webkit-transition: 23s;
   transition: 23s;
-  -webkit-animation: bottom 2s linear infinite;
-          animation: bottom 2s linear infinite;
+  -webkit-animation: bottom 12s linear infinite;
+          animation: bottom 12s linear infinite;
+}
+
+.tag_6 {
+  top: 77%;
+  right: 0;
+  width: 32px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
+}
+
+.tag_7 {
+  top: 32%;
+  right: 0;
+  width: 45px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 9s linear infinite;
+          animation: bottom 9s linear infinite;
+}
+
+.tag_8 {
+  top: 62%;
+  right: 0;
+  width: 7px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 6s linear infinite;
+          animation: bottom 6s linear infinite;
+}
+
+.tag_9 {
+  top: 31%;
+  right: 0;
+  width: 32px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
+}
+
+.tag_10 {
+  top: 10%;
+  right: 0;
+  width: 16px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 3s linear infinite;
+          animation: bottom 3s linear infinite;
+}
+
+.tag_11 {
+  top: 60%;
+  right: 0;
+  width: 18px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 11s linear infinite;
+          animation: bottom 11s linear infinite;
+}
+
+.tag_12 {
+  top: 87%;
+  right: 0;
+  width: 31px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 3s linear infinite;
+          animation: bottom 3s linear infinite;
+}
+
+.tag_13 {
+  top: 40%;
+  right: 0;
+  width: 2px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
+}
+
+.tag_14 {
+  top: 2%;
+  right: 0;
+  width: 35px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 23s;
+  transition: 23s;
+  -webkit-animation: bottom 8s linear infinite;
+          animation: bottom 8s linear infinite;
 }
 
 @-webkit-keyframes bottom {

@@ -1,9 +1,8 @@
 (function() {
-
     $('.gallery-link').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
-        closeBtnInside: true,
+        closeBtnInside: false,
         mainClass: 'mfp-with-zoom mfp-img-mobile',
         image: {
             verticalFit: true,
@@ -14,7 +13,6 @@
         zoom: {
             enabled: true
         },
-        // duration: 300
         gallery: {
             enabled: true,
             navigateByImgClick: false,
@@ -26,4 +24,3 @@
     });
 
 }).call(this);
-

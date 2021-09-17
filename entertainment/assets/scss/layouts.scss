@@ -777,4 +777,18 @@ main {
       }
     }
   }
+  #footer {
+    .inner {
+      flex-direction: column;
+      height: auto;
+      padding: 30px 50px;
+    }
+    .logo {
+      margin: auto;
+      padding: 0;
+    }
+    .infos {
+      padding: 30px 0 20px;
+    }
+  }
 }

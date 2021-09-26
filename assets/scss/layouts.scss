@@ -434,7 +434,6 @@ main {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center;
-      max-height: 60vh;
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       font-family: "Raleway";
@@ -789,6 +788,9 @@ main {
     }
     .infos {
       padding: 30px 0 20px;
+    }
+    .family {
+      width: 100%;
     }
   }
 }

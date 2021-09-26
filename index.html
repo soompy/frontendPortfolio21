@@ -134,7 +134,7 @@
                     </div>
                     <div>
                         <div class="grid-item">
-                            <img src="http://www.wikileaks-kr.org/news/photo/201810/38215_14991_269.jpg" alt="스트레이키즈">
+                            <img src="https://i.ytimg.com/vi/DwT-AypzycM/maxresdefault.jpg" alt="스트레이키즈">
                             <h2>스트레이키즈 현진X방찬 듀엣곡 티저 스릴감+매혹미</h2>
                         </div>
                     </div>
@@ -665,25 +665,11 @@
     <script src="./assets/js/common.js"></script>
     <script src="./assets/js/modal.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        const scrollposition = window.scrollY;
-        const headerLayout = document.getElementById('header');
-        const headerHeight = headerLayout.offsetTop;
-
-        window.addEventListener('scroll', function (e) {
-            if(scrollposition < headerHeight) {
-                headerLayout.classList.remove("bg-header");
-                console.log('scrollposition()')
-            } else {
-                headerLayout.classList.add("bg-header");
-            }
-        })
-
+    <script>        
         AOS.init({
             easing: 'ease-out-back',
             duration: 1000
-        });
-        // hljs.initHighlightingOnLoad();
+        });    
         $('.hero__scroll').on('click', function (e) {
             $('html, body').animate({
                 scrollTop: $(window).height()
